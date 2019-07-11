@@ -41,6 +41,6 @@ DXライブラリを使ったゲーム開発を楽にするために作った自
 
 ## ドキュメンテーション
 
-[QGJ2015Spring Docs](https://nokotan.github.io/QGJ2015Spring/Documentation/index.html)
+[QGJ2015Spring Docs](https://nokotan.github.io/QGJ2015Spring/Documentation/html/index.html)
 
 当時作成したドキュメンテーションなので若干情報が古いままです。
