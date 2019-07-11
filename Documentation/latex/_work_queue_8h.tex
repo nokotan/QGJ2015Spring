@@ -1,0 +1,128 @@
+\hypertarget{_work_queue_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue.h ファイル}
+\label{_work_queue_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue.\+h}}
+{\ttfamily \#include $<$functional$>$}\\*
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_work_queue_8h_a6fbfe391dc270d5c93951f06fd1ed230}{Utility\+::\+Work\+Queue\+Have\+More\+Work} ()
+\begin{DoxyCompactList}\small\item\em 実行すべき関数がまだ残っているかどうか。\end{DoxyCompactList}\item 
+void {\bfseries Utility\+::\+Work\+Queue\+Enqueue} (\hyperlink{classstd_1_1function}{std\+::function}$<$ void()$>$ \&work)
+\begin{DoxyCompactList}\small\item\em 実行すべき関数を追加します。\end{DoxyCompactList}\item 
+void {\bfseries Utility\+::\+Work\+Queue\+Enqueue} (\hyperlink{classstd_1_1function}{std\+::function}$<$ void()$>$ \&\&work)
+\begin{DoxyCompactList}\small\item\em 実行すべき関数を追加します。\end{DoxyCompactList}\item 
+void {\bfseries Utility\+::\+Work\+Queue\+Dequeue} ()
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数を実行し、キューから削除します。\end{DoxyCompactList}\item 
+void {\bfseries Utility\+::\+Work\+Queue\+Run\+Work} ()
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数を実行します。\end{DoxyCompactList}\item 
+void {\bfseries Utility\+::\+Work\+Queue\+Pop} ()
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数をキューから削除します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_work_queue_8h}{Work\+Queue.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 引数および戻り値のない関数をリスト管理し、実行できるようにします。
+
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_work_queue_8h}{WorkQueue.h}"}
+
+\textcolor{keywordtype}{void} SomeFunction() \{
+  printf(\textcolor{stringliteral}{"SomeFunction is called!\(\backslash\)n"});
+\}
+
+\textcolor{keywordtype}{int} main() \{
+  WorkQueueEnqueue(SomeFunction);
+  WorkQueueEnqueue([]() \{ printf(\textcolor{stringliteral}{"Lambda function is called!\(\backslash\)n"}); \};
+
+  \textcolor{keywordflow}{while} (\hyperlink{_work_queue_8h_a6fbfe391dc270d5c93951f06fd1ed230}{WorkQueueHaveMoreWork}()) \{
+      WorkQueueDequeue();
+  \}
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ 出力\+: 
+\begin{DoxyCode}
+SomeFunction is called!
+Lambda \textcolor{keyword}{function} is called!
+\end{DoxyCode}
+ 最終更新： \subsubsection*{2016/08/12 }
+
+\subsection{関数詳解}
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Dequeue@{Work\+Queue\+Dequeue}}
+\index{Work\+Queue\+Dequeue@{Work\+Queue\+Dequeue}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Dequeue()}{WorkQueueDequeue()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+Work\+Queue\+Dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8cpp_file_aeedcb691905267e98f359ea3184d456b}{}\label{_work_queue_8cpp_file_aeedcb691905267e98f359ea3184d456b}
+
+
+一番先頭にある関数を実行し、キューから削除します。
+
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Enqueue@{Work\+Queue\+Enqueue}}
+\index{Work\+Queue\+Enqueue@{Work\+Queue\+Enqueue}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Enqueue(std\+::function$<$ void()$>$ \&work)}{WorkQueueEnqueue(std::function< void()> &work)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+Work\+Queue\+Enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::function}$<$ void()$>$ \&}]{work}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8cpp_file_a02eca39e0a70c01b5af92e1ba2c66fde}{}\label{_work_queue_8cpp_file_a02eca39e0a70c01b5af92e1ba2c66fde}
+
+
+実行すべき関数を追加します。
+
+
+\begin{DoxyParams}{引数}
+{\em work} & 追加する関数への参照\\
+\hline
+\end{DoxyParams}
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Enqueue@{Work\+Queue\+Enqueue}}
+\index{Work\+Queue\+Enqueue@{Work\+Queue\+Enqueue}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Enqueue(std\+::function$<$ void()$>$ \&\&work)}{WorkQueueEnqueue(std::function< void()> &&work)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+Work\+Queue\+Enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::function}$<$ void()$>$ \&\&}]{work}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8cpp_file_aefb64dc85f0d084841df007388b41235}{}\label{_work_queue_8cpp_file_aefb64dc85f0d084841df007388b41235}
+
+
+実行すべき関数を追加します。
+
+
+\begin{DoxyParams}{引数}
+{\em work} & 追加する関数への参照\\
+\hline
+\end{DoxyParams}
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Have\+More\+Work@{Work\+Queue\+Have\+More\+Work}}
+\index{Work\+Queue\+Have\+More\+Work@{Work\+Queue\+Have\+More\+Work}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Have\+More\+Work()}{WorkQueueHaveMoreWork()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Utility\+::\+Work\+Queue\+Have\+More\+Work (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8h_file_a6fbfe391dc270d5c93951f06fd1ed230}{}\label{_work_queue_8h_file_a6fbfe391dc270d5c93951f06fd1ed230}
+
+
+実行すべき関数がまだ残っているかどうか。
+
+\begin{DoxyReturn}{戻り値}
+関数が残っていれば true, そうでなければ false
+\end{DoxyReturn}
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Pop@{Work\+Queue\+Pop}}
+\index{Work\+Queue\+Pop@{Work\+Queue\+Pop}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Pop()}{WorkQueuePop()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+Work\+Queue\+Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8cpp_file_ab60135612ea056a8586714fca847d028}{}\label{_work_queue_8cpp_file_ab60135612ea056a8586714fca847d028}
+
+
+一番先頭にある関数をキューから削除します。
+
+\index{Work\+Queue.\+h@{Work\+Queue.\+h}!Work\+Queue\+Run\+Work@{Work\+Queue\+Run\+Work}}
+\index{Work\+Queue\+Run\+Work@{Work\+Queue\+Run\+Work}!Work\+Queue.\+h@{Work\+Queue.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Run\+Work()}{WorkQueueRunWork()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+Work\+Queue\+Run\+Work (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_work_queue_8cpp_file_a68fe70bd2cc127b08592e9c13f887883}{}\label{_work_queue_8cpp_file_a68fe70bd2cc127b08592e9c13f887883}
+
+
+一番先頭にある関数を実行します。
+

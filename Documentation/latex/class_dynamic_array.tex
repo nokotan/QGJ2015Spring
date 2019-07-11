@@ -1,0 +1,185 @@
+\hypertarget{class_dynamic_array}{}\section{Dynamic\+Array$<$ Type $>$ クラステンプレート}
+\label{class_dynamic_array}\index{Dynamic\+Array$<$ Type $>$@{Dynamic\+Array$<$ Type $>$}}
+
+
+配列に対して安全に要素にアクセスする方法と反復子を用意します。 
+
+
+
+
+{\ttfamily \#include $<$Base\+Unit.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_dynamic_array_1_1_iterator}{Iterator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_dynamic_array}{Dynamic\+Array} の要素を順方向に走査するイテレータを実装します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dynamic_array_a963b26e158a87cd8b81be8dfae867f27}{Dynamic\+Array} (Type $\ast$\hyperlink{class_dynamic_array_a4d38117f244e69a7eb5721f618a1d26b}{data}, int \hyperlink{class_dynamic_array_a9b9ebf1cb333a8a582e2b5712c502e61}{size})
+\begin{DoxyCompactList}\small\item\em 動的に割り当てた配列とその大きさから \hyperlink{class_dynamic_array}{Dynamic\+Array} オブジェクトを初期化します。 \hyperlink{class_dynamic_array}{Dynamic\+Array} オブジェクトを使って要素を変更すると、元の配列にもその変更が適用されます。 渡された配列を \hyperlink{class_dynamic_array}{Dynamic\+Array} 内部で自動的に解放することはないので注意が必要です。 \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_dynamic_array_a9b9ebf1cb333a8a582e2b5712c502e61}{size} () const 
+\begin{DoxyCompactList}\small\item\em 要素数を取得します。\end{DoxyCompactList}\item 
+Type $\ast$ \hyperlink{class_dynamic_array_a4d38117f244e69a7eb5721f618a1d26b}{data} () const 
+\begin{DoxyCompactList}\small\item\em 内部の配列データを取得します。\end{DoxyCompactList}\item 
+Type \& \hyperlink{class_dynamic_array_a5b4a10a09d1930bff5d9503728cc3359}{at} (int index)
+\begin{DoxyCompactList}\small\item\em 指定した要素の値への参照を取得します。\end{DoxyCompactList}\item 
+Type \& \hyperlink{class_dynamic_array_ac4f2c6bdbb12c76adbc1338323b50165}{Item} (int index)
+\begin{DoxyCompactList}\small\item\em 指定した要素の値への参照を取得します。\end{DoxyCompactList}\item 
+Type \& \hyperlink{class_dynamic_array_a6a636edafe46560e08c9a940bfba152d}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\begin{DoxyCompactList}\small\item\em 指定した要素の値への参照を取得します。\end{DoxyCompactList}\item 
+\hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \hyperlink{class_dynamic_array_a5f5dbf0d8fd66e53da7f6c239a9b3ff8}{begin} ()
+\begin{DoxyCompactList}\small\item\em 最初の要素を示すイテレータを取得します。\end{DoxyCompactList}\item 
+\hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \hyperlink{class_dynamic_array_ac8fb9e4c45de416a630db0198ed52f60}{end} ()
+\begin{DoxyCompactList}\small\item\em 最後の要素を示すイテレータを取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\\*
+class Dynamic\+Array$<$ Type $>$}
+
+配列に対して安全に要素にアクセスする方法と反復子を用意します。
+
+
+
+\subsection{構築子と解体子}
+\index{Dynamic\+Array@{Dynamic\+Array}!Dynamic\+Array@{Dynamic\+Array}}
+\index{Dynamic\+Array@{Dynamic\+Array}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Dynamic\+Array(\+Type $\ast$data, int size)}{DynamicArray(Type *data, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Dynamic\+Array}$<$ Type $>$\+::{\bf Dynamic\+Array} (
+\begin{DoxyParamCaption}
+\item[{Type $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a963b26e158a87cd8b81be8dfae867f27}{}\label{class_dynamic_array_a963b26e158a87cd8b81be8dfae867f27}
+
+
+動的に割り当てた配列とその大きさから \hyperlink{class_dynamic_array}{Dynamic\+Array} オブジェクトを初期化します。 \hyperlink{class_dynamic_array}{Dynamic\+Array} オブジェクトを使って要素を変更すると、元の配列にもその変更が適用されます。 渡された配列を \hyperlink{class_dynamic_array}{Dynamic\+Array} 内部で自動的に解放することはないので注意が必要です。 
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 反復子を用意させたい配列\\
+\hline
+{\em size} & 反復子を用意させたい配列の要素数\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} *pArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[10] \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \};
+\{
+    \hyperlink{class_dynamic_array}{DynamicArray<int>} dArray \{ pArray, 10 \};
+    \textcolor{comment}{// 普通の配列みたいに要素を変更}
+    \textcolor{comment}{// pArray[0] が 10 に書き換わる。}
+    dArray[0] = 10;
+
+    \textcolor{comment}{// range-based for も使える}
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int}& val : dArray) \{
+        printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, val);
+    \}
+\} 
+\textcolor{comment}{// スコープを抜けても、DynamicArray によって pArray は解放されないので、}
+\textcolor{comment}{// プログラマが配列を解放しなければならない。 }
+\textcolor{keyword}{delete}[] pArray;
+\end{DoxyCode}
+ 
+
+\subsection{関数詳解}
+\index{Dynamic\+Array@{Dynamic\+Array}!at@{at}}
+\index{at@{at}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{at(int index)}{at(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ Type\& {\bf Dynamic\+Array}$<$ Type $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a5b4a10a09d1930bff5d9503728cc3359}{}\label{class_dynamic_array_a5b4a10a09d1930bff5d9503728cc3359}
+
+
+指定した要素の値への参照を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em index} & アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。\\
+\hline
+\end{DoxyParams}
+\index{Dynamic\+Array@{Dynamic\+Array}!begin@{begin}}
+\index{begin@{begin}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{begin()}{begin()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Iterator} {\bf Dynamic\+Array}$<$ Type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a5f5dbf0d8fd66e53da7f6c239a9b3ff8}{}\label{class_dynamic_array_a5f5dbf0d8fd66e53da7f6c239a9b3ff8}
+
+
+最初の要素を示すイテレータを取得します。
+
+使用例\+: class \hyperlink{class_dynamic_array_1_1_iterator}{Dynamic\+Array$<$Type\&gt\+::\+Iterator} を参照のこと。 \index{Dynamic\+Array@{Dynamic\+Array}!data@{data}}
+\index{data@{data}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ Type$\ast$ {\bf Dynamic\+Array}$<$ Type $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a4d38117f244e69a7eb5721f618a1d26b}{}\label{class_dynamic_array_a4d38117f244e69a7eb5721f618a1d26b}
+
+
+内部の配列データを取得します。
+
+\index{Dynamic\+Array@{Dynamic\+Array}!end@{end}}
+\index{end@{end}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{end()}{end()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Iterator} {\bf Dynamic\+Array}$<$ Type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_ac8fb9e4c45de416a630db0198ed52f60}{}\label{class_dynamic_array_ac8fb9e4c45de416a630db0198ed52f60}
+
+
+最後の要素を示すイテレータを取得します。
+
+使用例\+: class \hyperlink{class_dynamic_array_1_1_iterator}{Dynamic\+Array$<$Type\&gt\+::\+Iterator} を参照のこと。 \index{Dynamic\+Array@{Dynamic\+Array}!Item@{Item}}
+\index{Item@{Item}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{Item(int index)}{Item(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ Type\& {\bf Dynamic\+Array}$<$ Type $>$\+::Item (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_ac4f2c6bdbb12c76adbc1338323b50165}{}\label{class_dynamic_array_ac4f2c6bdbb12c76adbc1338323b50165}
+
+
+指定した要素の値への参照を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em index} & アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。\\
+\hline
+\end{DoxyParams}
+\index{Dynamic\+Array@{Dynamic\+Array}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{operator[](int index)}{operator[](int index)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ Type\& {\bf Dynamic\+Array}$<$ Type $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a6a636edafe46560e08c9a940bfba152d}{}\label{class_dynamic_array_a6a636edafe46560e08c9a940bfba152d}
+
+
+指定した要素の値への参照を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em index} & アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。\\
+\hline
+\end{DoxyParams}
+\index{Dynamic\+Array@{Dynamic\+Array}!size@{size}}
+\index{size@{size}!Dynamic\+Array@{Dynamic\+Array}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ size\+\_\+t {\bf Dynamic\+Array}$<$ Type $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_a9b9ebf1cb333a8a582e2b5712c502e61}{}\label{class_dynamic_array_a9b9ebf1cb333a8a582e2b5712c502e61}
+
+
+要素数を取得します。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_base_unit_8h}{Base\+Unit.\+h}\end{DoxyCompactItemize}

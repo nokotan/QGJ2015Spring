@@ -1,0 +1,98 @@
+\hypertarget{_base_unit_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Base\+Unit.h ファイル}
+\label{_base_unit_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Base\+Unit.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Base\+Unit.\+h}}
+{\ttfamily \#include \char`\"{}Shape.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$xutility$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_map_tile}{Map\+Tile}
+\begin{DoxyCompactList}\small\item\em マップタイルの設定\end{DoxyCompactList}\item 
+class \hyperlink{class_dynamic_array}{Dynamic\+Array$<$ Type $>$}
+\begin{DoxyCompactList}\small\item\em 配列に対して安全に要素にアクセスする方法と反復子を用意します。\end{DoxyCompactList}\item 
+class \hyperlink{class_dynamic_array_1_1_iterator}{Dynamic\+Array$<$ Type $>$\+::\+Iterator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_dynamic_array}{Dynamic\+Array} の要素を順方向に走査するイテレータを実装します。\end{DoxyCompactList}\item 
+class \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor$<$ Type $>$}
+\begin{DoxyCompactList}\small\item\em マップチップを管理するレイヤーを実装します。\end{DoxyCompactList}\item 
+class \hyperlink{class_map}{Map$<$ Map\+Type $>$}
+\begin{DoxyCompactList}\small\item\em 自由にサイズが変更できるタイルマップを実装します。\end{DoxyCompactList}\item 
+class \hyperlink{class_temporary_map}{Temporary\+Map$<$ Type, Width, Height $>$}
+\begin{DoxyCompactList}\small\item\em 既存の２次元配列をタイルマップとして使うための関数を用意します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_map}{Map}$<$ Map\+Tile\+::\+Type $>$ {\bfseries C\+Map}\hypertarget{_base_unit_8h_a2ff92057c1bd8e9604924817f10841b0}{}\label{_base_unit_8h_a2ff92057c1bd8e9604924817f10841b0}
+
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Type , size\+\_\+t Width, size\+\_\+t Height$>$ }\\\hyperlink{class_map}{Map}$<$ Type $>$ \hyperlink{_base_unit_8h_a41052ba89a1e10f3b1de2e79ff87533a}{Create\+Map} (Type(\&map)\mbox{[}Width\mbox{]}\mbox{[}Height\mbox{]})
+\begin{DoxyCompactList}\small\item\em 既存の２次元配列から、\+Map オブジェクトを作成します。渡された２次元配列はこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , size\+\_\+t Width, size\+\_\+t Height$>$ }\\\hyperlink{class_temporary_map}{Temporary\+Map}$<$ Type, Width, Height $>$ \hyperlink{_base_unit_8h_ac2f90d9c823f9f908e39a2b880c62698}{Create\+Temporary\+Map} (Type(\&map)\mbox{[}Width\mbox{]}\mbox{[}Height\mbox{]})
+\begin{DoxyCompactList}\small\item\em 既存の２次元配列から、\+Temporary\+Map オブジェクトを作成します。渡された２次元配列はこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_base_unit_8h}{Base\+Unit.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- ゲーム中に使うオブジェクト（の基底クラス） 最終更新\+: \subsubsection*{2016/08/14 }
+
+\subsection{関数詳解}
+\index{Base\+Unit.\+h@{Base\+Unit.\+h}!Create\+Map@{Create\+Map}}
+\index{Create\+Map@{Create\+Map}!Base\+Unit.\+h@{Base\+Unit.\+h}}
+\subsubsection[{\texorpdfstring{Create\+Map(\+Type(\&map)[Width][Height])}{CreateMap(Type(&map)[Width][Height])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , size\+\_\+t Width, size\+\_\+t Height$>$ {\bf Map}$<$Type$>$ Create\+Map (
+\begin{DoxyParamCaption}
+\item[{Type(\&)}]{map\mbox{[}\+Width\mbox{]}\mbox{[}\+Height\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_base_unit_8h_a41052ba89a1e10f3b1de2e79ff87533a}{}\label{_base_unit_8h_a41052ba89a1e10f3b1de2e79ff87533a}
+
+
+既存の２次元配列から、\+Map オブジェクトを作成します。渡された２次元配列はこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。 
+
+使用例\+: 
+\begin{DoxyCode}
+1 int MapTiles[120][30];
+2 MapTiles[20][20] = -1;
+3 
+4 auto&amp;&amp; MyMap = CreateMap(MapTiles);
+5 // これを書くのと同じ
+6 // Map<int>&amp;&amp; MyMap \{ MapTiles \};
+7 
+8 // [] を使って配列の内容を更新する。
+9 MyMap[30][20] = 120;
+10 // [] を使って配列の内容を取得する。
+11 int val = MyMap[20][20];
+12 
+13 printf("MyMap[20][20] = %d\(\backslash\)n", val);
+14 // 出力:
+15 // MyMap[20][20] = -1
+\end{DoxyCode}
+ \index{Base\+Unit.\+h@{Base\+Unit.\+h}!Create\+Temporary\+Map@{Create\+Temporary\+Map}}
+\index{Create\+Temporary\+Map@{Create\+Temporary\+Map}!Base\+Unit.\+h@{Base\+Unit.\+h}}
+\subsubsection[{\texorpdfstring{Create\+Temporary\+Map(\+Type(\&map)[Width][Height])}{CreateTemporaryMap(Type(&map)[Width][Height])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , size\+\_\+t Width, size\+\_\+t Height$>$ {\bf Temporary\+Map}$<$Type, Width, Height$>$ Create\+Temporary\+Map (
+\begin{DoxyParamCaption}
+\item[{Type(\&)}]{map\mbox{[}\+Width\mbox{]}\mbox{[}\+Height\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_base_unit_8h_ac2f90d9c823f9f908e39a2b880c62698}{}\label{_base_unit_8h_ac2f90d9c823f9f908e39a2b880c62698}
+
+
+既存の２次元配列から、\+Temporary\+Map オブジェクトを作成します。渡された２次元配列はこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。 
+
+使用例\+: 
+\begin{DoxyCode}
+1 int MapTiles[120][30];
+2 MapTiles[20][20] = -1;
+3 
+4 auto&& MyMap = CreateTemporaryMap(MapTiles);
+5 // これを書くのと同じ
+6 // TemporaryMap<int, 120, 30>&amp;&amp; MyMap \{ MapTiles \};
+7 
+8 // [] を使って配列の内容を更新する。
+9 MyMap[30][20] = 120;
+10 // [] を使って配列の内容を取得する。
+11 int val = MyMap[20][20];
+12 
+13 printf("MyMap[20][20] = %d\(\backslash\)n", val);
+14 // 出力:
+15 // MyMap[20][20] = -1
+\end{DoxyCode}
+ 

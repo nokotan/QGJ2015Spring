@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QGJ2015Spring: GameResourseManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="亀甲.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QGJ2015Spring
+   &#160;<span id="projectnumber">ver 0.1.1</span>
+   </div>
+   <div id="projectbrief">Library for DX Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_game_resourse_manager.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_game_resourse_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GameResourseManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ゲーム中で使用する音楽や画像などを管理します。 [Singleton クラス] インスタンス生成ができないので、GameResourseManager::Instance() 関数 または GameResourseMgr マクロを使ってインスタンスにアクセスしてください。  
+ <a href="class_game_resourse_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_resourse_manager_8h_source.html">GameResourseManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a552197bd5bedfd03a9139fcf55b2e517"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#a552197bd5bedfd03a9139fcf55b2e517">InitializeImages</a> ()</td></tr>
+<tr class="memdesc:a552197bd5bedfd03a9139fcf55b2e517"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を初期化します。 <a href="#a552197bd5bedfd03a9139fcf55b2e517">[詳解]</a><br /></td></tr>
+<tr class="separator:a552197bd5bedfd03a9139fcf55b2e517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443b0918312674650773d73f671979c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#a443b0918312674650773d73f671979c8">DisposeImages</a> ()</td></tr>
+<tr class="memdesc:a443b0918312674650773d73f671979c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を明示的に解放します。 <a href="#a443b0918312674650773d73f671979c8">[詳解]</a><br /></td></tr>
+<tr class="separator:a443b0918312674650773d73f671979c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f10ff42b21ff8045e663f7bc9a8098"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#a37f10ff42b21ff8045e663f7bc9a8098">InitializeMusics</a> ()</td></tr>
+<tr class="memdesc:a37f10ff42b21ff8045e663f7bc9a8098"><td class="mdescLeft">&#160;</td><td class="mdescRight">音楽を初期化します。 <a href="#a37f10ff42b21ff8045e663f7bc9a8098">[詳解]</a><br /></td></tr>
+<tr class="separator:a37f10ff42b21ff8045e663f7bc9a8098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bc2345617c007e3c7d5fb82a8c7a30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#aa3bc2345617c007e3c7d5fb82a8c7a30">DisposeMusics</a> ()</td></tr>
+<tr class="memdesc:aa3bc2345617c007e3c7d5fb82a8c7a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">音楽を明示的に解放します。 <a href="#aa3bc2345617c007e3c7d5fb82a8c7a30">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3bc2345617c007e3c7d5fb82a8c7a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dff92a4927e47f9fba92b7be03a58bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#a3dff92a4927e47f9fba92b7be03a58bb">GetGameImageHandle</a> (GameImages)</td></tr>
+<tr class="memdesc:a3dff92a4927e47f9fba92b7be03a58bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した画像のハンドルを取得します。 <a href="#a3dff92a4927e47f9fba92b7be03a58bb">[詳解]</a><br /></td></tr>
+<tr class="separator:a3dff92a4927e47f9fba92b7be03a58bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad998a6963f836fc32dd229dd956b6aba"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#ad998a6963f836fc32dd229dd956b6aba">GetGameImageHandleArray</a> (GameImages)</td></tr>
+<tr class="memdesc:ad998a6963f836fc32dd229dd956b6aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した画像のハンドルを取得します。 <a href="#ad998a6963f836fc32dd229dd956b6aba">[詳解]</a><br /></td></tr>
+<tr class="separator:ad998a6963f836fc32dd229dd956b6aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f3e1954ed171adb29816f065589299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#ae5f3e1954ed171adb29816f065589299">GetGameImageHandleCount</a> (GameImages)</td></tr>
+<tr class="memdesc:ae5f3e1954ed171adb29816f065589299"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した画像の数を取得します。 <a href="#ae5f3e1954ed171adb29816f065589299">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5f3e1954ed171adb29816f065589299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608fd6d01fbf83b419697f1ea9a285cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#a608fd6d01fbf83b419697f1ea9a285cf">GetGameMusicHandle</a> (GameMusics)</td></tr>
+<tr class="memdesc:a608fd6d01fbf83b419697f1ea9a285cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した音楽のハンドルを取得します。 <a href="#a608fd6d01fbf83b419697f1ea9a285cf">[詳解]</a><br /></td></tr>
+<tr class="separator:a608fd6d01fbf83b419697f1ea9a285cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:acec2038a01e96c4f44dca817bff407ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_resourse_manager.html">GameResourseManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_resourse_manager.html#acec2038a01e96c4f44dca817bff407ad">Instance</a> ()</td></tr>
+<tr class="memdesc:acec2038a01e96c4f44dca817bff407ad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_game_resourse_manager.html" title="ゲーム中で使用する音楽や画像などを管理します。 [Singleton クラス] インスタンス生成ができないので、Gam...">GameResourseManager</a> インスタンスを取得します。 <a href="#acec2038a01e96c4f44dca817bff407ad">[詳解]</a><br /></td></tr>
+<tr class="separator:acec2038a01e96c4f44dca817bff407ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲーム中で使用する音楽や画像などを管理します。 [Singleton クラス] インスタンス生成ができないので、GameResourseManager::Instance() 関数 または GameResourseMgr マクロを使ってインスタンスにアクセスしてください。 </p>
+<p>使用例: <a class="el" href="_game_resourse_manager_8h.html">GameResourseManager.h</a> </p><div class="fragment"><div class="line"><span class="preprocessor">#pragma once</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_debug_helper_8h.html">DebugHelper.h</a>&quot;</span></div><div class="line"></div><div class="line"><a class="code" href="_game_resourse_manager_8h.html#ad4ba4fe9f17a7a6b57283d945e6dcde7">enumdef</a>(GameImages,</div><div class="line">    PlayerImage,</div><div class="line">    EnemyImage,</div><div class="line">    ItemImage</div><div class="line">)</div><div class="line"></div><div class="line"><a class="code" href="_game_resourse_manager_8h.html#ad4ba4fe9f17a7a6b57283d945e6dcde7">enumdef</a>(GameMusics,</div><div class="line">    PlayerJumpSound,</div><div class="line">    DamageSound,</div><div class="line">    MainBGM</div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment">// 以下編集の必要がないので省略</span></div></div><!-- fragment --><p> GameResourseManager.cpp </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_game_resourse_manager_8h.html">GameResourseManager.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;DxLib.h&quot;</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"></div><div class="line">画像の読み込みに必要なデータを格納します。</div><div class="line">データは、LoadDivGraph に使うものです。</div><div class="line"><span class="keyword">struct </span><a class="code" href="struct_graph_data.html">GraphData</a> {</div><div class="line">    <span class="comment">// 定義は省略    </span></div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">// プレイヤー、敵、アイテムの画像の名前がそれぞれ、&quot;Player.png&quot;, &quot;Enemy.png&quot;, &quot;Item.png&quot;</span></div><div class="line"><span class="comment">// である時の書き方です。実際に使うファイル名に応じて書き換えてください。</span></div><div class="line"><span class="keyword">static</span> <a class="code" href="struct_graph_data.html">GraphData</a> ImageFileNames[] {</div><div class="line">    <span class="stringliteral">&quot;Player.png&quot;</span>,   <span class="comment">// PlayerImage</span></div><div class="line">    <span class="stringliteral">&quot;Enemy.png&quot;</span>,    <span class="comment">// EnemyImage</span></div><div class="line">    <span class="stringliteral">&quot;Item.png&quot;</span>      <span class="comment">// ItemImage</span></div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">static</span> std::string MusicFileNames[] {</div><div class="line">    <span class="stringliteral">&quot;Jump.ogg&quot;</span>,     <span class="comment">// PlayerJumpSound</span></div><div class="line">    <span class="stringliteral">&quot;Damage.ogg&quot;</span>,   <span class="comment">// DamageSound</span></div><div class="line">    <span class="stringliteral">&quot;MainBGM.ogg&quot;</span>   <span class="comment">// MainBGM</span></div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">// 以下編集の必要がないので省略</span></div></div><!-- fragment --><p> 使用部分 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_game_resourse_manager_8h.html">GameResourseManager.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;DxLib.h&quot;</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, <span class="keywordtype">int</span>) {</div><div class="line">    ChangeWindowMode(TRUE);</div><div class="line"></div><div class="line">    <span class="keywordflow">if</span> (DxLib_Init() == -1) {</div><div class="line">        <span class="keywordflow">return</span> 0;</div><div class="line">    }</div><div class="line"></div><div class="line">    SetDrawScreen(DX_SCREEN_BACK);  </div><div class="line">    <a class="code" href="_game_resourse_manager_8h.html#a89060b4b81e364e5cf07aac63fc09b29">GameResourseMgr</a>.InitializeImages();</div><div class="line"></div><div class="line">    PlaySoundMem(<a class="code" href="_game_resourse_manager_8h.html#a89060b4b81e364e5cf07aac63fc09b29">GameResourseMgr</a>.GetGameMusicHandle(MainBGM), DX_PLAYTYPE_BACK);</div><div class="line"></div><div class="line">    <span class="comment">// メインループ</span></div><div class="line">    <span class="keywordflow">while</span> (ProcessMessage() != -1 &amp;amp;&amp;amp; ClearDrawScreen() != -1) {</div><div class="line">        DrawGraph(100, 100, <a class="code" href="_game_resourse_manager_8h.html#a89060b4b81e364e5cf07aac63fc09b29">GameResourseMgr</a>.GameImageHandleArray(PlayerImage)[0], TRUE);</div><div class="line">        DrawGraph(100, 100, <a class="code" href="_game_resourse_manager_8h.html#a89060b4b81e364e5cf07aac63fc09b29">GameResourseMgr</a>.GameImageHandle(EnemyImage), TRUE);</div><div class="line"></div><div class="line">        ScreenFlip();</div><div class="line">    }</div><div class="line"></div><div class="line">    DxLib_End();</div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a443b0918312674650773d73f671979c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameResourseManager::DisposeImages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像を明示的に解放します。</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3bc2345617c007e3c7d5fb82a8c7a30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameResourseManager::DisposeMusics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>音楽を明示的に解放します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dff92a4927e47f9fba92b7be03a58bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameResourseManager::GetGameImageHandle </td>
+          <td>(</td>
+          <td class="paramtype">GameImages&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した画像のハンドルを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="ad998a6963f836fc32dd229dd956b6aba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * GameResourseManager::GetGameImageHandleArray </td>
+          <td>(</td>
+          <td class="paramtype">GameImages&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した画像のハンドルを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5f3e1954ed171adb29816f065589299"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameResourseManager::GetGameImageHandleCount </td>
+          <td>(</td>
+          <td class="paramtype">GameImages&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した画像の数を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a608fd6d01fbf83b419697f1ea9a285cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GameResourseManager::GetGameMusicHandle </td>
+          <td>(</td>
+          <td class="paramtype">GameMusics&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した音楽のハンドルを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a552197bd5bedfd03a9139fcf55b2e517"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameResourseManager::InitializeImages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像を初期化します。</p>
+<dl class="section return"><dt>戻り値</dt><dd>初期化に成功すれば false, そうでなければ true</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a37f10ff42b21ff8045e663f7bc9a8098"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameResourseManager::InitializeMusics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>音楽を初期化します。</p>
+<dl class="section return"><dt>戻り値</dt><dd>初期化に成功すれば false, そうでなければ true</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acec2038a01e96c4f44dca817bff407ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_game_resourse_manager.html">GameResourseManager</a>&amp; GameResourseManager::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_game_resourse_manager.html" title="ゲーム中で使用する音楽や画像などを管理します。 [Singleton クラス] インスタンス生成ができないので、Gam...">GameResourseManager</a> インスタンスを取得します。</p>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="class_game_resourse_manager.html" title="ゲーム中で使用する音楽や画像などを管理します。 [Singleton クラス] インスタンス生成ができないので、Gam...">GameResourseManager</a> インスタンスへの参照</dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/Owner/Documents/Visual Studio 2013/Projects/QGJ2015Spring/<a class="el" href="_game_resourse_manager_8h_source.html">GameResourseManager.h</a></li>
+<li>C:/Users/Owner/Documents/Visual Studio 2013/Projects/QGJ2015Spring/GameResourseManager.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_game_resourse_manager.html">GameResourseManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

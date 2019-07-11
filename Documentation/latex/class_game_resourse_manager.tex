@@ -1,0 +1,235 @@
+\hypertarget{class_game_resourse_manager}{}\section{Game\+Resourse\+Manager クラス}
+\label{class_game_resourse_manager}\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+
+
+ゲーム中で使用する音楽や画像などを管理します。 \mbox{[}Singleton クラス\mbox{]} インスタンス生成ができないので、\+Game\+Resourse\+Manager\+::\+Instance() 関数 または Game\+Resourse\+Mgr マクロを使ってインスタンスにアクセスしてください。  
+
+
+
+
+{\ttfamily \#include $<$Game\+Resourse\+Manager.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_game_resourse_manager_a552197bd5bedfd03a9139fcf55b2e517}{Initialize\+Images} ()
+\begin{DoxyCompactList}\small\item\em 画像を初期化します。\end{DoxyCompactList}\item 
+void \hyperlink{class_game_resourse_manager_a443b0918312674650773d73f671979c8}{Dispose\+Images} ()
+\begin{DoxyCompactList}\small\item\em 画像を明示的に解放します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_game_resourse_manager_a37f10ff42b21ff8045e663f7bc9a8098}{Initialize\+Musics} ()
+\begin{DoxyCompactList}\small\item\em 音楽を初期化します。\end{DoxyCompactList}\item 
+void \hyperlink{class_game_resourse_manager_aa3bc2345617c007e3c7d5fb82a8c7a30}{Dispose\+Musics} ()
+\begin{DoxyCompactList}\small\item\em 音楽を明示的に解放します。\end{DoxyCompactList}\item 
+int \hyperlink{class_game_resourse_manager_a3dff92a4927e47f9fba92b7be03a58bb}{Get\+Game\+Image\+Handle} (Game\+Images)
+\begin{DoxyCompactList}\small\item\em 指定した画像のハンドルを取得します。\end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_game_resourse_manager_ad998a6963f836fc32dd229dd956b6aba}{Get\+Game\+Image\+Handle\+Array} (Game\+Images)
+\begin{DoxyCompactList}\small\item\em 指定した画像のハンドルを取得します。\end{DoxyCompactList}\item 
+int \hyperlink{class_game_resourse_manager_ae5f3e1954ed171adb29816f065589299}{Get\+Game\+Image\+Handle\+Count} (Game\+Images)
+\begin{DoxyCompactList}\small\item\em 指定した画像の数を取得します。\end{DoxyCompactList}\item 
+int \hyperlink{class_game_resourse_manager_a608fd6d01fbf83b419697f1ea9a285cf}{Get\+Game\+Music\+Handle} (Game\+Musics)
+\begin{DoxyCompactList}\small\item\em 指定した音楽のハンドルを取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game_resourse_manager}{Game\+Resourse\+Manager} \& \hyperlink{class_game_resourse_manager_acec2038a01e96c4f44dca817bff407ad}{Instance} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_resourse_manager}{Game\+Resourse\+Manager} インスタンスを取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ゲーム中で使用する音楽や画像などを管理します。 \mbox{[}Singleton クラス\mbox{]} インスタンス生成ができないので、\+Game\+Resourse\+Manager\+::\+Instance() 関数 または Game\+Resourse\+Mgr マクロを使ってインスタンスにアクセスしてください。 
+
+使用例\+: \hyperlink{_game_resourse_manager_8h}{Game\+Resourse\+Manager.\+h} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#pragma once}
+
+\textcolor{preprocessor}{#include "\hyperlink{_debug_helper_8h}{DebugHelper.h}"}
+
+\hyperlink{_game_resourse_manager_8h_ad4ba4fe9f17a7a6b57283d945e6dcde7}{enumdef}(GameImages,
+    PlayerImage,
+    EnemyImage,
+    ItemImage
+)
+
+\hyperlink{_game_resourse_manager_8h_ad4ba4fe9f17a7a6b57283d945e6dcde7}{enumdef}(GameMusics,
+    PlayerJumpSound,
+    DamageSound,
+    MainBGM
+)
+
+\textcolor{comment}{// 以下編集の必要がないので省略}
+\end{DoxyCode}
+ Game\+Resourse\+Manager.\+cpp 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_game_resourse_manager_8h}{GameResourseManager.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{preprocessor}{#include <string>}
+
+画像の読み込みに必要なデータを格納します。
+データは、LoadDivGraph に使うものです。
+\textcolor{keyword}{struct }\hyperlink{struct_graph_data}{GraphData} \{
+    \textcolor{comment}{// 定義は省略    }
+\};
+
+\textcolor{comment}{// プレイヤー、敵、アイテムの画像の名前がそれぞれ、"Player.png", "Enemy.png", "Item.png"}
+\textcolor{comment}{// である時の書き方です。実際に使うファイル名に応じて書き換えてください。}
+\textcolor{keyword}{static} \hyperlink{struct_graph_data}{GraphData} ImageFileNames[] \{
+    \textcolor{stringliteral}{"Player.png"},   \textcolor{comment}{// PlayerImage}
+    \textcolor{stringliteral}{"Enemy.png"},    \textcolor{comment}{// EnemyImage}
+    \textcolor{stringliteral}{"Item.png"}      \textcolor{comment}{// ItemImage}
+\};
+
+\textcolor{keyword}{static} std::string MusicFileNames[] \{
+    \textcolor{stringliteral}{"Jump.ogg"},     \textcolor{comment}{// PlayerJumpSound}
+    \textcolor{stringliteral}{"Damage.ogg"},   \textcolor{comment}{// DamageSound}
+    \textcolor{stringliteral}{"MainBGM.ogg"}   \textcolor{comment}{// MainBGM}
+\};
+
+\textcolor{comment}{// 以下編集の必要がないので省略}
+\end{DoxyCode}
+ 使用部分 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_game_resourse_manager_8h}{GameResourseManager.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{keywordtype}{int} WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, \textcolor{keywordtype}{int}) \{
+    ChangeWindowMode(TRUE);
+
+    \textcolor{keywordflow}{if} (DxLib\_Init() == -1) \{
+        \textcolor{keywordflow}{return} 0;
+    \}
+
+    SetDrawScreen(DX\_SCREEN\_BACK);  
+    \hyperlink{_game_resourse_manager_8h_a89060b4b81e364e5cf07aac63fc09b29}{GameResourseMgr}.InitializeImages();
+
+    PlaySoundMem(\hyperlink{_game_resourse_manager_8h_a89060b4b81e364e5cf07aac63fc09b29}{GameResourseMgr}.GetGameMusicHandle(MainBGM), DX\_PLAYTYPE\_BACK);
+
+    \textcolor{comment}{// メインループ}
+    \textcolor{keywordflow}{while} (ProcessMessage() != -1 &amp;&amp; ClearDrawScreen() != -1) \{
+        DrawGraph(100, 100, \hyperlink{_game_resourse_manager_8h_a89060b4b81e364e5cf07aac63fc09b29}{GameResourseMgr}.GameImageHandleArray(PlayerImage)[0], TRUE);
+        DrawGraph(100, 100, \hyperlink{_game_resourse_manager_8h_a89060b4b81e364e5cf07aac63fc09b29}{GameResourseMgr}.GameImageHandle(EnemyImage), TRUE);
+
+        ScreenFlip();
+    \}
+
+    DxLib\_End();
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ 
+
+\subsection{関数詳解}
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Dispose\+Images@{Dispose\+Images}}
+\index{Dispose\+Images@{Dispose\+Images}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Dispose\+Images()}{DisposeImages()}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Resourse\+Manager\+::\+Dispose\+Images (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_a443b0918312674650773d73f671979c8}{}\label{class_game_resourse_manager_a443b0918312674650773d73f671979c8}
+
+
+画像を明示的に解放します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Dispose\+Musics@{Dispose\+Musics}}
+\index{Dispose\+Musics@{Dispose\+Musics}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Dispose\+Musics()}{DisposeMusics()}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Resourse\+Manager\+::\+Dispose\+Musics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_aa3bc2345617c007e3c7d5fb82a8c7a30}{}\label{class_game_resourse_manager_aa3bc2345617c007e3c7d5fb82a8c7a30}
+
+
+音楽を明示的に解放します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Get\+Game\+Image\+Handle@{Get\+Game\+Image\+Handle}}
+\index{Get\+Game\+Image\+Handle@{Get\+Game\+Image\+Handle}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Game\+Image\+Handle(\+Game\+Images)}{GetGameImageHandle(GameImages)}}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Resourse\+Manager\+::\+Get\+Game\+Image\+Handle (
+\begin{DoxyParamCaption}
+\item[{Game\+Images}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_a3dff92a4927e47f9fba92b7be03a58bb}{}\label{class_game_resourse_manager_a3dff92a4927e47f9fba92b7be03a58bb}
+
+
+指定した画像のハンドルを取得します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Get\+Game\+Image\+Handle\+Array@{Get\+Game\+Image\+Handle\+Array}}
+\index{Get\+Game\+Image\+Handle\+Array@{Get\+Game\+Image\+Handle\+Array}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Game\+Image\+Handle\+Array(\+Game\+Images)}{GetGameImageHandleArray(GameImages)}}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Game\+Resourse\+Manager\+::\+Get\+Game\+Image\+Handle\+Array (
+\begin{DoxyParamCaption}
+\item[{Game\+Images}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_ad998a6963f836fc32dd229dd956b6aba}{}\label{class_game_resourse_manager_ad998a6963f836fc32dd229dd956b6aba}
+
+
+指定した画像のハンドルを取得します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Get\+Game\+Image\+Handle\+Count@{Get\+Game\+Image\+Handle\+Count}}
+\index{Get\+Game\+Image\+Handle\+Count@{Get\+Game\+Image\+Handle\+Count}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Game\+Image\+Handle\+Count(\+Game\+Images)}{GetGameImageHandleCount(GameImages)}}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Resourse\+Manager\+::\+Get\+Game\+Image\+Handle\+Count (
+\begin{DoxyParamCaption}
+\item[{Game\+Images}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_ae5f3e1954ed171adb29816f065589299}{}\label{class_game_resourse_manager_ae5f3e1954ed171adb29816f065589299}
+
+
+指定した画像の数を取得します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Get\+Game\+Music\+Handle@{Get\+Game\+Music\+Handle}}
+\index{Get\+Game\+Music\+Handle@{Get\+Game\+Music\+Handle}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Game\+Music\+Handle(\+Game\+Musics)}{GetGameMusicHandle(GameMusics)}}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Resourse\+Manager\+::\+Get\+Game\+Music\+Handle (
+\begin{DoxyParamCaption}
+\item[{Game\+Musics}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_a608fd6d01fbf83b419697f1ea9a285cf}{}\label{class_game_resourse_manager_a608fd6d01fbf83b419697f1ea9a285cf}
+
+
+指定した音楽のハンドルを取得します。
+
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Initialize\+Images@{Initialize\+Images}}
+\index{Initialize\+Images@{Initialize\+Images}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Initialize\+Images()}{InitializeImages()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Resourse\+Manager\+::\+Initialize\+Images (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_a552197bd5bedfd03a9139fcf55b2e517}{}\label{class_game_resourse_manager_a552197bd5bedfd03a9139fcf55b2e517}
+
+
+画像を初期化します。
+
+\begin{DoxyReturn}{戻り値}
+初期化に成功すれば false, そうでなければ true
+\end{DoxyReturn}
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Initialize\+Musics@{Initialize\+Musics}}
+\index{Initialize\+Musics@{Initialize\+Musics}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Initialize\+Musics()}{InitializeMusics()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Resourse\+Manager\+::\+Initialize\+Musics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_resourse_manager_a37f10ff42b21ff8045e663f7bc9a8098}{}\label{class_game_resourse_manager_a37f10ff42b21ff8045e663f7bc9a8098}
+
+
+音楽を初期化します。
+
+\begin{DoxyReturn}{戻り値}
+初期化に成功すれば false, そうでなければ true
+\end{DoxyReturn}
+\index{Game\+Resourse\+Manager@{Game\+Resourse\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Game\+Resourse\+Manager@{Game\+Resourse\+Manager}}
+\subsubsection[{\texorpdfstring{Instance()}{Instance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Game\+Resourse\+Manager}\& Game\+Resourse\+Manager\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_game_resourse_manager_acec2038a01e96c4f44dca817bff407ad}{}\label{class_game_resourse_manager_acec2038a01e96c4f44dca817bff407ad}
+
+
+\hyperlink{class_game_resourse_manager}{Game\+Resourse\+Manager} インスタンスを取得します。
+
+\begin{DoxyReturn}{戻り値}
+\hyperlink{class_game_resourse_manager}{Game\+Resourse\+Manager} インスタンスへの参照
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_game_resourse_manager_8h}{Game\+Resourse\+Manager.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Game\+Resourse\+Manager.\+cpp\end{DoxyCompactItemize}

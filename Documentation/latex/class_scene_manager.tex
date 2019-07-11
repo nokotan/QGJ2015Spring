@@ -1,0 +1,121 @@
+\hypertarget{class_scene_manager}{}\section{Scene\+Manager クラス}
+\label{class_scene_manager}\index{Scene\+Manager@{Scene\+Manager}}
+
+
+画面を管理します。 
+
+
+
+
+{\ttfamily \#include $<$Scene\+Base.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_manager_a52085e6737c23b491c228e86781af808}{Scene\+Manager} ()
+\begin{DoxyCompactList}\small\item\em 新しい \hyperlink{class_scene_manager}{Scene\+Manager} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+\hyperlink{class_scene_manager_a3ac7c1263eefc696a69c8c570ba481b0}{Scene\+Manager} (\hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{Scene\+Type} next\+Scene)
+\begin{DoxyCompactList}\small\item\em 新しい \hyperlink{class_scene_manager}{Scene\+Manager} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+void \hyperlink{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}{Update} ()
+\begin{DoxyCompactList}\small\item\em シーンを更新します。\end{DoxyCompactList}\item 
+void \hyperlink{class_scene_manager_ab1da7cddc28c54d6a8dc9b91d3c94a6c}{Draw} () const 
+\begin{DoxyCompactList}\small\item\em シーンを描画します。\end{DoxyCompactList}\item 
+void \hyperlink{class_scene_manager_a1defdb68759e3d118f91d57f49425167}{On\+Scene\+Change} (\hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{Scene\+Type} next\+Scene)
+\begin{DoxyCompactList}\small\item\em シーンを変更します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+画面を管理します。
+
+
+
+\subsection{構築子と解体子}
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection[{\texorpdfstring{Scene\+Manager()}{SceneManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Manager\+::\+Scene\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_manager_a52085e6737c23b491c228e86781af808}{}\label{class_scene_manager_a52085e6737c23b491c228e86781af808}
+
+
+新しい \hyperlink{class_scene_manager}{Scene\+Manager} オブジェクトを初期化します。
+
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\index{Scene\+Manager@{Scene\+Manager}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection[{\texorpdfstring{Scene\+Manager(\+Scene\+Type next\+Scene)}{SceneManager(SceneType nextScene)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Manager\+::\+Scene\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Type}}]{next\+Scene}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_manager_a3ac7c1263eefc696a69c8c570ba481b0}{}\label{class_scene_manager_a3ac7c1263eefc696a69c8c570ba481b0}
+
+
+新しい \hyperlink{class_scene_manager}{Scene\+Manager} オブジェクトを初期化します。
+
+
+\begin{DoxyParams}{引数}
+{\em next\+Scene} & 最初のシーンを表す Scene\+Type 列挙体の値\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Scene\+Base.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+\textcolor{comment}{// 最初のシーンをタイトルシーンに設定}
+\hyperlink{class_scene_manager}{SceneManager} MySceneManager \{ ST\_Title \};
+\end{DoxyCode}
+ 
+
+\subsection{関数詳解}
+\index{Scene\+Manager@{Scene\+Manager}!Draw@{Draw}}
+\index{Draw@{Draw}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection[{\texorpdfstring{Draw() const }{Draw() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Manager\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_scene_manager_ab1da7cddc28c54d6a8dc9b91d3c94a6c}{}\label{class_scene_manager_ab1da7cddc28c54d6a8dc9b91d3c94a6c}
+
+
+シーンを描画します。
+
+\index{Scene\+Manager@{Scene\+Manager}!On\+Scene\+Change@{On\+Scene\+Change}}
+\index{On\+Scene\+Change@{On\+Scene\+Change}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection[{\texorpdfstring{On\+Scene\+Change(\+Scene\+Type next\+Scene)}{OnSceneChange(SceneType nextScene)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Manager\+::\+On\+Scene\+Change (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Type}}]{next\+Scene}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_manager_a1defdb68759e3d118f91d57f49425167}{}\label{class_scene_manager_a1defdb68759e3d118f91d57f49425167}
+
+
+シーンを変更します。
+
+
+\begin{DoxyParams}{引数}
+{\em next\+Scene} & 次のシーンを表す Scene\+Type 列挙体の値\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Scene\+Base.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+\hyperlink{class_scene_manager}{SceneManager} MySceneManager;
+\textcolor{comment}{// タイトルシーンに切り替え}
+MySceneManager.\hyperlink{class_scene_manager_a1defdb68759e3d118f91d57f49425167}{OnSceneChange}(ST\_Title);
+\end{DoxyCode}
+ \index{Scene\+Manager@{Scene\+Manager}!Update@{Update}}
+\index{Update@{Update}!Scene\+Manager@{Scene\+Manager}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Manager\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}{}\label{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}
+
+
+シーンを更新します。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_scene_base_8h}{Scene\+Base.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Scene\+Manager.\+cpp\end{DoxyCompactItemize}

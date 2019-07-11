@@ -1,0 +1,85 @@
+\hypertarget{_work_queue_class_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue\+Class.h ファイル}
+\label{_work_queue_class_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue\+Class.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Work\+Queue\+Class.\+h}}
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_utility_1_1_work_queue_base}{Utility\+::\+Work\+Queue\+Base$<$ Ret\+Type, Arg\+Types $>$}
+\begin{DoxyCompactList}\small\item\em 関数をリスト管理し、実行できるようにします。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef Work\+Queue\+Base$<$ void $>$ \hyperlink{_work_queue_class_8h_a3cd42fad38ea5656e971d1aa9480aeda}{Utility\+::\+Work\+Queue}
+\begin{DoxyCompactList}\small\item\em 関数をリスト管理し、実行できるようにします。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_work_queue_class_8h}{Work\+Queue\+Class.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 関数をリスト管理し、実行できるようにします。 名前空間\+: Utility 使用例\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_work_queue_class_8h}{WorkQueueClass.h}"}
+
+\textcolor{keyword}{using namespace }\hyperlink{namespace_utility}{Utility};
+
+\textcolor{keywordtype}{void} SomeFunction() \{
+  printf(\textcolor{stringliteral}{"SomeFunction is called!\(\backslash\)n"});
+\}
+
+\textcolor{keyword}{class }MyTask \{
+  \textcolor{keywordtype}{int} Flames;
+\textcolor{keyword}{public}:
+  MyTask() : Flames(0) \{
+
+  \}
+
+  \textcolor{keywordtype}{bool} operator()() \{
+      Flames++;
+      printf(\textcolor{stringliteral}{"MyTask : %d\(\backslash\)n"}, Flames);
+      \textcolor{keywordflow}{return} Flames >= 10;
+  \}
+\};
+
+\textcolor{keywordtype}{int} main() \{
+  \hyperlink{class_utility_1_1_work_queue_base}{WorkQueue} MyWorkQueue;
+  MyWorkQueue.\hyperlink{class_utility_1_1_work_queue_base_a4ecb958dcd62ae825d554989ae42de41}{Enqueue}([]() \{ printf(\textcolor{stringliteral}{"Lambda function is called!\(\backslash\)n"}); \};
+
+  \textcolor{keywordflow}{while} (MyWorkQueue.\hyperlink{class_utility_1_1_work_queue_base_a682eab32915823ad6782116dd173b7bc}{HaveMoreWork}()) \{
+      MyWorkQueue.\hyperlink{class_utility_1_1_work_queue_base_a5c129e5b8605d28bed51f33767cd8af6}{Dequeue}();
+  \}
+
+  \hyperlink{class_utility_1_1_work_queue_base}{WorkQueueBase<bool>} TaskList;
+
+  \textcolor{keywordflow}{while} (TaskList.\hyperlink{class_utility_1_1_work_queue_base_a682eab32915823ad6782116dd173b7bc}{HaveMoreWork}()) \{
+      \textcolor{keywordflow}{if} (TaskList.\hyperlink{class_utility_1_1_work_queue_base_ab8384746b144ee2225ded569371a2437}{RunWork}()) \{
+          MyWorkQueue.\hyperlink{class_utility_1_1_work_queue_base_a9be74bbf9df0c7bd46de3810567d7b8e}{Pop}();
+      \}
+  \}
+
+  \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ 出力\+: 
+\begin{DoxyCode}
+SomeFunction is called!
+Lambda \textcolor{keyword}{function} is called!
+Mytask : 1
+Mytask : 2
+Mytask : 3
+Mytask : 4
+Mytask : 5
+Mytask : 6
+Mytask : 7
+Mytask : 8
+Mytask : 9
+Mytask : 10
+\end{DoxyCode}
+ 最終更新\+: \subsubsection*{2016/07/22 }
+
+\subsection{型定義詳解}
+\index{Work\+Queue\+Class.\+h@{Work\+Queue\+Class.\+h}!Work\+Queue@{Work\+Queue}}
+\index{Work\+Queue@{Work\+Queue}!Work\+Queue\+Class.\+h@{Work\+Queue\+Class.\+h}}
+\subsubsection[{\texorpdfstring{Work\+Queue}{WorkQueue}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Work\+Queue\+Base$<$void$>$ {\bf Utility\+::\+Work\+Queue}}\hypertarget{_work_queue_class_8h_file_a3cd42fad38ea5656e971d1aa9480aeda}{}\label{_work_queue_class_8h_file_a3cd42fad38ea5656e971d1aa9480aeda}
+
+
+関数をリスト管理し、実行できるようにします。
+

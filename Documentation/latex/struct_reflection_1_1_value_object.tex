@@ -1,0 +1,88 @@
+\hypertarget{struct_reflection_1_1_value_object}{}\section{Reflection\+:\+:Value\+Object 構造体}
+\label{struct_reflection_1_1_value_object}\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+
+
+任意型の値を保持することができるクラス 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ Value\+Holder\+Base $>$ {\bfseries P\+Value\+Holder\+Base}\hypertarget{struct_reflection_1_1_value_object_a71dff8a994aca6d289c178149b262cad}{}\label{struct_reflection_1_1_value_object_a71dff8a994aca6d289c178149b262cad}
+
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}{Value\+Object} ()
+\begin{DoxyCompactList}\small\item\em 空の値を保持する \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{struct_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}{Value\+Object} (Type val)
+\begin{DoxyCompactList}\small\item\em 指定された値を保持する \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\Type \hyperlink{struct_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}{Get} ()
+\begin{DoxyCompactList}\small\item\em このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{struct_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}{operator Type} ()
+\begin{DoxyCompactList}\small\item\em このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+任意型の値を保持することができるクラス
+
+
+
+\subsection{構築子と解体子}
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object()}{ValueObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}{}\label{struct_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}
+
+
+空の値を保持する \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object(\+Type val)}{ValueObject(Type val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{Type}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}{}\label{struct_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}
+
+
+指定された値を保持する \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Get@{Get}}
+\index{Get@{Get}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Get()}{Get()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Type Reflection\+::\+Value\+Object\+::\+Get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}{}\label{struct_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}
+
+
+このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!operator Type@{operator Type}}
+\index{operator Type@{operator Type}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{operator Type()}{operator Type()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Reflection\+::\+Value\+Object\+::operator Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{struct_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}{}\label{struct_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}
+
+
+このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\end{DoxyCompactItemize}

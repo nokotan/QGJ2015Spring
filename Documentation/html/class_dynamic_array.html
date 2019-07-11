@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QGJ2015Spring: DynamicArray&lt; Type &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="亀甲.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QGJ2015Spring
+   &#160;<span id="projectnumber">ver 0.1.1</span>
+   </div>
+   <div id="projectbrief">Library for DX Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_dynamic_array.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_dynamic_array-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DynamicArray&lt; Type &gt; クラステンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>配列に対して安全に要素にアクセスする方法と反復子を用意します。 
+ <a href="class_dynamic_array.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_base_unit_8h_source.html">BaseUnit.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array_1_1_iterator.html">Iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> の要素を順方向に走査するイテレータを実装します。 <a href="class_dynamic_array_1_1_iterator.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a963b26e158a87cd8b81be8dfae867f27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a963b26e158a87cd8b81be8dfae867f27">DynamicArray</a> (Type *<a class="el" href="class_dynamic_array.html#a4d38117f244e69a7eb5721f618a1d26b">data</a>, int <a class="el" href="class_dynamic_array.html#a9b9ebf1cb333a8a582e2b5712c502e61">size</a>)</td></tr>
+<tr class="memdesc:a963b26e158a87cd8b81be8dfae867f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">動的に割り当てた配列とその大きさから <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> オブジェクトを初期化します。 <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> オブジェクトを使って要素を変更すると、元の配列にもその変更が適用されます。 渡された配列を <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> 内部で自動的に解放することはないので注意が必要です。  <a href="#a963b26e158a87cd8b81be8dfae867f27">[詳解]</a><br /></td></tr>
+<tr class="separator:a963b26e158a87cd8b81be8dfae867f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9ebf1cb333a8a582e2b5712c502e61"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a9b9ebf1cb333a8a582e2b5712c502e61">size</a> () const </td></tr>
+<tr class="memdesc:a9b9ebf1cb333a8a582e2b5712c502e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を取得します。 <a href="#a9b9ebf1cb333a8a582e2b5712c502e61">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b9ebf1cb333a8a582e2b5712c502e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d38117f244e69a7eb5721f618a1d26b"><td class="memItemLeft" align="right" valign="top">Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a4d38117f244e69a7eb5721f618a1d26b">data</a> () const </td></tr>
+<tr class="memdesc:a4d38117f244e69a7eb5721f618a1d26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部の配列データを取得します。 <a href="#a4d38117f244e69a7eb5721f618a1d26b">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d38117f244e69a7eb5721f618a1d26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4a10a09d1930bff5d9503728cc3359"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a5b4a10a09d1930bff5d9503728cc3359">at</a> (int index)</td></tr>
+<tr class="memdesc:a5b4a10a09d1930bff5d9503728cc3359"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素の値への参照を取得します。 <a href="#a5b4a10a09d1930bff5d9503728cc3359">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b4a10a09d1930bff5d9503728cc3359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f2c6bdbb12c76adbc1338323b50165"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#ac4f2c6bdbb12c76adbc1338323b50165">Item</a> (int index)</td></tr>
+<tr class="memdesc:ac4f2c6bdbb12c76adbc1338323b50165"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素の値への参照を取得します。 <a href="#ac4f2c6bdbb12c76adbc1338323b50165">[詳解]</a><br /></td></tr>
+<tr class="separator:ac4f2c6bdbb12c76adbc1338323b50165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a636edafe46560e08c9a940bfba152d"><td class="memItemLeft" align="right" valign="top">Type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a6a636edafe46560e08c9a940bfba152d">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a6a636edafe46560e08c9a940bfba152d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した要素の値への参照を取得します。 <a href="#a6a636edafe46560e08c9a940bfba152d">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a636edafe46560e08c9a940bfba152d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5dbf0d8fd66e53da7f6c239a9b3ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamic_array_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#a5f5dbf0d8fd66e53da7f6c239a9b3ff8">begin</a> ()</td></tr>
+<tr class="memdesc:a5f5dbf0d8fd66e53da7f6c239a9b3ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">最初の要素を示すイテレータを取得します。 <a href="#a5f5dbf0d8fd66e53da7f6c239a9b3ff8">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f5dbf0d8fd66e53da7f6c239a9b3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8fb9e4c45de416a630db0198ed52f60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dynamic_array_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_array.html#ac8fb9e4c45de416a630db0198ed52f60">end</a> ()</td></tr>
+<tr class="memdesc:ac8fb9e4c45de416a630db0198ed52f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">最後の要素を示すイテレータを取得します。 <a href="#ac8fb9e4c45de416a630db0198ed52f60">[詳解]</a><br /></td></tr>
+<tr class="separator:ac8fb9e4c45de416a630db0198ed52f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;class Type&gt;<br />
+class DynamicArray&lt; Type &gt;</h3>
+
+<p>配列に対して安全に要素にアクセスする方法と反復子を用意します。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a class="anchor" id="a963b26e158a87cd8b81be8dfae867f27"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::<a class="el" href="class_dynamic_array.html">DynamicArray</a> </td>
+          <td>(</td>
+          <td class="paramtype">Type *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>動的に割り当てた配列とその大きさから <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> オブジェクトを初期化します。 <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> オブジェクトを使って要素を変更すると、元の配列にもその変更が適用されます。 渡された配列を <a class="el" href="class_dynamic_array.html" title="配列に対して安全に要素にアクセスする方法と反復子を用意します。">DynamicArray</a> 内部で自動的に解放することはないので注意が必要です。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>反復子を用意させたい配列</td></tr>
+    <tr><td class="paramname">size</td><td>反復子を用意させたい配列の要素数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>使用例: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> *pArray = <span class="keyword">new</span> <span class="keywordtype">int</span>[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };</div><div class="line">{</div><div class="line">    <a class="code" href="class_dynamic_array.html">DynamicArray&lt;int&gt;</a> dArray { pArray, 10 };</div><div class="line">    <span class="comment">// 普通の配列みたいに要素を変更</span></div><div class="line">    <span class="comment">// pArray[0] が 10 に書き換わる。</span></div><div class="line">    dArray[0] = 10;</div><div class="line"></div><div class="line">    <span class="comment">// range-based for も使える</span></div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span>&amp; val : dArray) {</div><div class="line">        printf(<span class="stringliteral">&quot;%d\n&quot;</span>, val);</div><div class="line">    }</div><div class="line">} </div><div class="line"><span class="comment">// スコープを抜けても、DynamicArray によって pArray は解放されないので、</span></div><div class="line"><span class="comment">// プログラマが配列を解放しなければならない。 </span></div><div class="line"><span class="keyword">delete</span>[] pArray;</div></div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a5b4a10a09d1930bff5d9503728cc3359"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type&amp; <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した要素の値への参照を取得します。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5f5dbf0d8fd66e53da7f6c239a9b3ff8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamic_array_1_1_iterator.html">Iterator</a> <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最初の要素を示すイテレータを取得します。</p>
+<p>使用例: class <a class="el" href="class_dynamic_array_1_1_iterator.html">DynamicArray&lt;Type&amp;gt::Iterator</a> を参照のこと。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4d38117f244e69a7eb5721f618a1d26b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type* <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>内部の配列データを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8fb9e4c45de416a630db0198ed52f60"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dynamic_array_1_1_iterator.html">Iterator</a> <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最後の要素を示すイテレータを取得します。</p>
+<p>使用例: class <a class="el" href="class_dynamic_array_1_1_iterator.html">DynamicArray&lt;Type&amp;gt::Iterator</a> を参照のこと。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac4f2c6bdbb12c76adbc1338323b50165"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type&amp; <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::Item </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した要素の値への参照を取得します。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a636edafe46560e08c9a940bfba152d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type&amp; <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した要素の値への参照を取得します。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>アクセスする配列要素のインデックス。0 以上、要素数未満である必要があります。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b9ebf1cb333a8a582e2b5712c502e61"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_dynamic_array.html">DynamicArray</a>&lt; Type &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素数を取得します。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/Owner/Documents/Visual Studio 2013/Projects/QGJ2015Spring/<a class="el" href="_base_unit_8h_source.html">BaseUnit.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_dynamic_array.html">DynamicArray</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

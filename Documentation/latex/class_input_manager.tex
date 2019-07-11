@@ -1,0 +1,216 @@
+\hypertarget{class_input_manager}{}\section{Input\+Manager クラス}
+\label{class_input_manager}\index{Input\+Manager@{Input\+Manager}}
+
+
+エミュレート機能を備えた、ジョイパッド入力対応の入力管理クラス。 
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_input_manager_a9d59fc26c033096c70554b725a5b34fa}{Initialize\+Data} ()
+\begin{DoxyCompactList}\small\item\em 内部データを初期化します。アプリケーション開始時は自動的に一度呼ばれるので、アプリケーション開始時に呼び出す必要はありません。\end{DoxyCompactList}\item 
+void \hyperlink{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}{Update} ()
+\begin{DoxyCompactList}\small\item\em 入力状態を更新します。１フレームを目安に呼び出してください。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_a4e2c0f85c865760531bc373d71180630}{Load\+Emulate\+File} (const char filename\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em エミュレートファイルを読み込みます。\end{DoxyCompactList}\item 
+void \hyperlink{class_input_manager_aed453ee1a1b372ff7ae1c9204272f8a3}{Start\+Emulate} ()
+\begin{DoxyCompactList}\small\item\em 入力のエミュレートを開始します。 Key\+Pressed, Key\+Pressed\+Once, Key\+Pressed\+Flame 関数に影響します。 \end{DoxyCompactList}\item 
+void \hyperlink{class_input_manager_a6658574be74485579cbd99e56b6abcec}{End\+Emulate} ()
+\begin{DoxyCompactList}\small\item\em 入力のエミュレートを終了します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_a3f15928d9522586da1b47a2c9a65e453}{Key\+Pressed} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 特定のキー入力状態を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_abcd73b9fee163ea92ca73c01b149cb18}{Key\+Typed} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 特定のキー入力状態を取得します。タイピング向けです。\end{DoxyCompactList}\item 
+int \hyperlink{class_input_manager_a3b9b6280d613b3441fa4a8bac1cef502}{Joy\+Pad\+Pressed} (int keycode)
+\begin{DoxyCompactList}\small\item\em 特定のジョイパッド入力状態を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_a13380875904b6ad54e37f2c727dbe08a}{Key\+Pressed\+Once} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 特定のキーが押された瞬間かどうかを取得します。\end{DoxyCompactList}\item 
+int \hyperlink{class_input_manager_a38147ee44dd913964543d91ac41556c6}{Key\+Pressed\+Flame} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 特定のキーが押されているフレーム数を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_aaa52e91c7a5816ab8680d5620210e66a}{Key\+Pressed\+\_\+\+Actual} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 実際のキー入力状態を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_a633f4192164eb3ca9e48d9d922df5b6a}{Key\+Pressed\+Once\+\_\+\+Actual} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 実際のキーが押された瞬間かどうかを取得します。\end{DoxyCompactList}\item 
+int \hyperlink{class_input_manager_a119cd284128ec64ed6cad6479fe246d3}{Key\+Pressed\+Flame\+\_\+\+Actual} (int keycode) const 
+\begin{DoxyCompactList}\small\item\em 実際のキーが押されているフレーム数を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_input_manager_ae4286b0b732204cc2e7f287fe10c683e}{Get\+Reset\+Request\+Status} () const 
+\begin{DoxyCompactList}\small\item\em \mbox{[}2015年合宿仕様準拠\mbox{]} リセットキーコマンド（\mbox{[}E\mbox{]}\mbox{[}S\mbox{]}\mbox{[}C\mbox{]} Or \mbox{[}↓\mbox{]}\mbox{[}3\mbox{]}\mbox{[}5\mbox{]}\mbox{[}6\mbox{]}\mbox{[}7\mbox{]}\mbox{[}8\mbox{]}）の状態を取得します。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_input_manager}{Input\+Manager} \& {\bfseries Instance} ()\hypertarget{class_input_manager_a4b36379b1381374a534e42c3c3effbe0}{}\label{class_input_manager_a4b36379b1381374a534e42c3c3effbe0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+エミュレート機能を備えた、ジョイパッド入力対応の入力管理クラス。
+
+
+
+\subsection{関数詳解}
+\index{Input\+Manager@{Input\+Manager}!End\+Emulate@{End\+Emulate}}
+\index{End\+Emulate@{End\+Emulate}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{End\+Emulate()}{EndEmulate()}}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::\+End\+Emulate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_a6658574be74485579cbd99e56b6abcec}{}\label{class_input_manager_a6658574be74485579cbd99e56b6abcec}
+
+
+入力のエミュレートを終了します。
+
+\index{Input\+Manager@{Input\+Manager}!Get\+Reset\+Request\+Status@{Get\+Reset\+Request\+Status}}
+\index{Get\+Reset\+Request\+Status@{Get\+Reset\+Request\+Status}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Reset\+Request\+Status() const }{GetResetRequestStatus() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Get\+Reset\+Request\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_ae4286b0b732204cc2e7f287fe10c683e}{}\label{class_input_manager_ae4286b0b732204cc2e7f287fe10c683e}
+
+
+\mbox{[}2015年合宿仕様準拠\mbox{]} リセットキーコマンド（\mbox{[}E\mbox{]}\mbox{[}S\mbox{]}\mbox{[}C\mbox{]} Or \mbox{[}↓\mbox{]}\mbox{[}3\mbox{]}\mbox{[}5\mbox{]}\mbox{[}6\mbox{]}\mbox{[}7\mbox{]}\mbox{[}8\mbox{]}）の状態を取得します。 
+
+\index{Input\+Manager@{Input\+Manager}!Initialize\+Data@{Initialize\+Data}}
+\index{Initialize\+Data@{Initialize\+Data}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Initialize\+Data()}{InitializeData()}}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::\+Initialize\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_a9d59fc26c033096c70554b725a5b34fa}{}\label{class_input_manager_a9d59fc26c033096c70554b725a5b34fa}
+
+
+内部データを初期化します。アプリケーション開始時は自動的に一度呼ばれるので、アプリケーション開始時に呼び出す必要はありません。
+
+\index{Input\+Manager@{Input\+Manager}!Joy\+Pad\+Pressed@{Joy\+Pad\+Pressed}}
+\index{Joy\+Pad\+Pressed@{Joy\+Pad\+Pressed}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Joy\+Pad\+Pressed(int keycode)}{JoyPadPressed(int keycode)}}]{\setlength{\rightskip}{0pt plus 5cm}int Input\+Manager\+::\+Joy\+Pad\+Pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_a3b9b6280d613b3441fa4a8bac1cef502}{}\label{class_input_manager_a3b9b6280d613b3441fa4a8bac1cef502}
+
+
+特定のジョイパッド入力状態を取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed(int keycode) const }{KeyPressed(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Key\+Pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_a3f15928d9522586da1b47a2c9a65e453}{}\label{class_input_manager_a3f15928d9522586da1b47a2c9a65e453}
+
+
+特定のキー入力状態を取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed\+\_\+\+Actual@{Key\+Pressed\+\_\+\+Actual}}
+\index{Key\+Pressed\+\_\+\+Actual@{Key\+Pressed\+\_\+\+Actual}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed\+\_\+\+Actual(int keycode) const }{KeyPressed_Actual(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Key\+Pressed\+\_\+\+Actual (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_aaa52e91c7a5816ab8680d5620210e66a}{}\label{class_input_manager_aaa52e91c7a5816ab8680d5620210e66a}
+
+
+実際のキー入力状態を取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed\+Flame@{Key\+Pressed\+Flame}}
+\index{Key\+Pressed\+Flame@{Key\+Pressed\+Flame}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed\+Flame(int keycode) const }{KeyPressedFlame(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Input\+Manager\+::\+Key\+Pressed\+Flame (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_a38147ee44dd913964543d91ac41556c6}{}\label{class_input_manager_a38147ee44dd913964543d91ac41556c6}
+
+
+特定のキーが押されているフレーム数を取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed\+Flame\+\_\+\+Actual@{Key\+Pressed\+Flame\+\_\+\+Actual}}
+\index{Key\+Pressed\+Flame\+\_\+\+Actual@{Key\+Pressed\+Flame\+\_\+\+Actual}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed\+Flame\+\_\+\+Actual(int keycode) const }{KeyPressedFlame_Actual(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Input\+Manager\+::\+Key\+Pressed\+Flame\+\_\+\+Actual (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_a119cd284128ec64ed6cad6479fe246d3}{}\label{class_input_manager_a119cd284128ec64ed6cad6479fe246d3}
+
+
+実際のキーが押されているフレーム数を取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed\+Once@{Key\+Pressed\+Once}}
+\index{Key\+Pressed\+Once@{Key\+Pressed\+Once}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed\+Once(int keycode) const }{KeyPressedOnce(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Key\+Pressed\+Once (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_a13380875904b6ad54e37f2c727dbe08a}{}\label{class_input_manager_a13380875904b6ad54e37f2c727dbe08a}
+
+
+特定のキーが押された瞬間かどうかを取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Pressed\+Once\+\_\+\+Actual@{Key\+Pressed\+Once\+\_\+\+Actual}}
+\index{Key\+Pressed\+Once\+\_\+\+Actual@{Key\+Pressed\+Once\+\_\+\+Actual}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Pressed\+Once\+\_\+\+Actual(int keycode) const }{KeyPressedOnce_Actual(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Key\+Pressed\+Once\+\_\+\+Actual (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_a633f4192164eb3ca9e48d9d922df5b6a}{}\label{class_input_manager_a633f4192164eb3ca9e48d9d922df5b6a}
+
+
+実際のキーが押された瞬間かどうかを取得します。
+
+\index{Input\+Manager@{Input\+Manager}!Key\+Typed@{Key\+Typed}}
+\index{Key\+Typed@{Key\+Typed}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Key\+Typed(int keycode) const }{KeyTyped(int keycode) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Key\+Typed (
+\begin{DoxyParamCaption}
+\item[{int}]{keycode}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_input_manager_abcd73b9fee163ea92ca73c01b149cb18}{}\label{class_input_manager_abcd73b9fee163ea92ca73c01b149cb18}
+
+
+特定のキー入力状態を取得します。タイピング向けです。
+
+\index{Input\+Manager@{Input\+Manager}!Load\+Emulate\+File@{Load\+Emulate\+File}}
+\index{Load\+Emulate\+File@{Load\+Emulate\+File}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Load\+Emulate\+File(const char filename[])}{LoadEmulateFile(const char filename[])}}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Manager\+::\+Load\+Emulate\+File (
+\begin{DoxyParamCaption}
+\item[{const char}]{filename\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_a4e2c0f85c865760531bc373d71180630}{}\label{class_input_manager_a4e2c0f85c865760531bc373d71180630}
+
+
+エミュレートファイルを読み込みます。
+
+\index{Input\+Manager@{Input\+Manager}!Start\+Emulate@{Start\+Emulate}}
+\index{Start\+Emulate@{Start\+Emulate}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Start\+Emulate()}{StartEmulate()}}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::\+Start\+Emulate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_aed453ee1a1b372ff7ae1c9204272f8a3}{}\label{class_input_manager_aed453ee1a1b372ff7ae1c9204272f8a3}
+
+
+入力のエミュレートを開始します。 Key\+Pressed, Key\+Pressed\+Once, Key\+Pressed\+Flame 関数に影響します。 
+
+\index{Input\+Manager@{Input\+Manager}!Update@{Update}}
+\index{Update@{Update}!Input\+Manager@{Input\+Manager}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Manager\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}{}\label{class_input_manager_aa5480931dba2720e7d80dd00a53adae0}
+
+
+入力状態を更新します。１フレームを目安に呼び出してください。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_input_manager_8h}{Input\+Manager.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Input\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,326 @@
+\hypertarget{class_map}{}\section{Map$<$ Map\+Type $>$ クラステンプレート}
+\label{class_map}\index{Map$<$ Map\+Type $>$@{Map$<$ Map\+Type $>$}}
+
+
+自由にサイズが変更できるタイルマップを実装します。 
+
+
+
+
+{\ttfamily \#include $<$Base\+Unit.\+h$>$}
+
+
+
+\hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor$<$ Map\+Type $>$}を継承しています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_a1d025d39c20c7cffe9c85607965bff5c}{Map} ()
+\begin{DoxyCompactList}\small\item\em 空のタイルマップを作成します。\end{DoxyCompactList}\item 
+\hyperlink{class_map_a8fd7da75b5b4440e1c7df6e0c345ef10}{Map} (int width, int height)
+\begin{DoxyCompactList}\small\item\em 指定した大きさのタイルマップを作成します。\end{DoxyCompactList}\item 
+\hyperlink{class_map_a60d3d60f11ce569b7d11a1434a767a4c}{Map} (int width, int height, Map\+Type \&val)
+\begin{DoxyCompactList}\small\item\em 指定した大きさのタイルマップを作成し、指定した値で埋めます。\end{DoxyCompactList}\item 
+\hyperlink{class_map_aa4a58a3e9c58e2c9b1f56947f19670cb}{Map} (int width, int height, Map\+Type \&\&val)
+\begin{DoxyCompactList}\small\item\em 指定した大きさのタイルマップを作成し、指定した値で埋めます。\end{DoxyCompactList}\item 
+{\bfseries Map} (\hyperlink{class_map}{Map} \&)=delete\hypertarget{class_map_a1c79b2a29e17d9db7355b24946d15488}{}\label{class_map_a1c79b2a29e17d9db7355b24946d15488}
+
+\item 
+{\footnotesize template$<$size\+\_\+t width, size\+\_\+t height$>$ }\\\hyperlink{class_map_ae6696f8eaad102abae658cd8af41cb46}{Map} (Map\+Type(\&tiles)\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, bool forceclone=false)
+\begin{DoxyCompactList}\small\item\em 既存の２次元配列からタイルマップを作成します。\end{DoxyCompactList}\item 
+void \hyperlink{class_map_a17408881d7e39d5e4ebd2ad5ea3c6034}{Create} (int width, int height, Map\+Type $\ast$$\ast$source=nullptr, bool forceclone=false)
+\begin{DoxyCompactList}\small\item\em 指定した大きさのタイルマップを作成します。\end{DoxyCompactList}\item 
+void \hyperlink{class_map_aac3da2d34501dedf52ec6d48c9662111}{Fill} (Map\+Type \&val)
+\begin{DoxyCompactList}\small\item\em 現在のマップを指定した値で埋めます。\end{DoxyCompactList}\item 
+void \hyperlink{class_map_ae92787109f1e8e90a387f2900c3ccd59}{Fill} (Map\+Type \&\&val)
+\begin{DoxyCompactList}\small\item\em 現在のマップを指定した値で埋めます。\end{DoxyCompactList}\item 
+int \hyperlink{class_map_af83f6e34a7847c4083f8c9771343a07b}{Cols} () override
+\begin{DoxyCompactList}\small\item\em 列数を取得します。\end{DoxyCompactList}\item 
+int \hyperlink{class_map_a5636f15af5669a481744deb7ea297ef3}{Rows} () override
+\begin{DoxyCompactList}\small\item\em 行数を取得します。\end{DoxyCompactList}\item 
+void \hyperlink{class_map_a1710dc141f0ffecd0f6cd10f934b490f}{Set\+Tile} (Map\+Type \&tile, int x, int y) override
+\begin{DoxyCompactList}\small\item\em 指定した場所にマップチップを配置します。\end{DoxyCompactList}\item 
+Map\+Type \& \hyperlink{class_map_a22ce1bfe32e5a5ac13ec6af75df9d214}{Get\+Tile} (int x, int y) override
+\begin{DoxyCompactList}\small\item\em 指定した場所にあるマップチップを取得します。\end{DoxyCompactList}\item 
+\hyperlink{class_dynamic_array}{Dynamic\+Array}$<$ Map\+Type $>$ \hyperlink{class_map_adb5c1e607bbfa292568c915c4aae259f}{operator\mbox{[}$\,$\mbox{]}} (int x)
+\begin{DoxyCompactList}\small\item\em 指定した場所にあるマップチップを取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_map}{Map} {\bfseries Default\+Map} = \hyperlink{class_map}{Map}$<$Type$>$()\hypertarget{class_map_a698ab178b7ee8e0d762f565a582c3044}{}\label{class_map_a698ab178b7ee8e0d762f565a582c3044}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Map\+Type$>$\\*
+class Map$<$ Map\+Type $>$}
+
+自由にサイズが変更できるタイルマップを実装します。
+
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// int[120][30] の２次元配列を作成し、-1で埋める}
+\hyperlink{class_map}{Map<int>} MyMap \{ 120, 30, -1 \};
+\textcolor{comment}{// [] を使って配列の内容を更新する。}
+MyMap[30][20] = 120;
+\textcolor{comment}{// [] を使って配列の内容を取得する。}
+\textcolor{keywordtype}{int} val = MyMap[20][20];
+
+printf(\textcolor{stringliteral}{"MyMap[20][20] = %d\(\backslash\)n"}, val);
+\textcolor{comment}{// 出力:}
+\textcolor{comment}{// MyMap[20][20] = -1}
+\end{DoxyCode}
+ 
+
+\subsection{構築子と解体子}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map()}{Map()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ {\bf Map}$<$ Map\+Type $>$\+::{\bf Map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_a1d025d39c20c7cffe9c85607965bff5c}{}\label{class_map_a1d025d39c20c7cffe9c85607965bff5c}
+
+
+空のタイルマップを作成します。
+
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(int width, int height)}{Map(int width, int height)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ {\bf Map}$<$ Map\+Type $>$\+::{\bf Map} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_a8fd7da75b5b4440e1c7df6e0c345ef10}{}\label{class_map_a8fd7da75b5b4440e1c7df6e0c345ef10}
+
+
+指定した大きさのタイルマップを作成します。
+
+
+\begin{DoxyParams}{引数}
+{\em width} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの幅\\
+\hline
+{\em height} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの高さ\\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(int width, int height, Map\+Type \&val)}{Map(int width, int height, MapType &val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ {\bf Map}$<$ Map\+Type $>$\+::{\bf Map} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Map\+Type \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_a60d3d60f11ce569b7d11a1434a767a4c}{}\label{class_map_a60d3d60f11ce569b7d11a1434a767a4c}
+
+
+指定した大きさのタイルマップを作成し、指定した値で埋めます。
+
+
+\begin{DoxyParams}{引数}
+{\em width} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの幅\\
+\hline
+{\em height} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの高さ\\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(int width, int height, Map\+Type \&\&val)}{Map(int width, int height, MapType &&val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ {\bf Map}$<$ Map\+Type $>$\+::{\bf Map} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Map\+Type \&\&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_aa4a58a3e9c58e2c9b1f56947f19670cb}{}\label{class_map_aa4a58a3e9c58e2c9b1f56947f19670cb}
+
+
+指定した大きさのタイルマップを作成し、指定した値で埋めます。
+
+
+\begin{DoxyParams}{引数}
+{\em width} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの幅\\
+\hline
+{\em height} & 新しく作成する \hyperlink{class_map}{Map} オブジェクトの高さ\\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(\+Map\+Type(\&tiles)[width][height], bool forceclone=false)}{Map(MapType(&tiles)[width][height], bool forceclone=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ template$<$size\+\_\+t width, size\+\_\+t height$>$ {\bf Map}$<$ Map\+Type $>$\+::{\bf Map} (
+\begin{DoxyParamCaption}
+\item[{Map\+Type(\&)}]{tiles\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, }
+\item[{bool}]{forceclone = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_ae6696f8eaad102abae658cd8af41cb46}{}\label{class_map_ae6696f8eaad102abae658cd8af41cb46}
+
+
+既存の２次元配列からタイルマップを作成します。
+
+
+\begin{DoxyParams}{引数}
+{\em tiles} & マップタイルを作成するもとの２次元配列\\
+\hline
+{\em forceclone} & コピーを強制するかどうか。コピーを行わなければ渡された２次元配列とこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。コピーを行うと渡された２次元配列とこのタイルマップは独立したもの となり、互いに影響を与えません。既定ではこのオプションは false に設定されます。 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\index{Map@{Map}!Cols@{Cols}}
+\index{Cols@{Cols}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Cols() override}{Cols() override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ int {\bf Map}$<$ Map\+Type $>$\+::Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_map_af83f6e34a7847c4083f8c9771343a07b}{}\label{class_map_af83f6e34a7847c4083f8c9771343a07b}
+
+
+列数を取得します。
+
+
+
+\hyperlink{class_i_map_tile_layor_a41b142a96432b5de2da71e833006930f}{I\+Map\+Tile\+Layor$<$ Map\+Type $>$}を実装しています。
+
+\index{Map@{Map}!Create@{Create}}
+\index{Create@{Create}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Create(int width, int height, Map\+Type $\ast$$\ast$source=nullptr, bool forceclone=false)}{Create(int width, int height, MapType **source=nullptr, bool forceclone=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ void {\bf Map}$<$ Map\+Type $>$\+::Create (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{Map\+Type $\ast$$\ast$}]{source = {\ttfamily nullptr}, }
+\item[{bool}]{forceclone = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_a17408881d7e39d5e4ebd2ad5ea3c6034}{}\label{class_map_a17408881d7e39d5e4ebd2ad5ea3c6034}
+
+
+指定した大きさのタイルマップを作成します。
+
+
+\begin{DoxyParams}{引数}
+{\em width} & 新しく作成するタイルマップの幅\\
+\hline
+{\em height} & 新しく作成するタイルマップの高さ\\
+\hline
+{\em tiles} & マップタイルのコピーもとの２次元配列。nullptr を渡すと、内部で新しいタイルマップを作成します。 既定では、この引数に nullptr が設定されます。 \\
+\hline
+{\em forceclone} & コピーを強制するかどうか。コピーを行わなければ tiles で渡された２次元配列とこのタイルマップの間で共有され、 一方を変更するともう一方も変更されます。コピーを行うと tiles で渡された２次元配列とこのタイルマップは独立したもの となり、互いに影響を与えません。tiles に nullptr を渡した場合、このオプションは無視されます。 既定ではこのオプションは false に設定されます。 \\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!Fill@{Fill}}
+\index{Fill@{Fill}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Fill(\+Map\+Type \&val)}{Fill(MapType &val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ void {\bf Map}$<$ Map\+Type $>$\+::Fill (
+\begin{DoxyParamCaption}
+\item[{Map\+Type \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_aac3da2d34501dedf52ec6d48c9662111}{}\label{class_map_aac3da2d34501dedf52ec6d48c9662111}
+
+
+現在のマップを指定した値で埋めます。
+
+\index{Map@{Map}!Fill@{Fill}}
+\index{Fill@{Fill}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Fill(\+Map\+Type \&\&val)}{Fill(MapType &&val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ void {\bf Map}$<$ Map\+Type $>$\+::Fill (
+\begin{DoxyParamCaption}
+\item[{Map\+Type \&\&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_ae92787109f1e8e90a387f2900c3ccd59}{}\label{class_map_ae92787109f1e8e90a387f2900c3ccd59}
+
+
+現在のマップを指定した値で埋めます。
+
+\index{Map@{Map}!Get\+Tile@{Get\+Tile}}
+\index{Get\+Tile@{Get\+Tile}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Get\+Tile(int x, int y) override}{GetTile(int x, int y) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ Map\+Type\& {\bf Map}$<$ Map\+Type $>$\+::Get\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_map_a22ce1bfe32e5a5ac13ec6af75df9d214}{}\label{class_map_a22ce1bfe32e5a5ac13ec6af75df9d214}
+
+
+指定した場所にあるマップチップを取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em x} & マップチップを配置する場所の列数。0 以上幅未満である必要があります。\\
+\hline
+{\em y} & マップチップを配置する場所の行数。0 以上高さ未満である必要があります。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定した場所にあるマップチップ。x, y のいずれかが範囲外の場合、位置 (0, 0) にあるマップチップを返します。 
+\end{DoxyReturn}
+
+
+\hyperlink{class_i_map_tile_layor_a822f3e55fcc6fe9c97d232f5a59a5271}{I\+Map\+Tile\+Layor$<$ Map\+Type $>$}を実装しています。
+
+\index{Map@{Map}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Map@{Map}}
+\subsubsection[{\texorpdfstring{operator[](int x)}{operator[](int x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ {\bf Dynamic\+Array}$<$Map\+Type$>$ {\bf Map}$<$ Map\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_map_adb5c1e607bbfa292568c915c4aae259f}{}\label{class_map_adb5c1e607bbfa292568c915c4aae259f}
+
+
+指定した場所にあるマップチップを取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em x} & マップチップを配置する場所の列数。0 以上幅未満である必要があります。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定した列数にあるマップチップ。x が範囲外の場合、空の配列を返します。
+\end{DoxyReturn}
+
+
+使用例\+: \hyperlink{class_map}{Map$<$Map\+Type$>$}を参照のこと。 \index{Map@{Map}!Rows@{Rows}}
+\index{Rows@{Rows}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Rows() override}{Rows() override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ int {\bf Map}$<$ Map\+Type $>$\+::Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_map_a5636f15af5669a481744deb7ea297ef3}{}\label{class_map_a5636f15af5669a481744deb7ea297ef3}
+
+
+行数を取得します。
+
+
+
+\hyperlink{class_i_map_tile_layor_a803dba2f9709bc5094b0b1e46c650bbe}{I\+Map\+Tile\+Layor$<$ Map\+Type $>$}を実装しています。
+
+\index{Map@{Map}!Set\+Tile@{Set\+Tile}}
+\index{Set\+Tile@{Set\+Tile}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Set\+Tile(\+Map\+Type \&tile, int x, int y) override}{SetTile(MapType &tile, int x, int y) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Map\+Type$>$ void {\bf Map}$<$ Map\+Type $>$\+::Set\+Tile (
+\begin{DoxyParamCaption}
+\item[{Map\+Type \&}]{tile, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_map_a1710dc141f0ffecd0f6cd10f934b490f}{}\label{class_map_a1710dc141f0ffecd0f6cd10f934b490f}
+
+
+指定した場所にマップチップを配置します。
+
+
+\begin{DoxyParams}{引数}
+{\em tile} & 配置するマップチップ\\
+\hline
+{\em x} & マップチップを配置する場所の列数。0 以上幅未満である必要があります。\\
+\hline
+{\em y} & マップチップを配置する場所の行数。0 以上高さ未満である必要があります。\\
+\hline
+\end{DoxyParams}
+
+
+x, y のいずれかが範囲外の場合、何もしません。 
+
+\hyperlink{class_i_map_tile_layor_ae4f7c41ec2e7bcf34c4b3af67fd020cc}{I\+Map\+Tile\+Layor$<$ Map\+Type $>$}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_base_unit_8h}{Base\+Unit.\+h}\end{DoxyCompactItemize}

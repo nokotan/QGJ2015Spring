@@ -1,0 +1,137 @@
+\hypertarget{class_dynamic_array_1_1_iterator}{}\section{Dynamic\+Array$<$ Type $>$\+:\+:Iterator クラス}
+\label{class_dynamic_array_1_1_iterator}\index{Dynamic\+Array$<$ Type $>$\+::\+Iterator@{Dynamic\+Array$<$ Type $>$\+::\+Iterator}}
+
+
+\hyperlink{class_dynamic_array}{Dynamic\+Array} の要素を順方向に走査するイテレータを実装します。 
+
+
+
+
+{\ttfamily \#include $<$Base\+Unit.\+h$>$}
+
+
+
+iterator$<$ std\+::forward\+\_\+iterator\+\_\+tag, Type $>$を継承しています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dynamic_array_1_1_iterator_a46b8c9ccfaaba3050783ae871fa8ddf0}{Iterator} (const \hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \&obj)=default
+\begin{DoxyCompactList}\small\item\em イテレータをコピーします。\end{DoxyCompactList}\item 
+\hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \& \hyperlink{class_dynamic_array_1_1_iterator_a490ce9a02523d09f66d7995b8fe8f6fc}{operator++} ()
+\begin{DoxyCompactList}\small\item\em イテレータを１つ進めます\end{DoxyCompactList}\item 
+\hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \hyperlink{class_dynamic_array_1_1_iterator_abdb0348b15367467686e168f17080bd9}{operator++} (int)
+\begin{DoxyCompactList}\small\item\em イテレータを１つ進めます\end{DoxyCompactList}\item 
+Type \& \hyperlink{class_dynamic_array_1_1_iterator_a5bd348cd1b665af45f5b591eb63fa602}{operator$\ast$} ()
+\begin{DoxyCompactList}\small\item\em 現在のイテレータの位置の値を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_dynamic_array_1_1_iterator_ab7e083ee8a067de130bf3a48752b05e5}{operator==} (const \hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \&obj)
+\begin{DoxyCompactList}\small\item\em ２つのイテレータが等しいかどうか確かめます。\end{DoxyCompactList}\item 
+bool \hyperlink{class_dynamic_array_1_1_iterator_ac72b09c796d6eb985f28048877a07057}{operator!=} (const \hyperlink{class_dynamic_array_1_1_iterator}{Iterator} \&obj)
+\begin{DoxyCompactList}\small\item\em ２つのイテレータが等しくないかどうか確かめます。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Dynamic\+Array$<$ Type $>$}\hypertarget{class_dynamic_array_1_1_iterator_a23a2c0626e0507062c8d0700fb7473e0}{}\label{class_dynamic_array_1_1_iterator_a23a2c0626e0507062c8d0700fb7473e0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\\*
+class Dynamic\+Array$<$ Type $>$\+::\+Iterator}
+
+\hyperlink{class_dynamic_array}{Dynamic\+Array} の要素を順方向に走査するイテレータを実装します。
+
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} pArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[10] \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \};
+\hyperlink{class_dynamic_array}{DynamicArray} dArray \{ pArray, 10 \};
+
+\textcolor{keywordflow}{for} (\hyperlink{class_dynamic_array_1_1_iterator}{DynamicArray<int>::Iterator} iter = dArray.begin(); iter != dArray.end(); 
+      iter++) \{
+    printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, *iter);
+\}
+\end{DoxyCode}
+ 
+
+\subsection{構築子と解体子}
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{Iterator(const Iterator \&obj)=default}{Iterator(const Iterator &obj)=default}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::\+Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Iterator} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{class_dynamic_array_1_1_iterator_a46b8c9ccfaaba3050783ae871fa8ddf0}{}\label{class_dynamic_array_1_1_iterator_a46b8c9ccfaaba3050783ae871fa8ddf0}
+
+
+イテレータをコピーします。
+
+
+
+\subsection{関数詳解}
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{operator"!=(const Iterator \&obj)}{operator!=(const Iterator &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ bool {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Iterator} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_1_1_iterator_ac72b09c796d6eb985f28048877a07057}{}\label{class_dynamic_array_1_1_iterator_ac72b09c796d6eb985f28048877a07057}
+
+
+２つのイテレータが等しくないかどうか確かめます。
+
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{operator$\ast$()}{operator*()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ Type\& {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_1_1_iterator_a5bd348cd1b665af45f5b591eb63fa602}{}\label{class_dynamic_array_1_1_iterator_a5bd348cd1b665af45f5b591eb63fa602}
+
+
+現在のイテレータの位置の値を取得します。
+
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{operator++()}{operator++()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Iterator}\& {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_1_1_iterator_a490ce9a02523d09f66d7995b8fe8f6fc}{}\label{class_dynamic_array_1_1_iterator_a490ce9a02523d09f66d7995b8fe8f6fc}
+
+
+イテレータを１つ進めます
+
+\begin{DoxyReturn}{戻り値}
+１つ進めた後のイテレータ
+\end{DoxyReturn}
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{operator++(int)}{operator++(int)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ {\bf Iterator} {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_1_1_iterator_abdb0348b15367467686e168f17080bd9}{}\label{class_dynamic_array_1_1_iterator_abdb0348b15367467686e168f17080bd9}
+
+
+イテレータを１つ進めます
+
+\begin{DoxyReturn}{戻り値}
+１つ進める前のイテレータ
+\end{DoxyReturn}
+\index{Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Dynamic\+Array\+::\+Iterator@{Dynamic\+Array\+::\+Iterator}}
+\subsubsection[{\texorpdfstring{operator==(const Iterator \&obj)}{operator==(const Iterator &obj)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ bool {\bf Dynamic\+Array}$<$ Type $>$\+::Iterator\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Iterator} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_dynamic_array_1_1_iterator_ab7e083ee8a067de130bf3a48752b05e5}{}\label{class_dynamic_array_1_1_iterator_ab7e083ee8a067de130bf3a48752b05e5}
+
+
+２つのイテレータが等しいかどうか確かめます。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_base_unit_8h}{Base\+Unit.\+h}\end{DoxyCompactItemize}

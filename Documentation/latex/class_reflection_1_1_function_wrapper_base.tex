@@ -1,0 +1,134 @@
+\hypertarget{class_reflection_1_1_function_wrapper_base}{}\section{Reflection\+:\+:Function\+Wrapper\+Base クラス}
+\label{class_reflection_1_1_function_wrapper_base}\index{Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}}
+
+
+画一的な関数呼び出しを実現するクラスの基底クラス 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+
+
+\hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_5_08_07_args_8_8_8_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type($\ast$)(\+Args...)$>$}, \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_07_args_8_8_8_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)(\+Args...)$>$}, \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)$>$}に継承されています。
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_args_indexes}{Args\+Indexes}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper}{Copy\+Helper}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper_3_01const_01_type_01_6_01_4}{Copy\+Helper$<$ const Type \& $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper_3_01_type_07_6_08[_size]_4}{Copy\+Helper$<$ Type(\&)\mbox{[}\+Size\mbox{]}$>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_make_indexes}{Make\+Indexes}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_make_indexes_3_010_00_01_indexes_8_8_8_01_4}{Make\+Indexes$<$ 0, Indexes... $>$}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_function_wrapper_base_a23b2aa7c02ba4daf611a9a8fa52b1f8d}{Invoke} (\hyperlink{_reflector_helper_8hpp_a83512919cd42ea73553f4d173e7ace4c}{Args\+List} \&args)=0
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_reflection_1_1_value_object}{Value\+Object} の配列を引数として関数を呼び出します。\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_reflection_1_1_function_wrapper_base_a36995d6466e10a377669082eb9e3daae}{Set\+Value} (\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&Obj, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&value)
+\begin{DoxyCompactList}\small\item\em メンバ変数の値を書き込みます。\end{DoxyCompactList}\item 
+virtual \hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_function_wrapper_base_ac8d92623cf7e6c328fed80b918cb857a}{Get\+Value} (\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&Obj)
+\begin{DoxyCompactList}\small\item\em メンバ変数の値を読み出します。\end{DoxyCompactList}\item 
+virtual \hyperlink{class_reflection_1_1_function_wrapper_base_a2ab28e5876c05c005275ec2a71b6e794}{$\sim$\+Function\+Wrapper\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em この \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} オブジェクトが保持するリソースを解放します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_reflection_1_1_value_object}{Value\+Object} \& {\bfseries Get\+Value} (\hyperlink{_reflector_helper_8hpp_a83512919cd42ea73553f4d173e7ace4c}{Args\+List} \&Args, size\+\_\+t Index)\hypertarget{class_reflection_1_1_function_wrapper_base_a970bce51e2d27d81e99926e622487081}{}\label{class_reflection_1_1_function_wrapper_base_a970bce51e2d27d81e99926e622487081}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+画一的な関数呼び出しを実現するクラスの基底クラス
+
+
+
+\subsection{構築子と解体子}
+\index{Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}!````~Function\+Wrapper\+Base@{$\sim$\+Function\+Wrapper\+Base}}
+\index{````~Function\+Wrapper\+Base@{$\sim$\+Function\+Wrapper\+Base}!Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}}
+\subsubsection[{\texorpdfstring{$\sim$\+Function\+Wrapper\+Base()=default}{~FunctionWrapperBase()=default}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Reflection\+::\+Function\+Wrapper\+Base\+::$\sim$\+Function\+Wrapper\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\hypertarget{class_reflection_1_1_function_wrapper_base_a2ab28e5876c05c005275ec2a71b6e794}{}\label{class_reflection_1_1_function_wrapper_base_a2ab28e5876c05c005275ec2a71b6e794}
+
+
+この \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} オブジェクトが保持するリソースを解放します。
+
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}!Get\+Value@{Get\+Value}}
+\index{Get\+Value@{Get\+Value}!Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Value(\+Value\+Object \&\+Obj)}{GetValue(ValueObject &Obj)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Value\+Object} Reflection\+::\+Function\+Wrapper\+Base\+::\+Get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Value\+Object} \&}]{Obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_reflection_1_1_function_wrapper_base_ac8d92623cf7e6c328fed80b918cb857a}{}\label{class_reflection_1_1_function_wrapper_base_ac8d92623cf7e6c328fed80b918cb857a}
+
+
+メンバ変数の値を読み出します。
+
+\begin{DoxyReturn}{戻り値}
+メンバ変数の値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト
+\end{DoxyReturn}
+
+
+\hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_4_a3a7c1dda0b06ef0ccdfebfea1bdc89a7}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)$>$}で再実装されています。
+
+\index{Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}}
+\subsubsection[{\texorpdfstring{Invoke(\+Args\+List \&args)=0}{Invoke(ArgsList &args)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Value\+Object} Reflection\+::\+Function\+Wrapper\+Base\+::\+Invoke (
+\begin{DoxyParamCaption}
+\item[{{\bf Args\+List} \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_reflection_1_1_function_wrapper_base_a23b2aa7c02ba4daf611a9a8fa52b1f8d}{}\label{class_reflection_1_1_function_wrapper_base_a23b2aa7c02ba4daf611a9a8fa52b1f8d}
+
+
+\hyperlink{class_reflection_1_1_value_object}{Value\+Object} の配列を引数として関数を呼び出します。
+
+
+\begin{DoxyParams}{引数}
+{\em args} & 関数の引数として渡す \hyperlink{class_reflection_1_1_value_object}{Value\+Object} の配列\\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_4_a0b188062b8e2aa883f2ffaebdf87d987}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)$>$}, \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_07_args_8_8_8_08_4_a24547d04f8961d2924cc02e97b1cbbe8}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)(\+Args...)$>$}, \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_5_08_07_args_8_8_8_08_4_a4e471c87f1e5e5cc14c4861f50698ebd}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type($\ast$)(\+Args...)$>$}で実装されています。
+
+\index{Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}!Set\+Value@{Set\+Value}}
+\index{Set\+Value@{Set\+Value}!Reflection\+::\+Function\+Wrapper\+Base@{Reflection\+::\+Function\+Wrapper\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Value(\+Value\+Object \&\+Obj, Value\+Object \&value)}{SetValue(ValueObject &Obj, ValueObject &value)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Reflection\+::\+Function\+Wrapper\+Base\+::\+Set\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Value\+Object} \&}]{Obj, }
+\item[{{\bf Value\+Object} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_reflection_1_1_function_wrapper_base_a36995d6466e10a377669082eb9e3daae}{}\label{class_reflection_1_1_function_wrapper_base_a36995d6466e10a377669082eb9e3daae}
+
+
+メンバ変数の値を書き込みます。
+
+
+\begin{DoxyParams}{引数}
+{\em value} & メンバ変数の新しい値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト\\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_4_a4ab816181f6d22687f712f13440b3b5e}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)$>$}で再実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Value\+Object.\+cpp\end{DoxyCompactItemize}

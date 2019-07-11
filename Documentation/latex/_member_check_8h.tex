@@ -1,0 +1,112 @@
+\hypertarget{_member_check_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Member\+Check.h ファイル}
+\label{_member_check_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Member\+Check.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Member\+Check.\+h}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_check_member}{Check\+Member$<$ Type, Arg\+Type $>$}
+\item 
+class \hyperlink{class_check_member_3_01_type_00_01void_01_4}{Check\+Member$<$ Type, void $>$}
+\item 
+struct \hyperlink{struct_get_collide_rectange_caller}{Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectange $>$}
+\item 
+struct \hyperlink{struct_get_collide_rectange_caller_3_01_type_00_01false_01_4}{Get\+Collide\+Rectange\+Caller$<$ Type, false $>$}
+\item 
+struct \hyperlink{struct_map_tile_get_collide_rectange_caller}{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectangle, hasxy, haswidthheight $>$}
+\item 
+struct \hyperlink{struct_map_tile_get_collide_rectange_caller_3_01_type_00_01false_00_01true_00_01true_01_4}{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, false, true, true $>$}
+\item 
+struct \hyperlink{struct_map_tile_get_collide_rectange_caller_3_01_type_00_01false_00_01true_00_01false_01_4}{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, false, true, false $>$}
+\item 
+struct \hyperlink{struct_map_tile_get_collide_rectange_caller_3_01_type_00_01false_00_01false_00_01true_01_4}{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, false, false, true $>$}
+\item 
+struct \hyperlink{struct_map_tile_get_collide_rectange_caller_3_01_type_00_01false_00_01false_00_01false_01_4}{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, false, false, false $>$}
+\item 
+struct \hyperlink{struct_on_collide_from_side_caller}{On\+Collide\+From\+Side\+Caller$<$ Type, Map\+Type, has\+On\+Collide\+From\+Side $>$}
+\begin{DoxyCompactList}\small\item\em 指定したクラスがメンバ関数 On\+Collide\+From\+Side を持っている場合はそれを呼び出し、そうでない場合は何もしません。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_on_collide_from_side_caller_3_01_type_00_01_map_type_00_01false_01_4}{On\+Collide\+From\+Side\+Caller$<$ Type, Map\+Type, false $>$}
+\begin{DoxyCompactList}\small\item\em 指定したクラスがメンバ関数 On\+Collide\+From\+Side を持っている場合はそれを呼び出し、そうでない場合は何もしません。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_on_collide_from_bottom_caller}{On\+Collide\+From\+Bottom\+Caller$<$ Type, Map\+Type, has\+On\+Collide\+From\+Bottom $>$}
+\begin{DoxyCompactList}\small\item\em 指定したクラスがメンバ関数 On\+Collide\+From\+Bottom を持っている場合はそれを呼び出し、そうでない場合は何もしません。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_on_collide_from_bottom_caller_3_01_type_00_01_map_type_00_01false_01_4}{On\+Collide\+From\+Bottom\+Caller$<$ Type, Map\+Type, false $>$}
+\begin{DoxyCompactList}\small\item\em 指定したクラスがメンバ関数 On\+Collide\+From\+Bottom を持っている場合はそれを呼び出し、そうでない場合は何もしません。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_map_tile_is_empty_caller}{Map\+Tile\+Is\+Empty\+Caller$<$ Type, bool $>$}
+\item 
+struct \hyperlink{struct_map_tile_is_empty_caller_3_01_type_00_01false_01_4}{Map\+Tile\+Is\+Empty\+Caller$<$ Type, false $>$}
+\item 
+struct \hyperlink{struct_enable_getter}{Enable\+Getter$<$ Type, bool $>$}
+\item 
+struct \hyperlink{struct_enable_getter_3_01_type_00_01false_01_4}{Enable\+Getter$<$ Type, false $>$}
+\item 
+struct \hyperlink{struct_is_empty_caller}{Is\+Empty\+Caller$<$ Type, bool $>$}
+\item 
+struct \hyperlink{struct_is_empty_caller_3_01_type_00_01false_01_4}{Is\+Empty\+Caller$<$ Type, false $>$}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_member_check_8h_ab8daabf63e23c7bb8ecf055d4d5ff26e}{Create\+Test\+Member}(Function\+Name,  Member\+Name\+List)
+\begin{DoxyCompactList}\small\item\em メンバをチェックする関数を定義します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_member_check_8h_a5dda6b6b09a297b551d89a3fd35b5776}{Member}~(Member\+Name)					\&Test\+Type\+::\+Member\+Name
+\begin{DoxyCompactList}\small\item\em 単一メンバへのポインタを返します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_member_check_8h_a0a2deee7f6b830132e8eea417fdedaf5}{Members}(Member\+Name1,  Member\+Name2)~\&Test\+Type\+::\+Member\+Name1, \&Test\+Type\+::\+Member\+Name2
+\begin{DoxyCompactList}\small\item\em 複数メンバへのポインタを返します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_member_check_8h_a422ea6f7b3ccc3c32c0b5a735d39a842}{Get\+Check\+Result}(Function\+Name)~typename std\+::identity$<$decltype(Function\+Name$<$Type$>$(std\+::declval$<$Type$>$()))$>$\+::type\+::value
+\begin{DoxyCompactList}\small\item\em メンバ変数の確認結果を返します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_member_check_8h}{Member\+Check.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- あるクラスまたは構造体があるメンバー変数あるいはメンバー関数を 持っているかをテストし、その結果から適切な処理を行えるようにします。 ※ 基本的にはこのファイルをいじる必要はありません。
+
+最終更新\+: \subsubsection*{2016/ 7/25 }
+
+\subsection{マクロ定義詳解}
+\index{Member\+Check.\+h@{Member\+Check.\+h}!Create\+Test\+Member@{Create\+Test\+Member}}
+\index{Create\+Test\+Member@{Create\+Test\+Member}!Member\+Check.\+h@{Member\+Check.\+h}}
+\subsubsection[{\texorpdfstring{Create\+Test\+Member}{CreateTestMember}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Create\+Test\+Member(
+\begin{DoxyParamCaption}
+\item[{}]{Function\+Name, }
+\item[{}]{Member\+Name\+List}
+\end{DoxyParamCaption}
+)}\hypertarget{_member_check_8h_ab8daabf63e23c7bb8ecf055d4d5ff26e}{}\label{_member_check_8h_ab8daabf63e23c7bb8ecf055d4d5ff26e}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{class} TestType>                                                               \(\backslash\)
+    static \textcolor{keyword}{auto} FunctionName(TestType&& obj) -> decltype(MemberNameList, std::true\_type()); \(\backslash\)
+    template <class TestType>                                                               \(\backslash\)
+    static std::false\_type FunctionName(...)
+\end{DoxyCode}
+
+
+メンバをチェックする関数を定義します。
+
+\index{Member\+Check.\+h@{Member\+Check.\+h}!Get\+Check\+Result@{Get\+Check\+Result}}
+\index{Get\+Check\+Result@{Get\+Check\+Result}!Member\+Check.\+h@{Member\+Check.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Check\+Result}{GetCheckResult}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Get\+Check\+Result(
+\begin{DoxyParamCaption}
+\item[{}]{Function\+Name}
+\end{DoxyParamCaption}
+)~typename std\+::identity$<$decltype(Function\+Name$<$Type$>$(std\+::declval$<$Type$>$()))$>$\+::type\+::value}\hypertarget{_member_check_8h_a422ea6f7b3ccc3c32c0b5a735d39a842}{}\label{_member_check_8h_a422ea6f7b3ccc3c32c0b5a735d39a842}
+
+
+メンバ変数の確認結果を返します。
+
+\index{Member\+Check.\+h@{Member\+Check.\+h}!Member@{Member}}
+\index{Member@{Member}!Member\+Check.\+h@{Member\+Check.\+h}}
+\subsubsection[{\texorpdfstring{Member}{Member}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Member~(Member\+Name)					\&Test\+Type\+::\+Member\+Name}\hypertarget{_member_check_8h_a5dda6b6b09a297b551d89a3fd35b5776}{}\label{_member_check_8h_a5dda6b6b09a297b551d89a3fd35b5776}
+
+
+単一メンバへのポインタを返します。
+
+\index{Member\+Check.\+h@{Member\+Check.\+h}!Members@{Members}}
+\index{Members@{Members}!Member\+Check.\+h@{Member\+Check.\+h}}
+\subsubsection[{\texorpdfstring{Members}{Members}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Members(
+\begin{DoxyParamCaption}
+\item[{}]{Member\+Name1, }
+\item[{}]{Member\+Name2}
+\end{DoxyParamCaption}
+)~\&Test\+Type\+::\+Member\+Name1, \&Test\+Type\+::\+Member\+Name2}\hypertarget{_member_check_8h_a0a2deee7f6b830132e8eea417fdedaf5}{}\label{_member_check_8h_a0a2deee7f6b830132e8eea417fdedaf5}
+
+
+複数メンバへのポインタを返します。
+

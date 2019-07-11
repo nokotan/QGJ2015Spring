@@ -1,0 +1,23 @@
+\hypertarget{struct_map_tile_get_collide_rectange_caller}{}\section{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectangle, hasxy, haswidthheight $>$ 構造体テンプレート}
+\label{struct_map_tile_get_collide_rectange_caller}\index{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectangle, hasxy, haswidthheight $>$@{Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectangle, hasxy, haswidthheight $>$}}
+
+
+{\ttfamily \#include $<$Member\+Check.\+h$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static Rectangle\+\_\+t {\bfseries Get\+Collide\+Rectangle} (Type \&obj, int x, int y)\hypertarget{struct_map_tile_get_collide_rectange_caller_a6c880369b8119b9543d3b99bceb100ef}{}\label{struct_map_tile_get_collide_rectange_caller_a6c880369b8119b9543d3b99bceb100ef}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type, bool has\+Get\+Collide\+Rectangle = Check\+Member$<$\+Type$>$\+::\+Has\+Get\+Collide\+Rectangle, bool hasxy = Check\+Member$<$\+Type$>$\+::\+Has\+XY, bool haswidthheight = Check\+Member$<$\+Type$>$\+::\+Has\+Width\+Height$>$\\*
+struct Map\+Tile\+Get\+Collide\+Rectange\+Caller$<$ Type, has\+Get\+Collide\+Rectangle, hasxy, haswidthheight $>$}
+
+指定したクラスがメンバ関数 Get\+Collide\+Rectangle を持っている場合はそれを呼び出し、 そうでない場合はメンバ変数 x, y, width, height から Rectangle\+\_\+t を作成します。 指定したクラスがメンバに Get\+Collide\+Rectangle と x, y, width, height の両方を持っていない場合、 コンパイルエラーが発生します。 
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_member_check_8h}{Member\+Check.\+h}\end{DoxyCompactItemize}

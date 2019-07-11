@@ -1,0 +1,186 @@
+\hypertarget{class_i_map_tile_layor}{}\section{I\+Map\+Tile\+Layor$<$ Type $>$ クラステンプレート}
+\label{class_i_map_tile_layor}\index{I\+Map\+Tile\+Layor$<$ Type $>$@{I\+Map\+Tile\+Layor$<$ Type $>$}}
+
+
+マップチップを管理するレイヤーを実装します。 
+
+
+
+
+{\ttfamily \#include $<$Base\+Unit.\+h$>$}
+
+
+
+\hyperlink{class_temporary_map}{Temporary\+Map$<$ Type, Width, Height $>$}に継承されています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_i_map_tile_layor_a41b142a96432b5de2da71e833006930f}{Cols} ()=0
+\begin{DoxyCompactList}\small\item\em 列数を取得します。\end{DoxyCompactList}\item 
+virtual int \hyperlink{class_i_map_tile_layor_a803dba2f9709bc5094b0b1e46c650bbe}{Rows} ()=0
+\begin{DoxyCompactList}\small\item\em 行数を取得します。\end{DoxyCompactList}\item 
+virtual \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Pixel} \hyperlink{class_i_map_tile_layor_a1fc1f35577cc219ee183f307feadbc88}{Get\+Tile\+Size} ()
+\begin{DoxyCompactList}\small\item\em 1つのタイルの大きさを取得します。\end{DoxyCompactList}\item 
+virtual \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Pixel} \hyperlink{class_i_map_tile_layor_aae0e315c58ba40664a330015279f55aa}{GetX} ()
+\begin{DoxyCompactList}\small\item\em X座標を取得します。\end{DoxyCompactList}\item 
+virtual \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Pixel} \hyperlink{class_i_map_tile_layor_a8076377d9ddb9e08578a49a2a3e3b96f}{GetY} ()
+\begin{DoxyCompactList}\small\item\em Y座標を取得します。\end{DoxyCompactList}\item 
+virtual \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Pixel} \hyperlink{class_i_map_tile_layor_a021b4072af5e1cec4939d4cf8c4a1624}{Get\+DeltaX} ()
+\begin{DoxyCompactList}\small\item\em X軸方向の速度を取得します。\end{DoxyCompactList}\item 
+virtual \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Pixel} \hyperlink{class_i_map_tile_layor_acf089c1961f6f3562f6a9d0ceda477e3}{Get\+DeltaY} ()
+\begin{DoxyCompactList}\small\item\em Y軸方向の速度を取得します。\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_map_tile_layor_ae4f7c41ec2e7bcf34c4b3af67fd020cc}{Set\+Tile} (Type \&tile, int x, int y)=0
+\begin{DoxyCompactList}\small\item\em 指定した座標にマップチップを配置します。\end{DoxyCompactList}\item 
+virtual Type \& \hyperlink{class_i_map_tile_layor_a822f3e55fcc6fe9c97d232f5a59a5271}{Get\+Tile} (int x, int y)=0
+\begin{DoxyCompactList}\small\item\em 指定した座標にあるマップチップを取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\\*
+class I\+Map\+Tile\+Layor$<$ Type $>$}
+
+マップチップを管理するレイヤーを実装します。
+
+
+
+\subsection{関数詳解}
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Cols@{Cols}}
+\index{Cols@{Cols}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Cols()=0}{Cols()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual int {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_i_map_tile_layor_a41b142a96432b5de2da71e833006930f}{}\label{class_i_map_tile_layor_a41b142a96432b5de2da71e833006930f}
+
+
+列数を取得します。
+
+
+
+\hyperlink{class_temporary_map_af7fce728f271905270d2cd4ee3c149d0}{Temporary\+Map$<$ Type, Width, Height $>$}, \hyperlink{class_map_af83f6e34a7847c4083f8c9771343a07b}{Map$<$ Map\+Type $>$}で実装されています。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Get\+DeltaX@{Get\+DeltaX}}
+\index{Get\+DeltaX@{Get\+DeltaX}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+Delta\+X()}{GetDeltaX()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual {\bf Pixel} {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Get\+DeltaX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_map_tile_layor_a021b4072af5e1cec4939d4cf8c4a1624}{}\label{class_i_map_tile_layor_a021b4072af5e1cec4939d4cf8c4a1624}
+
+
+X軸方向の速度を取得します。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Get\+DeltaY@{Get\+DeltaY}}
+\index{Get\+DeltaY@{Get\+DeltaY}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+Delta\+Y()}{GetDeltaY()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual {\bf Pixel} {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Get\+DeltaY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_map_tile_layor_acf089c1961f6f3562f6a9d0ceda477e3}{}\label{class_i_map_tile_layor_acf089c1961f6f3562f6a9d0ceda477e3}
+
+
+Y軸方向の速度を取得します。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Get\+Tile@{Get\+Tile}}
+\index{Get\+Tile@{Get\+Tile}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+Tile(int x, int y)=0}{GetTile(int x, int y)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual Type\& {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Get\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_i_map_tile_layor_a822f3e55fcc6fe9c97d232f5a59a5271}{}\label{class_i_map_tile_layor_a822f3e55fcc6fe9c97d232f5a59a5271}
+
+
+指定した座標にあるマップチップを取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 取得するマップチップの列数\\
+\hline
+{\em y} & 取得するマップチップの行数\\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_temporary_map_a86dcb37a20d333785aa6e972aa1681eb}{Temporary\+Map$<$ Type, Width, Height $>$}, \hyperlink{class_map_a22ce1bfe32e5a5ac13ec6af75df9d214}{Map$<$ Map\+Type $>$}で実装されています。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Get\+Tile\+Size@{Get\+Tile\+Size}}
+\index{Get\+Tile\+Size@{Get\+Tile\+Size}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+Tile\+Size()}{GetTileSize()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual {\bf Pixel} {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Get\+Tile\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_map_tile_layor_a1fc1f35577cc219ee183f307feadbc88}{}\label{class_i_map_tile_layor_a1fc1f35577cc219ee183f307feadbc88}
+
+
+1つのタイルの大きさを取得します。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!GetX@{GetX}}
+\index{GetX@{GetX}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+X()}{GetX()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual {\bf Pixel} {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::GetX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_map_tile_layor_aae0e315c58ba40664a330015279f55aa}{}\label{class_i_map_tile_layor_aae0e315c58ba40664a330015279f55aa}
+
+
+X座標を取得します。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!GetY@{GetY}}
+\index{GetY@{GetY}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Get\+Y()}{GetY()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual {\bf Pixel} {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::GetY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_map_tile_layor_a8076377d9ddb9e08578a49a2a3e3b96f}{}\label{class_i_map_tile_layor_a8076377d9ddb9e08578a49a2a3e3b96f}
+
+
+Y座標を取得します。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Rows@{Rows}}
+\index{Rows@{Rows}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Rows()=0}{Rows()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual int {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_i_map_tile_layor_a803dba2f9709bc5094b0b1e46c650bbe}{}\label{class_i_map_tile_layor_a803dba2f9709bc5094b0b1e46c650bbe}
+
+
+行数を取得します。
+
+
+
+\hyperlink{class_temporary_map_a183900f63c890c2745fcfddd1283c4c6}{Temporary\+Map$<$ Type, Width, Height $>$}, \hyperlink{class_map_a5636f15af5669a481744deb7ea297ef3}{Map$<$ Map\+Type $>$}で実装されています。
+
+\index{I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}!Set\+Tile@{Set\+Tile}}
+\index{Set\+Tile@{Set\+Tile}!I\+Map\+Tile\+Layor@{I\+Map\+Tile\+Layor}}
+\subsubsection[{\texorpdfstring{Set\+Tile(\+Type \&tile, int x, int y)=0}{SetTile(Type &tile, int x, int y)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type$>$ virtual void {\bf I\+Map\+Tile\+Layor}$<$ Type $>$\+::Set\+Tile (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{tile, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_i_map_tile_layor_ae4f7c41ec2e7bcf34c4b3af67fd020cc}{}\label{class_i_map_tile_layor_ae4f7c41ec2e7bcf34c4b3af67fd020cc}
+
+
+指定した座標にマップチップを配置します。
+
+
+\begin{DoxyParams}{引数}
+{\em tile} & 配置するマップチップ\\
+\hline
+{\em x} & マップチップを配置する場所の列数\\
+\hline
+{\em y} & マップチップを配置する場所の行数\\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_temporary_map_a6e89bbdc050b0ef5e5f89ef27ccb29e3}{Temporary\+Map$<$ Type, Width, Height $>$}, \hyperlink{class_map_a1710dc141f0ffecd0f6cd10f934b490f}{Map$<$ Map\+Type $>$}で実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_base_unit_8h}{Base\+Unit.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{class_utility_1_1_f_p_s_manager}{}\section{Utility\+:\+:F\+P\+S\+Manager クラス}
+\label{class_utility_1_1_f_p_s_manager}\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+
+
+実行速度を監視し、ゲームのフレームレートを調整します。 
+
+
+
+
+{\ttfamily \#include $<$F\+P\+S\+Manager.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_utility_1_1_f_p_s_manager_aa182e73499c8caa2067a0b5d578fb30e}{F\+P\+S\+Manager} (int target\+\_\+fps=60)
+\begin{DoxyCompactList}\small\item\em 新しい \hyperlink{class_utility_1_1_f_p_s_manager}{F\+P\+S\+Manager} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+int \hyperlink{class_utility_1_1_f_p_s_manager_adf0d4b298671ae460a6fd257eed65c3c}{Set\+F\+PS} (int target\+\_\+fps)
+\begin{DoxyCompactList}\small\item\em フレームレートを設定します。\end{DoxyCompactList}\item 
+float \hyperlink{class_utility_1_1_f_p_s_manager_aac98d1d4eb031eb66d991ddda53ce243}{Get\+Average\+F\+PS} () const 
+\begin{DoxyCompactList}\small\item\em 平均フレームレートを取得します。\end{DoxyCompactList}\item 
+void \hyperlink{class_utility_1_1_f_p_s_manager_a31cb7c72fdf5c1ed283dec130610494a}{Update} ()
+\begin{DoxyCompactList}\small\item\em 平均フレームレートを更新します。ゲームループが進むたびに呼び出してください。 \end{DoxyCompactList}\item 
+void \hyperlink{class_utility_1_1_f_p_s_manager_a16df4d2542235515fcc3b09d32c1a101}{Wait} ()
+\begin{DoxyCompactList}\small\item\em 設定したフレームレートになるように待機します。 現在のフレームレートが設定したフレームレートより遅れている場合、すぐに処理を返します。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+実行速度を監視し、ゲームのフレームレートを調整します。
+
+
+
+\subsection{構築子と解体子}
+\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}!F\+P\+S\+Manager@{F\+P\+S\+Manager}}
+\index{F\+P\+S\+Manager@{F\+P\+S\+Manager}!Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+\subsubsection[{\texorpdfstring{F\+P\+S\+Manager(int target\+\_\+fps=60)}{FPSManager(int target_fps=60)}}]{\setlength{\rightskip}{0pt plus 5cm}Utility\+::\+F\+P\+S\+Manager\+::\+F\+P\+S\+Manager (
+\begin{DoxyParamCaption}
+\item[{int}]{target\+\_\+fps = {\ttfamily 60}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_utility_1_1_f_p_s_manager_aa182e73499c8caa2067a0b5d578fb30e}{}\label{class_utility_1_1_f_p_s_manager_aa182e73499c8caa2067a0b5d578fb30e}
+
+
+新しい \hyperlink{class_utility_1_1_f_p_s_manager}{F\+P\+S\+Manager} オブジェクトを初期化します。
+
+
+\begin{DoxyParams}{引数}
+{\em target\+\_\+fps} & 目標とするフレームレート。既定では、60\+F\+P\+Sが指定されます。\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}!Get\+Average\+F\+PS@{Get\+Average\+F\+PS}}
+\index{Get\+Average\+F\+PS@{Get\+Average\+F\+PS}!Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Average\+F\+P\+S() const }{GetAverageFPS() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Utility\+::\+F\+P\+S\+Manager\+::\+Get\+Average\+F\+PS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_utility_1_1_f_p_s_manager_aac98d1d4eb031eb66d991ddda53ce243}{}\label{class_utility_1_1_f_p_s_manager_aac98d1d4eb031eb66d991ddda53ce243}
+
+
+平均フレームレートを取得します。
+
+\begin{DoxyReturn}{戻り値}
+直近の平均フレームレート
+\end{DoxyReturn}
+\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}!Set\+F\+PS@{Set\+F\+PS}}
+\index{Set\+F\+PS@{Set\+F\+PS}!Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+\subsubsection[{\texorpdfstring{Set\+F\+P\+S(int target\+\_\+fps)}{SetFPS(int target_fps)}}]{\setlength{\rightskip}{0pt plus 5cm}int Utility\+::\+F\+P\+S\+Manager\+::\+Set\+F\+PS (
+\begin{DoxyParamCaption}
+\item[{int}]{target\+\_\+fps}
+\end{DoxyParamCaption}
+)}\hypertarget{class_utility_1_1_f_p_s_manager_adf0d4b298671ae460a6fd257eed65c3c}{}\label{class_utility_1_1_f_p_s_manager_adf0d4b298671ae460a6fd257eed65c3c}
+
+
+フレームレートを設定します。
+
+
+\begin{DoxyParams}{引数}
+{\em target\+\_\+fps} & 目標とするフレームレート\\
+\hline
+\end{DoxyParams}
+\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}!Update@{Update}}
+\index{Update@{Update}!Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+F\+P\+S\+Manager\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_utility_1_1_f_p_s_manager_a31cb7c72fdf5c1ed283dec130610494a}{}\label{class_utility_1_1_f_p_s_manager_a31cb7c72fdf5c1ed283dec130610494a}
+
+
+平均フレームレートを更新します。ゲームループが進むたびに呼び出してください。 
+
+\index{Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}!Wait@{Wait}}
+\index{Wait@{Wait}!Utility\+::\+F\+P\+S\+Manager@{Utility\+::\+F\+P\+S\+Manager}}
+\subsubsection[{\texorpdfstring{Wait()}{Wait()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utility\+::\+F\+P\+S\+Manager\+::\+Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_utility_1_1_f_p_s_manager_a16df4d2542235515fcc3b09d32c1a101}{}\label{class_utility_1_1_f_p_s_manager_a16df4d2542235515fcc3b09d32c1a101}
+
+
+設定したフレームレートになるように待機します。 現在のフレームレートが設定したフレームレートより遅れている場合、すぐに処理を返します。 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_f_p_s_manager_8h}{F\+P\+S\+Manager.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/F\+P\+S\+Manager.\+cpp\end{DoxyCompactItemize}

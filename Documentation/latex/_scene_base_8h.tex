@@ -1,0 +1,261 @@
+\hypertarget{_scene_base_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Scene\+Base.h ファイル}
+\label{_scene_base_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Scene\+Base.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Scene\+Base.\+h}}
+{\ttfamily \#include $<$functional$>$}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_scene}{Scene}
+\begin{DoxyCompactList}\small\item\em 画面（シーン）の基底クラス\end{DoxyCompactList}\item 
+class \hyperlink{class_scene_manager}{Scene\+Manager}
+\begin{DoxyCompactList}\small\item\em 画面を管理します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_scene_base_8h_a7ac041c68d562fe0101be3199c392948}{Scene\+Types}(macro)
+\begin{DoxyCompactList}\small\item\em シーン制御用マクロ\end{DoxyCompactList}\item 
+\#define \hyperlink{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}{Create\+Scene}(name)
+\begin{DoxyCompactList}\small\item\em 指定したシーンクラスを実体化するための関数を作成します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_scene_base_8h_a3f85785c437cea4f72e53b5857ce59fc}{Declear\+Scene\+Type}(name)~S\+T\+\_\+\#\#name,
+\begin{DoxyCompactList}\small\item\em Scene\+Type 列挙型の各要素を宣言します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{Scene\+Type} \{ \hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948a89f65965b3a1633d8e2829afbb005bb4}{S\+T\+\_\+\+N\+U\+LL}, 
+{\bfseries Scene\+Types} =(Declear\+Scene\+Type)
+ \}\begin{DoxyCompactList}\small\item\em 画面（シーン）の種類。各シーンに対して、\+S\+T\+\_\+(クラス名) という形式の値があります。\end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_scene_base_8h}{Scene\+Base.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 画面（シーケンス）遷移システムを提供します。 最終更新\+: \subsubsection*{2016/08/18 }
+
+\begin{DoxyRemark}{注釈}
+使用例\+: \hyperlink{_scene_base_8h}{Scene\+Base.\+h} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#pragma once}
+\textcolor{preprocessor}{#define SceneTypes(macro)   \(\backslash\)}
+\textcolor{preprocessor}{    macro(Title)            \(\backslash\)}
+\textcolor{preprocessor}{    macro(Game)             \(\backslash\)}
+\textcolor{preprocessor}{    macro(Ending)}
+
+\textcolor{comment}{// 以下編集の必要がないので省略}
+\end{DoxyCode}
+ Title\+Scene.\+cpp 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_scene_base_8h}{SceneBase.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{keyword}{class }TitleScene : \textcolor{keyword}{public} \hyperlink{class_scene}{Scene} \{
+    \textcolor{comment}{// ここにタイトル画面で必要となる変数を追加してください。}
+\textcolor{keyword}{public}:
+    \textcolor{keywordtype}{bool} \hyperlink{class_scene_a7fce113f1a210a5b1998c2976171be40}{Initialize}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_scene_ab99ec7aff3ed995985ddb764ffb78f8e}{Update}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_scene_a8680672fd30bb4b345e6fab918e31ecd}{Draw}() \textcolor{keyword}{override};
+\};
+
+\hyperlink{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}{CreateScene}(TitleScene);
+
+\textcolor{keywordtype}{bool} TitleScene::Initialize() \{
+    \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+\}
+
+\textcolor{keywordtype}{void} TitleScene::Update() \{
+    \textcolor{comment}{// [Z]キーが押されたら画面変更}
+    \textcolor{keywordflow}{if} (CheckHitKey(KEY\_INPUT\_Z)) \{
+        \hyperlink{class_scene_a425abcf008b32202319d672792f39259}{OnSceneChange}(ST\_GameScene);
+    \}
+\}
+
+\textcolor{keywordtype}{void} TitleScene::Draw() \{
+    DrawString(3, 3, \textcolor{stringliteral}{"This is Title Scene!"}, GetColor(255, 255, 255));
+    DrawString(3, 50, \textcolor{stringliteral}{"Press [Z] Key!!"}, GetColor(255, 255, 255));
+\}
+\end{DoxyCode}
+ Game\+Scene.\+cpp 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_scene_base_8h}{SceneBase.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{keyword}{class }GameScene : \textcolor{keyword}{public} \hyperlink{class_scene}{Scene} \{
+    \textcolor{comment}{// ここにゲーム画面で必要となる変数を追加してください。}
+    \textcolor{keywordtype}{int} Counter;
+\textcolor{keyword}{public}:
+    \textcolor{keywordtype}{bool} \hyperlink{class_scene_a7fce113f1a210a5b1998c2976171be40}{Initialize}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_scene_ab99ec7aff3ed995985ddb764ffb78f8e}{Update}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_scene_a8680672fd30bb4b345e6fab918e31ecd}{Draw}() \textcolor{keyword}{override};
+\};
+
+\hyperlink{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}{CreateScene}(GameScene);
+
+\textcolor{keywordtype}{bool} GameScene::Initialize() \{
+    Counter = 0;
+    \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+\}
+
+\textcolor{keywordtype}{void} GameScene::Update() \{
+    Counter++;
+
+    \textcolor{comment}{// ５秒たったら画面変更}
+    \textcolor{keywordflow}{if} (Counter >= 5 * 60) \{
+        \hyperlink{class_scene_a425abcf008b32202319d672792f39259}{OnSceneChange}(ST\_EndingScene);
+    \}
+\}
+
+\textcolor{keywordtype}{void} GameScene::Draw() \{
+    DrawString(3, 3, \textcolor{stringliteral}{"This is Game Scene!"}, GetColor(255, 255, 255));
+    DrawFormatString(3, 50, GetColor(255, 255, 255), \textcolor{stringliteral}{"切り替わるまで %d 秒"}, 5 - Counter / 60);
+\}
+\end{DoxyCode}
+ Ending\+Scene.\+cpp 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_scene_base_8h}{SceneBase.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{keyword}{class }\hyperlink{class_ending_scene}{EndingScene} : \textcolor{keyword}{public} \hyperlink{class_scene}{Scene} \{
+    \textcolor{comment}{// ここにリザルト画面で必要となる変数を追加してください。}
+    \textcolor{keywordtype}{int} Counter;
+\textcolor{keyword}{public}:
+    \textcolor{keywordtype}{bool} \hyperlink{class_ending_scene_af992008682dd87d32919f43fc0f14077}{Initialize}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_ending_scene_aefc237718b553dacba7d943b39353e63}{Update}() \textcolor{keyword}{override};
+    \textcolor{keywordtype}{void} \hyperlink{class_ending_scene_a85febce07b305b20d5ecae28cc2bc7eb}{Draw}() \textcolor{keyword}{override};
+\};
+
+\hyperlink{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}{CreateScene}(\hyperlink{class_ending_scene}{EndingScene});
+
+\textcolor{keywordtype}{bool} \hyperlink{class_ending_scene_af992008682dd87d32919f43fc0f14077}{EndingScene::Initialize}() \{
+    Counter = 0;
+    \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+\}
+
+\textcolor{keywordtype}{void} \hyperlink{class_ending_scene_aefc237718b553dacba7d943b39353e63}{EndingScene::Update}() \{
+    Counter++;
+
+    \textcolor{comment}{// ５秒たったら画面変更}
+    \textcolor{keywordflow}{if} (Counter >= 5 * 60) \{
+        \hyperlink{class_scene_a425abcf008b32202319d672792f39259}{OnSceneChange}(ST\_TitleScene);
+    \}
+\}
+
+\textcolor{keywordtype}{void} \hyperlink{class_ending_scene_a85febce07b305b20d5ecae28cc2bc7eb}{EndingScene::Draw}() \{
+    DrawString(3, 3, \textcolor{stringliteral}{"This is Ending Scene!"}, GetColor(255, 255, 255));
+    DrawFormatString(3, 50, GetColor(255, 255, 255), \textcolor{stringliteral}{"切り替わるまで %d 秒"}, 5 - Counter / 60);
+\}
+\end{DoxyCode}
+ Main.\+cpp 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{_scene_base_8h}{SceneBase.h}"}
+\textcolor{preprocessor}{#include "DxLib.h"}
+
+\textcolor{keywordtype}{int} WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, \textcolor{keywordtype}{int}) \{
+    ChangeWindowMode(TRUE);
+
+    \textcolor{keywordflow}{if} (DxLib\_Init() == -1) \{
+        \textcolor{keywordflow}{return} 0;
+    \};
+
+    SetDrawScreen(DX\_SCREEN\_BACK);
+    
+    \hyperlink{class_scene_manager}{SceneManager} MySceneManager;
+    MySceneManager.\hyperlink{class_scene_manager_a1defdb68759e3d118f91d57f49425167}{OnSceneChange}(ST\_Title);
+
+    \textcolor{keywordflow}{while} (ProcessMessage() != -1 && ClearDrawScreen() != -1) \{
+        MySceneManager.\hyperlink{class_scene_manager_a63dcf65832d6a2c190bf496d9a3b00a3}{Update}();
+        MySceneManager.\hyperlink{class_scene_manager_ab1da7cddc28c54d6a8dc9b91d3c94a6c}{Draw}();
+    \}
+
+    DxLib\_End();
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+
+
+\subsection{マクロ定義詳解}
+\index{Scene\+Base.\+h@{Scene\+Base.\+h}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Scene\+Base.\+h@{Scene\+Base.\+h}}
+\subsubsection[{\texorpdfstring{Create\+Scene}{CreateScene}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Create\+Scene(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}{}\label{_scene_base_8h_a0f22b55f21f40b1367c0ad02a0a453f3}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<>                              \(\backslash\)
+    Scene* Scene::CreateInstance<name>() \{  \(\backslash\)
+        return \textcolor{keyword}{new} name();                  \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+指定したシーンクラスを実体化するための関数を作成します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 実体化するための関数を作成するシーンクラスの名前\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Scene\+Base.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 Title\+Scene.\+cpp 
+\begin{DoxyCode}
+1 class TitleScene : public Scene \{
+2     // ここにタイトル画面で必要となる変数を追加してください。
+3 public:
+4     bool Initialize() override;
+5     void Update() override;
+6     void Draw() override;
+7 \};
+8 
+9 CreateScene(TitleScene);
+\end{DoxyCode}
+ \index{Scene\+Base.\+h@{Scene\+Base.\+h}!Declear\+Scene\+Type@{Declear\+Scene\+Type}}
+\index{Declear\+Scene\+Type@{Declear\+Scene\+Type}!Scene\+Base.\+h@{Scene\+Base.\+h}}
+\subsubsection[{\texorpdfstring{Declear\+Scene\+Type}{DeclearSceneType}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Declear\+Scene\+Type(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~S\+T\+\_\+\#\#name,}\hypertarget{_scene_base_8h_a3f85785c437cea4f72e53b5857ce59fc}{}\label{_scene_base_8h_a3f85785c437cea4f72e53b5857ce59fc}
+
+
+Scene\+Type 列挙型の各要素を宣言します。
+
+\index{Scene\+Base.\+h@{Scene\+Base.\+h}!Scene\+Types@{Scene\+Types}}
+\index{Scene\+Types@{Scene\+Types}!Scene\+Base.\+h@{Scene\+Base.\+h}}
+\subsubsection[{\texorpdfstring{Scene\+Types}{SceneTypes}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Scene\+Types(
+\begin{DoxyParamCaption}
+\item[{}]{macro}
+\end{DoxyParamCaption}
+)}\hypertarget{_scene_base_8h_a7ac041c68d562fe0101be3199c392948}{}\label{_scene_base_8h_a7ac041c68d562fe0101be3199c392948}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+macro(Opening)          \(\backslash\)
+    macro(Level)            \(\backslash\)
+    macro(Ending)           \(\backslash\)
+    macro(GameOver)         \(\backslash\)
+    macro(Shutter)          \(\backslash\)
+    macro(EffectTest)       \(\backslash\)
+    macro(WaveTest)         \(\backslash\)
+    macro(\hyperlink{namespace_reflection}{Reflection})
+\end{DoxyCode}
+
+
+シーン制御用マクロ
+
+シーンを追加するときはここにその名前を足してください。
+
+\subsection{列挙型詳解}
+\index{Scene\+Base.\+h@{Scene\+Base.\+h}!Scene\+Type@{Scene\+Type}}
+\index{Scene\+Type@{Scene\+Type}!Scene\+Base.\+h@{Scene\+Base.\+h}}
+\subsubsection[{\texorpdfstring{Scene\+Type}{SceneType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scene\+Type}}\hypertarget{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{}\label{_scene_base_8h_a006282dc9ad93696316e776700c3c948}
+
+
+画面（シーン）の種類。各シーンに対して、\+S\+T\+\_\+(クラス名) という形式の値があります。
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+T\+\_\+\+N\+U\+LL@{S\+T\+\_\+\+N\+U\+LL}!Scene\+Base.\+h@{Scene\+Base.\+h}}\index{Scene\+Base.\+h@{Scene\+Base.\+h}!S\+T\+\_\+\+N\+U\+LL@{S\+T\+\_\+\+N\+U\+LL}}\item[{\em 
+S\+T\+\_\+\+N\+U\+LL\hypertarget{_scene_base_8h_a006282dc9ad93696316e776700c3c948a89f65965b3a1633d8e2829afbb005bb4}{}\label{_scene_base_8h_a006282dc9ad93696316e776700c3c948a89f65965b3a1633d8e2829afbb005bb4}
+}]どのシーンでもないことを表す値\end{description}
+\end{Desc}

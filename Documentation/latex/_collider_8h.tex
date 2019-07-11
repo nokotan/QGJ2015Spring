@@ -1,0 +1,464 @@
+\hypertarget{_collider_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Collider.h ファイル}
+\label{_collider_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Collider.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Collider.\+h}}
+{\ttfamily \#include \char`\"{}Base\+Unit.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Member\+Check.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Debug\+Helper.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_collision_check_is_tile_empty_helper}{Collision\+Check\+Is\+Tile\+Empty\+Helper$<$ Tile\+Type $>$}
+\begin{DoxyCompactList}\small\item\em ユーザー定義の Map\+Tile\+Is\+Empty 関数、\+Map\+Type の Enable, Is\+Empty メンバのうち存在するものだけを呼び出す関数オブジェクトを作成します。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_collision_check_helper}{Collision\+Check\+Helper$<$ Type, Map\+Type, bool $>$}
+\begin{DoxyCompactList}\small\item\em あたり判定の対象となるオブジェクトが適切に実装されているかどうか調べ、また、あたり判定の実装を提供します。\end{DoxyCompactList}\item 
+struct \hyperlink{struct_collision_check_helper_3_01_type_00_01_map_type_00_01false_01_4}{Collision\+Check\+Helper$<$ Type, Map\+Type, false $>$}
+\begin{DoxyCompactList}\small\item\em あたり判定の対象となるオブジェクトが適切に実装されているかどうか調べ、また、あたり判定の実装を提供します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_collider_8h_adda4eb12c48d5d3e474e74d0744e319e}{enumclassdef}(name, ...)
+\begin{DoxyCompactList}\small\item\em クラス name 内に列挙体を作成し、その要素数を格納する Count も定義します\end{DoxyCompactList}\item 
+\#define {\bfseries M\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+F\+I\+LE}~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+\hypertarget{_collider_8h_a0b450b8920994537a3ae3ca6d41cde78}{}\label{_collider_8h_a0b450b8920994537a3ae3ca6d41cde78}
+
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Type , class Map\+Type $>$ }\\void \hyperlink{_collider_8h_a994ff4ae15da44bb653e361012c10c1c}{Collision\+Check} (Type \&obj, \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&layor)
+\begin{DoxyCompactList}\small\item\em 渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 マップタイルが空かどうかは、ユーザー定義の Map\+Tile\+Is\+Empty 関数、\+Map\+Type の Enable, Is\+Empty メンバのうち 存在するものが使用されます。 あたり判定がおかしい場合は、この３つのうち少なくとも一つが定義されていることを確認してください。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Map\+Type , class Type\+Empty $>$ }\\void \hyperlink{_collider_8h_aeb3ebb180d15919e8b095366b5f3a378}{Collision\+Check} (Type \&obj, \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&layor, Type\+Empty Empty\+Tile)
+\begin{DoxyCompactList}\small\item\em 渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Map\+Type $>$ }\\void \hyperlink{_collider_8h_a2c0d8ccf622970d3dd205f91b4e4449c}{Collision\+Check} (Type \&obj, \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&layor, Map\+Type Empty\+Tile)
+\begin{DoxyCompactList}\small\item\em 渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height$>$ }\\void \hyperlink{_collider_8h_a8b8e065ecc4c3aeb7c3c93848a3292af}{Collision\+Check} (Type \&obj, Map\+Type(\&layor)\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, int Map\+Size)
+\begin{DoxyCompactList}\small\item\em 渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 マップタイルが空かどうかは、ユーザー定義の Map\+Tile\+Is\+Empty 関数、\+Map\+Type の Enable, Is\+Empty メンバのうち 存在するものが使用されます。 あたり判定がおかしい場合は、この３つのうち少なくとも一つが定義されていることを確認してください。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height, class Type\+Empty $>$ }\\void \hyperlink{_collider_8h_a216e6663dffa60afbd833dc4bae1d35a}{Collision\+Check} (Type \&obj, Map\+Type(\&layor)\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, int Map\+Size, Type\+Empty Empty\+Tile)
+\begin{DoxyCompactList}\small\item\em 渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height$>$ }\\void \hyperlink{_collider_8h_ace673cc2b3ca005bbffbf0678f0983eb}{Collision\+Check} (Type \&obj, Map\+Type(\&layor)\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, int Map\+Size, Map\+Type Empty\+Tile)
+\begin{DoxyCompactList}\small\item\em 渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_collider_8h}{Collider.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- あたり判定を行うための関数を提供します。 使いやすさを重視するため、内部の処理の改変がしにくくなっているため、 改変するのであれば、\char`\"{}\char`\"{}を使うことをお勧めします。 最終更新\+: \subsubsection*{2016/08/14 }
+
+\begin{DoxyRemark}{注釈}
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "DxLib.h"}
+\textcolor{preprocessor}{#include "\hyperlink{_collider_8h}{Collider.h}"}
+
+\textcolor{keyword}{struct }Player \{
+    \textcolor{keywordtype}{int} x, y, width, height, dx, dy;
+\};
+
+\textcolor{keywordtype}{int} WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, \textcolor{keywordtype}{int}) \{
+
+    ChangeWindowMode(TRUE);
+    
+    \textcolor{keywordflow}{if} (DxLib\_Init() == -1) \{
+        \textcolor{keywordflow}{return} 0;
+    \}
+
+    SetDrawScreen(DX\_SCREEN\_BACK);      
+
+    \textcolor{comment}{// タイルマップとして使う２次元配列}
+    \textcolor{keyword}{const} \textcolor{keywordtype}{int} MapTilesWidth = 20;
+    \textcolor{keyword}{const} \textcolor{keywordtype}{int} MapTilesHeight = 15;
+    \textcolor{keywordtype}{int} MapTiles[MapTilesWidth][MapTilesHeight];
+
+    \textcolor{comment}{// タイルマップを -1 (何もない) で埋める}
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i &lt; MapTilesWidth; i++) \{
+        \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j &lt; MapTilesHeight; j++) \{
+            MapTiles[i][j] = -1;
+        
+            \textcolor{comment}{// 一番下は床として 0 を入れておく}
+            \textcolor{keywordflow}{if} (j == MapTilesHeight - 1) \{
+                MapTiles[i][j] = 0;
+            \}
+        \}
+    \}
+
+    Player player;
+    \textcolor{comment}{// player を初期化}
+    player.x = 0;
+    player.y = 384;
+    player.width = 32;
+    player.height = 64;
+    player.dx = 0;
+    player.dy = 0;
+
+    \textcolor{comment}{// メインループ}
+    \textcolor{keywordflow}{while} (ProcessMessage() != -1 &amp;&amp; ClearDrawScreen() != -1) \{
+        \textcolor{comment}{// 入力に応じて、プレイヤーのスピードを変える}
+        \textcolor{keywordflow}{if} (CheckHitKey(KEY\_INPUT\_LEFT)) \{
+            player.dx = -2;
+        \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (CheckHitKey(KEY\_INPUT\_RIGHT)) \{
+            player.dx = 2;
+        \} \textcolor{keywordflow}{else} \{
+            player.dx = 0;
+        \}
+
+        \textcolor{keywordflow}{if} (CheckHitKey(KEY\_INPUT\_SPACE) &amp;&amp; player.y == 384) \{
+            player.dy = -20;
+        \}
+
+        \textcolor{comment}{// 重力加速度を加える。}
+        player.dy += 1;
+
+        \textcolor{keywordflow}{if} (player.dy &gt; 10) \{
+            player.dy = 10;
+        \}
+
+        \textcolor{comment}{// あたり判定を行う。}
+        \hyperlink{_collider_8h_a994ff4ae15da44bb653e361012c10c1c}{CollisionCheck}(player, MapTiles, 32, -1);
+
+        \textcolor{comment}{// プレイヤー描画}
+        DrawBox(player.x, player.y, player.x + player.width, player.y + player.height, GetColor(255, 255, 2
+      55), TRUE);
+
+        \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i &lt; MapTilesWidth; i++) \{
+            \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j &lt; MapTilesHeight; j++) \{
+                \textcolor{keywordflow}{if} (MapTiles[i][j] != -1) \{
+                    DrawBox(i * 32, j * 32, i * 32 + 32, j * 32 + 32, GetColor(0, 216, 0), TRUE);
+                \}
+            \}
+        \}
+
+        ScreenFlip();
+    \}
+
+    DxLib\_End();
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+
+
+\subsection{マクロ定義詳解}
+\index{Collider.\+h@{Collider.\+h}!enumclassdef@{enumclassdef}}
+\index{enumclassdef@{enumclassdef}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{enumclassdef}{enumclassdef}}]{\setlength{\rightskip}{0pt plus 5cm}\#define enumclassdef(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_adda4eb12c48d5d3e474e74d0744e319e}{}\label{_collider_8h_adda4eb12c48d5d3e474e74d0744e319e}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{class }name \{                    \(\backslash\)
+        public:                     \(\backslash\)
+        enum Enum \{ \_\_VA\_ARGS\_\_ \};  \(\backslash\)
+        static \textcolor{keyword}{const} \textcolor{keywordtype}{int} Count;     \(\backslash\)
+    \};                              \(\backslash\)
+    const \textcolor{keywordtype}{int} name::Count = \hyperlink{_debug_helper_8h_a9d54ae95b24f1fcf3fc35b9a86dc8a0a}{CountComma}(#\_\_VA\_ARGS\_\_);
+\end{DoxyCode}
+
+
+クラス name 内に列挙体を作成し、その要素数を格納する Count も定義します
+
+
+
+\subsection{関数詳解}
+\index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, I\+Map\+Tile\+Layor$<$ Map\+Type $>$ \&layor)}{CollisionCheck(Type &obj, IMapTileLayor< MapType > &layor)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type $>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{{\bf I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&}]{layor}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_a994ff4ae15da44bb653e361012c10c1c}{}\label{_collider_8h_a994ff4ae15da44bb653e361012c10c1c}
+
+
+渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 マップタイルが空かどうかは、ユーザー定義の Map\+Tile\+Is\+Empty 関数、\+Map\+Type の Enable, Is\+Empty メンバのうち 存在するものが使用されます。 あたり判定がおかしい場合は、この３つのうち少なくとも一つが定義されていることを確認してください。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & あたり判定のフィールドとなる \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト。\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 // マップタイルが空かどうか判定する関数。この名前で特定の引数を持っていれば呼び出されます。
+2 bool MapTileIsEmpty(int tileid) \{
+3     return tileid = -1;
+4 \}
+5 
+6 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) \{
+7     const int MapTilesWidth = 20;
+8     const int MapTilesHeight = 15;
+9 
+10     Map<int> MyMap \{ MapTilesWidth, MapTilesHeight \};
+11 
+12     // 床以外 -1 (何もない) で埋める。
+13     for (int x = 0; x < MapTilesWidth; x++) \{
+14         for (int y = 0; y < MapTilesHeight - 1; y++) \{
+15             MyMap[x][y] = -1;
+16         \}
+17 
+18         MyMap[x][MapTilesHeight - 1] = 0;
+19     \}
+20 
+21     struct Player \{
+22         int x, y, width, height, dx, dy;
+23     \};
+24 
+25     Player player;
+26     CollisionCheck(player, MyMap);
+27     return 0;
+28 \}
+\end{DoxyCode}
+ \index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, I\+Map\+Tile\+Layor$<$ Map\+Type $>$ \&layor, Type\+Empty Empty\+Tile)}{CollisionCheck(Type &obj, IMapTileLayor< MapType > &layor, TypeEmpty EmptyTile)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type , class Type\+Empty $>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{{\bf I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&}]{layor, }
+\item[{Type\+Empty}]{Empty\+Tile}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_aeb3ebb180d15919e8b095366b5f3a378}{}\label{_collider_8h_aeb3ebb180d15919e8b095366b5f3a378}
+
+
+渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & あたり判定のフィールドとなる \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト。\\
+\hline
+{\em Empty\+Tile} & 空のマップタイルかどうか判定するための関数または関数オブジェクト\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 const int MapTilesWidth = 20;
+2 const int MapTilesHeight = 15;
+3 
+4 Map<int> MyMap \{ MapTilesWidth, MapTilesHeight \};
+5 
+6 // 床以外 -1 (何もない) で埋める。
+7 for (int x = 0; x < MapTilesWidth; x++) \{
+8     for (int y = 0; y < MapTilesHeight - 1; y++) \{
+9         MyMap[x][y] = -1;
+10     \}
+11 
+12     MyMap[x][MapTilesHeight - 1] = 0;
+13 \}
+14 
+15 struct Player \{
+16     int x, y, width, height, dx, dy;
+17 \};
+18 
+19 Player player;
+20 CollisionCheck(player, MyMap, [](int tileid) -> bool \{ return tileid == -1; \});
+\end{DoxyCode}
+ \index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, I\+Map\+Tile\+Layor$<$ Map\+Type $>$ \&layor, Map\+Type Empty\+Tile)}{CollisionCheck(Type &obj, IMapTileLayor< MapType > &layor, MapType EmptyTile)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type $>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{{\bf I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&}]{layor, }
+\item[{Map\+Type}]{Empty\+Tile}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_a2c0d8ccf622970d3dd205f91b4e4449c}{}\label{_collider_8h_a2c0d8ccf622970d3dd205f91b4e4449c}
+
+
+渡された \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト中で、渡されたオブジェクトに対してあたり判定を行います。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & あたり判定のフィールドとなる \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト。\\
+\hline
+{\em Empty\+Tile} & 空のマップタイルとして使う値。\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 const int MapTilesWidth = 20;
+2 const int MapTilesHeight = 15;
+3 
+4 Map<int> MyMap \{ MapTilesWidth, MapTilesHeight \};
+5 
+6 // 床以外 -1 (何もない) で埋める。
+7 for (int x = 0; x < MapTilesWidth; x++) \{
+8     for (int y = 0; y < MapTilesHeight - 1; y++) \{
+9         MyMap[x][y] = -1;
+10     \}
+11 
+12     MyMap[x][MapTilesHeight - 1] = 0;
+13 \}
+14 
+15 struct Player \{
+16     int x, y, width, height, dx, dy;
+17 \};
+18 
+19 Player player;
+20 CollisionCheck(player, MyMap, -1);
+\end{DoxyCode}
+ \index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, Map\+Type(\&layor)[width][height], int Map\+Size)}{CollisionCheck(Type &obj, MapType(&layor)[width][height], int MapSize)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height$>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{Map\+Type(\&)}]{layor\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, }
+\item[{int}]{Map\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_a8b8e065ecc4c3aeb7c3c93848a3292af}{}\label{_collider_8h_a8b8e065ecc4c3aeb7c3c93848a3292af}
+
+
+渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 マップタイルが空かどうかは、ユーザー定義の Map\+Tile\+Is\+Empty 関数、\+Map\+Type の Enable, Is\+Empty メンバのうち 存在するものが使用されます。 あたり判定がおかしい場合は、この３つのうち少なくとも一つが定義されていることを確認してください。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & タイルマップとして使う２次元配列。\\
+\hline
+{\em Map\+Size} & タイルマップ１つの幅。\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 // マップタイルが空かどうか判定する関数。この名前で特定の引数を持っていれば呼び出されます。
+2 bool MapTileIsEmpty(int tileid) \{
+3     return tileid = -1;
+4 \}
+5 
+6 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) \{
+7     const int MapTilesWidth = 20;
+8     const int MapTilesHeight = 15;
+9 
+10     int MyMap[MapTilesWidth][MapTilesHeight];
+11 
+12     // 床以外 -1 (何もない) で埋める。
+13     for (int x = 0; x < MapTilesWidth; x++) \{
+14         for (int y = 0; y < MapTilesHeight - 1; y++) \{
+15             MyMap[x][y] = -1;
+16         \}
+17 
+18         MyMap[x][MapTilesHeight - 1] = 0;
+19     \}
+20 
+21     struct Player \{
+22         int x, y, width, height, dx, dy;
+23     \};
+24 
+25     Player player;
+26     CollisionCheck(player, MyMap, 32);
+27     return 0;
+28 \}
+\end{DoxyCode}
+ \index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, Map\+Type(\&layor)[width][height], int Map\+Size, Type\+Empty Empty\+Tile)}{CollisionCheck(Type &obj, MapType(&layor)[width][height], int MapSize, TypeEmpty EmptyTile)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height, class Type\+Empty $>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{Map\+Type(\&)}]{layor\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, }
+\item[{int}]{Map\+Size, }
+\item[{Type\+Empty}]{Empty\+Tile}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_a216e6663dffa60afbd833dc4bae1d35a}{}\label{_collider_8h_a216e6663dffa60afbd833dc4bae1d35a}
+
+
+渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & タイルマップとして使う２次元配列。\\
+\hline
+{\em Map\+Size} & タイルマップ１つの幅。\\
+\hline
+{\em Empty\+Tile} & 空のマップタイルかどうか判定するための関数または関数オブジェクト\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 const int MapTilesWidth = 20;
+2 const int MapTilesHeight = 15;
+3 
+4 int MyMap[MapTilesWidth][MapTilesHeight];
+5 
+6 // 床以外 -1 (何もない) で埋める。
+7 for (int x = 0; x < MapTilesWidth; x++) \{
+8     for (int y = 0; y < MapTilesHeight - 1; y++) \{
+9         MyMap[x][y] = -1;
+10     \}
+11 
+12     MyMap[x][MapTilesHeight - 1] = 0;
+13 \}
+14 
+15 struct Player \{
+16     int x, y, width, height, dx, dy;
+17 \};
+18 
+19 Player player;
+20 CollisionCheck(player, MyMap, 32, [](int tileid) -> bool \{ return tileid == -1; \});
+\end{DoxyCode}
+ \index{Collider.\+h@{Collider.\+h}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collider.\+h@{Collider.\+h}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, Map\+Type(\&layor)[width][height], int Map\+Size, Map\+Type Empty\+Tile)}{CollisionCheck(Type &obj, MapType(&layor)[width][height], int MapSize, MapType EmptyTile)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Map\+Type , size\+\_\+t width, size\+\_\+t height$>$ void Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{Map\+Type(\&)}]{layor\mbox{[}width\mbox{]}\mbox{[}height\mbox{]}, }
+\item[{int}]{Map\+Size, }
+\item[{Map\+Type}]{Empty\+Tile}
+\end{DoxyParamCaption}
+)}\hypertarget{_collider_8h_ace673cc2b3ca005bbffbf0678f0983eb}{}\label{_collider_8h_ace673cc2b3ca005bbffbf0678f0983eb}
+
+
+渡された２次元配列をタイルマップとして扱い、そのタイルマップ中で渡されたオブジェクトのあたり判定を行います。 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。このオブジェクトはメンバとして、x, y, width, height, dx, dy を持っている必要があります。 この関数を行うと、オブジェクトの x, y は適切に更新され、マップタイルにぶつかったときに、そのオブジェクトの dx, dy を 0 に設定します。 オブジェクトの width, height が 0 であるとあたり判定が失敗するので注意してください。 \\
+\hline
+{\em layor} & タイルマップとして使う２次元配列。\\
+\hline
+{\em Map\+Size} & タイルマップ１つの幅。\\
+\hline
+{\em Empty\+Tile} & 空のマップタイルとして使う値。\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 注意！ このサンプルでは、関数を使うための最小限の部分だけ紹介しています。 ファイル \char`\"{}\+Collider.\+h\char`\"{} に示したサンプルも参考にしながら読んでください。 
+\begin{DoxyCode}
+1 const int MapTilesWidth = 20;
+2 const int MapTilesHeight = 15;
+3 
+4 int MyMap[MapTilesWidth][MapTilesHeight];
+5 
+6 // 床以外 -1 (何もない) で埋める。
+7 for (int x = 0; x < MapTilesWidth; x++) \{
+8     for (int y = 0; y < MapTilesHeight - 1; y++) \{
+9         MyMap[x][y] = -1;
+10     \}
+11 
+12     MyMap[x][MapTilesHeight - 1] = 0;
+13 \}
+14 
+15 struct Player \{
+16     int x, y, width, height, dx, dy;
+17 \};
+18 
+19 Player player;
+20 CollisionCheck(player, MyMap, 32, -1);
+\end{DoxyCode}
+ 

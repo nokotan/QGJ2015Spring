@@ -1,0 +1,209 @@
+\hypertarget{class_reflection_1_1_type_base}{}\section{Reflection\+:\+:Type\+Base クラス}
+\label{class_reflection_1_1_type_base}\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+
+
+リフレクション用の型情報を保持するクラス 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+
+
+\hyperlink{class_reflection_1_1_default_type_traits}{Reflection\+::\+Default\+Type\+Traits$<$ Type $>$}, \hyperlink{class_reflection_1_1_default_type_traits_3_01_type_01_5_01_4}{Reflection\+::\+Default\+Type\+Traits$<$ Type $\ast$ $>$}, \hyperlink{class_reflection_1_1_default_type_traits_3_01_type[_size]_4}{Reflection\+::\+Default\+Type\+Traits$<$ Type\mbox{[}\+Size\mbox{]}$>$}, \hyperlink{class_reflection_1_1_type}{Reflection\+::\+Type}, \hyperlink{class_reflection_1_1_type_impl}{Reflection\+::\+Type\+Impl$<$ This\+Type $>$}, \hyperlink{class_reflection_1_1_type_impl}{Reflection\+::\+Type\+Impl$<$ Reflection\+Scene $>$}に継承されています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_reflection_1_1_type_base_abba75a6078449ebf537e1625602faafc}{Add\+Function} (std\+::string name, \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} $\ast$funcobj)
+\begin{DoxyCompactList}\small\item\em 指定した名前で \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} オブジェクトを登録します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Ret\+Type , class... Args\+Type$>$ }\\void \hyperlink{class_reflection_1_1_type_base_a7bad52367a9d36f0440786e1f7af0443}{Add\+Function} (std\+::string name, Ret\+Type($\ast$func)(Args\+Type...))
+\begin{DoxyCompactList}\small\item\em 指定した名前でグローバル関数を登録します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , class Ret\+Type , class... Args\+Type$>$ }\\void \hyperlink{class_reflection_1_1_type_base_ae43bdbe09214e2983eae94c3cbcbb01a}{Add\+Member} (std\+::string name, Ret\+Type(Type\+::$\ast$func)(Args\+Type...))
+\begin{DoxyCompactList}\small\item\em 指定した名前でメンバ関数を登録します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Owner\+Type , class Type $>$ }\\void \hyperlink{class_reflection_1_1_type_base_ae391a46d84cc101c1552e988e91bbd2c}{Add\+Member} (std\+::string name, \hyperlink{class_reflection_1_1_type}{Type}(Owner\+Type\+::$\ast$member))
+\begin{DoxyCompactList}\small\item\em 指定した名前でメンバ変数を登録します。\end{DoxyCompactList}\item 
+\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_type_base_ad5b10ddb5430d3a334aff6a06d64bfe1}{Invoke\+Member} (const char name\mbox{[}$\,$\mbox{]}, \hyperlink{_reflector_helper_8hpp_a83512919cd42ea73553f4d173e7ace4c}{Args\+List} \&args)
+\begin{DoxyCompactList}\small\item\em 指定された名前で登録されている関数を呼び出します。\end{DoxyCompactList}\item 
+void \hyperlink{class_reflection_1_1_type_base_a57a6ce419728daa5554a22c85199b197}{Dump\+Member\+Value} (const char name\mbox{[}$\,$\mbox{]}, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} Obj)
+\begin{DoxyCompactList}\small\item\em 指定したオブジェクトのメンバの値を標準出力に吐き出します。\end{DoxyCompactList}\item 
+\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_type_base_ab9dd0ad1f29a70f41af71081d55dd7af}{Get\+Member\+Value} (const char name\mbox{[}$\,$\mbox{]}, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} Obj)
+\begin{DoxyCompactList}\small\item\em 指定したオブジェクトのメンバの値を読み出します。\end{DoxyCompactList}\item 
+void \hyperlink{class_reflection_1_1_type_base_a1ff9eb1a2b5f8acbd9d0098c2c922403}{Set\+Member\+Value} (const char name\mbox{[}$\,$\mbox{]}, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} Obj, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} value)
+\begin{DoxyCompactList}\small\item\em 指定したオブジェクトのメンバの値を更新します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+リフレクション用の型情報を保持するクラス
+
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Add\+Function@{Add\+Function}}
+\index{Add\+Function@{Add\+Function}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Add\+Function(std\+::string name, Function\+Wrapper\+Base $\ast$funcobj)}{AddFunction(std::string name, FunctionWrapperBase *funcobj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Reflection\+::\+Type\+Base\+::\+Add\+Function (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{{\bf Function\+Wrapper\+Base} $\ast$}]{funcobj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_type_base_abba75a6078449ebf537e1625602faafc}{}\label{class_reflection_1_1_type_base_abba75a6078449ebf537e1625602faafc}
+
+
+指定した名前で \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} オブジェクトを登録します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録する名前\\
+\hline
+{\em func} & 登録する \hyperlink{class_reflection_1_1_function_wrapper_base}{Function\+Wrapper\+Base} オブジェクトへのポインタ。内部で自動的に解放処理が行われます。\\
+\hline
+\end{DoxyParams}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Add\+Function@{Add\+Function}}
+\index{Add\+Function@{Add\+Function}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Add\+Function(std\+::string name, Ret\+Type($\ast$func)(\+Args\+Type...))}{AddFunction(std::string name, RetType(*func)(ArgsType...))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type , class... Args\+Type$>$ void Reflection\+::\+Type\+Base\+::\+Add\+Function (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{Ret\+Type($\ast$)(Args\+Type...)}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_type_base_a7bad52367a9d36f0440786e1f7af0443}{}\label{class_reflection_1_1_type_base_a7bad52367a9d36f0440786e1f7af0443}
+
+
+指定した名前でグローバル関数を登録します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録する名前\\
+\hline
+{\em func} & 登録するグローバル関数\\
+\hline
+\end{DoxyParams}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Add\+Member@{Add\+Member}}
+\index{Add\+Member@{Add\+Member}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Add\+Member(std\+::string name, Ret\+Type(\+Type\+::$\ast$func)(\+Args\+Type...))}{AddMember(std::string name, RetType(Type::*func)(ArgsType...))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , class Ret\+Type , class... Args\+Type$>$ void Reflection\+::\+Type\+Base\+::\+Add\+Member (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{Ret\+Type(Type\+::$\ast$)(Args\+Type...)}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_type_base_ae43bdbe09214e2983eae94c3cbcbb01a}{}\label{class_reflection_1_1_type_base_ae43bdbe09214e2983eae94c3cbcbb01a}
+
+
+指定した名前でメンバ関数を登録します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録する名前\\
+\hline
+{\em func} & 登録するメンバ関数\\
+\hline
+\end{DoxyParams}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Add\+Member@{Add\+Member}}
+\index{Add\+Member@{Add\+Member}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Add\+Member(std\+::string name, Type(\+Owner\+Type\+::$\ast$member))}{AddMember(std::string name, Type(OwnerType::*member))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Owner\+Type , class Type $>$ void Reflection\+::\+Type\+Base\+::\+Add\+Member (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{Type\+Owner\+Type\+::$\ast$}]{member}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_type_base_ae391a46d84cc101c1552e988e91bbd2c}{}\label{class_reflection_1_1_type_base_ae391a46d84cc101c1552e988e91bbd2c}
+
+
+指定した名前でメンバ変数を登録します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録する名前\\
+\hline
+{\em func} & 登録するメンバ変数\\
+\hline
+\end{DoxyParams}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Dump\+Member\+Value@{Dump\+Member\+Value}}
+\index{Dump\+Member\+Value@{Dump\+Member\+Value}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Dump\+Member\+Value(const char name[], Value\+Object Obj)}{DumpMemberValue(const char name[], ValueObject Obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void Reflection\+::\+Type\+Base\+::\+Dump\+Member\+Value (
+\begin{DoxyParamCaption}
+\item[{const char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Value\+Object}}]{Obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_type_base_a57a6ce419728daa5554a22c85199b197}{}\label{class_reflection_1_1_type_base_a57a6ce419728daa5554a22c85199b197}
+
+
+指定したオブジェクトのメンバの値を標準出力に吐き出します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 確認したいメンバ変数の登録名\\
+\hline
+{\em Obj} & 確認したいメンバ変数を保持しているオブジェクト\\
+\hline
+\end{DoxyParams}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Get\+Member\+Value@{Get\+Member\+Value}}
+\index{Get\+Member\+Value@{Get\+Member\+Value}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Get\+Member\+Value(const char name[], Value\+Object Obj)}{GetMemberValue(const char name[], ValueObject Obj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Object} Reflection\+::\+Type\+Base\+::\+Get\+Member\+Value (
+\begin{DoxyParamCaption}
+\item[{const char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Value\+Object}}]{Obj}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_type_base_ab9dd0ad1f29a70f41af71081d55dd7af}{}\label{class_reflection_1_1_type_base_ab9dd0ad1f29a70f41af71081d55dd7af}
+
+
+指定したオブジェクトのメンバの値を読み出します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 値を読み出したいメンバ変数の登録名\\
+\hline
+{\em Obj} & 確認したいメンバ変数を保持しているオブジェクト\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+メンバ変数の値をラップする \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト
+\end{DoxyReturn}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Invoke\+Member@{Invoke\+Member}}
+\index{Invoke\+Member@{Invoke\+Member}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Invoke\+Member(const char name[], Args\+List \&args)}{InvokeMember(const char name[], ArgsList &args)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Object} Reflection\+::\+Type\+Base\+::\+Invoke\+Member (
+\begin{DoxyParamCaption}
+\item[{const char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Args\+List} \&}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_type_base_ad5b10ddb5430d3a334aff6a06d64bfe1}{}\label{class_reflection_1_1_type_base_ad5b10ddb5430d3a334aff6a06d64bfe1}
+
+
+指定された名前で登録されている関数を呼び出します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 登録しておいた呼び出す関数の名前\\
+\hline
+{\em args} & 関数に渡す引数。メンバ関数の場合は、第１引数として、this に相当するものが必要です。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+関数の戻り値をラップする \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト
+\end{DoxyReturn}
+\index{Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}!Set\+Member\+Value@{Set\+Member\+Value}}
+\index{Set\+Member\+Value@{Set\+Member\+Value}!Reflection\+::\+Type\+Base@{Reflection\+::\+Type\+Base}}
+\subsubsection[{\texorpdfstring{Set\+Member\+Value(const char name[], Value\+Object Obj, Value\+Object value)}{SetMemberValue(const char name[], ValueObject Obj, ValueObject value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Reflection\+::\+Type\+Base\+::\+Set\+Member\+Value (
+\begin{DoxyParamCaption}
+\item[{const char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf Value\+Object}}]{Obj, }
+\item[{{\bf Value\+Object}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_type_base_a1ff9eb1a2b5f8acbd9d0098c2c922403}{}\label{class_reflection_1_1_type_base_a1ff9eb1a2b5f8acbd9d0098c2c922403}
+
+
+指定したオブジェクトのメンバの値を更新します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 値を更新したいメンバ変数の登録名\\
+\hline
+{\em Obj} & 値を更新したいメンバ変数を保持しているオブジェクト\\
+\hline
+{\em value} & メンバ変数の新しい値\\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Type\+Base.\+cpp\end{DoxyCompactItemize}

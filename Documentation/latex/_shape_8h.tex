@@ -1,0 +1,219 @@
+\hypertarget{_shape_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Shape.h ファイル}
+\label{_shape_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Shape.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Shape.\+h}}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_shape_1_1_rectangle}{Shape\+::\+Rectangle}
+\begin{DoxyCompactList}\small\item\em 辺が x, y 軸に平行な長方形を定義します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \hyperlink{_shape_8h_a2a49d9a10651b486dec23c8771d3ea98}{Shape\+::\+Pixel}
+\begin{DoxyCompactList}\small\item\em 座標の値を保持する型\end{DoxyCompactList}\item 
+typedef \hyperlink{struct_shape_1_1_rectangle}{Rectangle} {\bfseries Shape\+::\+Rectangle\+\_\+t}\hypertarget{_shape_8h_a0409e6845d007859b73b26ae7f707a07}{}\label{_shape_8h_a0409e6845d007859b73b26ae7f707a07}
+
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Shape\+::\+Rectangle\+Contains} (\hyperlink{struct_shape_1_1_rectangle}{Rectangle} rect, int x, int y)
+\begin{DoxyCompactList}\small\item\em 指定した長方形にある座標が含まれているかどうか調べます。\end{DoxyCompactList}\item 
+bool {\bfseries Shape\+::\+Rectangle\+Intersect\+With} (\hyperlink{struct_shape_1_1_rectangle}{Rectangle} rect1, \hyperlink{struct_shape_1_1_rectangle}{Rectangle} rect2)
+\begin{DoxyCompactList}\small\item\em ２つの長方形が重なっているかどうか調べます。\end{DoxyCompactList}\item 
+bool \hyperlink{_shape_8h_ad15451263473299f2862de2dd66c7f5c}{Shape\+::\+Rectangle\+Intersect\+With} (int x1, int y1, int width1, int height1, int x2, int y2, int width2, int height2)
+\begin{DoxyCompactList}\small\item\em 四角同士のあたり判定を行います。\end{DoxyCompactList}\item 
+\hyperlink{struct_shape_1_1_rectangle}{Rectangle} {\bfseries Shape\+::\+Rectangle\+Intersects} (\hyperlink{struct_shape_1_1_rectangle}{Rectangle} rect1, \hyperlink{struct_shape_1_1_rectangle}{Rectangle} rect2)
+\begin{DoxyCompactList}\small\item\em ２つの長方形の交差部分を取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_shape_8h}{Shape.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 幾何図形を定義します。 最終更新\+: \subsubsection*{2016/08/13 }
+
+\subsection{型定義詳解}
+\index{Shape.\+h@{Shape.\+h}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Shape.\+h@{Shape.\+h}}
+\subsubsection[{\texorpdfstring{Pixel}{Pixel}}]{\setlength{\rightskip}{0pt plus 5cm}typedef float {\bf Shape\+::\+Pixel}}\hypertarget{_shape_8h_file_a2a49d9a10651b486dec23c8771d3ea98}{}\label{_shape_8h_file_a2a49d9a10651b486dec23c8771d3ea98}
+
+
+座標の値を保持する型
+
+
+
+\subsection{関数詳解}
+\index{Shape.\+h@{Shape.\+h}!Rectangle\+Contains@{Rectangle\+Contains}}
+\index{Rectangle\+Contains@{Rectangle\+Contains}!Shape.\+h@{Shape.\+h}}
+\subsubsection[{\texorpdfstring{Rectangle\+Contains(\+Rectangle rect, int x, int y)}{RectangleContains(Rectangle rect, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Shape\+::\+Rectangle\+Contains (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle}}]{rect, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{_shape_8cpp_file_a7fe951300c7f11e827929a18f96719be}{}\label{_shape_8cpp_file_a7fe951300c7f11e827929a18f96719be}
+
+
+指定した長方形にある座標が含まれているかどうか調べます。
+
+
+\begin{DoxyParams}{引数}
+{\em rect} & ある座標が含まれているかどうか調べる対象の長方形\\
+\hline
+{\em x} & 含まれているかどうか確かめる点の x 座標の値\\
+\hline
+{\em y} & 含まれているかどうか確かめる点の y 座標の値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+含まれていれば true, そうでなければ false
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+Rectangle Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+\textcolor{keywordtype}{int} MouseX, MouseY;
+GetMousePoint(&amp;MouseX, &amp;MouseY);
+
+\textcolor{keywordflow}{if} (RectangleContains(Rect1, MouseX, MouseY)) \{
+    \textcolor{comment}{// マウスカーソルが長方形上にあればこっち}
+\} \textcolor{keywordflow}{else} \{
+    \textcolor{comment}{// マウスカーソルが長方形上になければこっち}
+\}
+\end{DoxyCode}
+ \index{Shape.\+h@{Shape.\+h}!Rectangle\+Intersects@{Rectangle\+Intersects}}
+\index{Rectangle\+Intersects@{Rectangle\+Intersects}!Shape.\+h@{Shape.\+h}}
+\subsubsection[{\texorpdfstring{Rectangle\+Intersects(\+Rectangle rect1, Rectangle rect2)}{RectangleIntersects(Rectangle rect1, Rectangle rect2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rectangle} Shape\+::\+Rectangle\+Intersects (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle}}]{rect1, }
+\item[{{\bf Rectangle}}]{rect2}
+\end{DoxyParamCaption}
+)}\hypertarget{_shape_8cpp_file_a3c0da1021e0c87583ef1a559927af10f}{}\label{_shape_8cpp_file_a3c0da1021e0c87583ef1a559927af10f}
+
+
+２つの長方形の交差部分を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em rect1} & 交差部分を取る対象の長方形\\
+\hline
+{\em rect2} & 交差部分を取る対象の長方形\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+２つの長方形の交差部分を表す Recta
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+Rectangle Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+Rectangle Rect2;
+Rect2.X = 150; Rect2.Y = 150;
+Rect2.Width = 100; Rect2.Height = 100;
+
+Rectanlge Rect3 = RectangleIntersects(Rect1, Rect2);
+printf(\textcolor{stringliteral}{"Rect3: x = %.0f, y = %.0f, width = %.0f, height = %.0f\(\backslash\)n"}, Rect3.X, Rect3.Y, Rect3.Width, Rect3.
+      Height);
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1: x = 150, y = 150, width = 50, height = 50}
+\end{DoxyCode}
+ \index{Shape.\+h@{Shape.\+h}!Rectangle\+Intersect\+With@{Rectangle\+Intersect\+With}}
+\index{Rectangle\+Intersect\+With@{Rectangle\+Intersect\+With}!Shape.\+h@{Shape.\+h}}
+\subsubsection[{\texorpdfstring{Rectangle\+Intersect\+With(int x1, int y1, int width1, int height1, int x2, int y2, int width2, int height2)}{RectangleIntersectWith(int x1, int y1, int width1, int height1, int x2, int y2, int width2, int height2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Shape\+::\+Rectangle\+Intersect\+With (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{width1, }
+\item[{int}]{height1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{int}]{width2, }
+\item[{int}]{height2}
+\end{DoxyParamCaption}
+)}\hypertarget{_shape_8h_file_ad15451263473299f2862de2dd66c7f5c}{}\label{_shape_8h_file_ad15451263473299f2862de2dd66c7f5c}
+
+
+四角同士のあたり判定を行います。
+
+$<$return$>$２つの四角が重なっていればtrue, そうでなければfalse$<$/return$>$ 
+\begin{DoxyParams}{引数}
+{\em x1} & 1個目の四角のx座標\\
+\hline
+{\em y1} & 1個目の四角のy座標\\
+\hline
+{\em width1} & 1個目の四角の幅\\
+\hline
+{\em height1} & 1個目の四角の高さ\\
+\hline
+{\em x2} & 2個目の四角のx座標\\
+\hline
+{\em y2} & 2個目の四角のy座標\\
+\hline
+{\em width2} & 2個目の四角の幅\\
+\hline
+{\em height2} & 2個目の四角の高さ\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (RectangleIntersectWith(100, 100, 100, 100, 150, 200, 100, 100)) \{
+    printf(\textcolor{stringliteral}{"Rect1 intersects Rect2!\(\backslash\)n"});
+\} \textcolor{keywordflow}{else} \{
+    printf(\textcolor{stringliteral}{"Rect1 does not intersect Rect2.\(\backslash\)n"});
+\}
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1 intersects Rect2!}
+\end{DoxyCode}
+ \index{Shape.\+h@{Shape.\+h}!Rectangle\+Intersect\+With@{Rectangle\+Intersect\+With}}
+\index{Rectangle\+Intersect\+With@{Rectangle\+Intersect\+With}!Shape.\+h@{Shape.\+h}}
+\subsubsection[{\texorpdfstring{Rectangle\+Intersect\+With(\+Rectangle rect1, Rectangle rect2)}{RectangleIntersectWith(Rectangle rect1, Rectangle rect2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Shape\+::\+Rectangle\+Intersect\+With (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle}}]{rect1, }
+\item[{{\bf Rectangle}}]{rect2}
+\end{DoxyParamCaption}
+)}\hypertarget{_shape_8cpp_file_acd9e80e97a9d73199513ae9dad7e1e50}{}\label{_shape_8cpp_file_acd9e80e97a9d73199513ae9dad7e1e50}
+
+
+２つの長方形が重なっているかどうか調べます。
+
+
+\begin{DoxyParams}{引数}
+{\em rect1} & 重なっているかどうか確かめる長方形\\
+\hline
+{\em rect2} & 重なっているかどうか確かめる長方形\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+重なっていれば true, そうでなければ false
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+Rectangle Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+Rectangle Rect2;
+Rect2.X = 150; Rect2.Y = 200;
+Rect2.Width = 100; Rect2.Height = 100;
+
+\textcolor{keywordflow}{if} (RectangleIntersectWith(Rect1, Rect2)) \{
+    printf(\textcolor{stringliteral}{"Rect1 intersects Rect2!\(\backslash\)n"});
+\} \textcolor{keywordflow}{else} \{
+    printf(\textcolor{stringliteral}{"Rect1 does not intersect Rect2.\(\backslash\)n"});
+\}
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1 intersects Rect2!}
+\end{DoxyCode}
+ 

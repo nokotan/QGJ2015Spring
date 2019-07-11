@@ -1,0 +1,54 @@
+\hypertarget{struct_collision_check_helper}{}\section{Collision\+Check\+Helper$<$ Type, Map\+Type, bool $>$ 構造体テンプレート}
+\label{struct_collision_check_helper}\index{Collision\+Check\+Helper$<$ Type, Map\+Type, bool $>$@{Collision\+Check\+Helper$<$ Type, Map\+Type, bool $>$}}
+
+
+あたり判定の対象となるオブジェクトが適切に実装されているかどうか調べ、また、あたり判定の実装を提供します。 
+
+
+
+
+{\ttfamily \#include $<$Collider.\+h$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Is\+Tile\+Empty $>$ }\\static void \hyperlink{struct_collision_check_helper_a2a6b589d941c538897bef9de9301c0a0}{Collision\+Check} (Type \&obj, \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&layor, Is\+Tile\+Empty Empty\+Check)
+\begin{DoxyCompactList}\small\item\em あたり判定の実装を提供します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type, class Map\+Type, bool = true$>$\\*
+struct Collision\+Check\+Helper$<$ Type, Map\+Type, bool $>$}
+
+あたり判定の対象となるオブジェクトが適切に実装されているかどうか調べ、また、あたり判定の実装を提供します。
+
+
+
+\subsection{関数詳解}
+\index{Collision\+Check\+Helper@{Collision\+Check\+Helper}!Collision\+Check@{Collision\+Check}}
+\index{Collision\+Check@{Collision\+Check}!Collision\+Check\+Helper@{Collision\+Check\+Helper}}
+\subsubsection[{\texorpdfstring{Collision\+Check(\+Type \&obj, I\+Map\+Tile\+Layor$<$ Map\+Type $>$ \&layor, Is\+Tile\+Empty Empty\+Check)}{CollisionCheck(Type &obj, IMapTileLayor< MapType > &layor, IsTileEmpty EmptyCheck)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type, class Map\+Type, bool  = true$>$ template$<$class Is\+Tile\+Empty $>$ static void {\bf Collision\+Check\+Helper}$<$ Type, Map\+Type, bool $>$\+::Collision\+Check (
+\begin{DoxyParamCaption}
+\item[{Type \&}]{obj, }
+\item[{{\bf I\+Map\+Tile\+Layor}$<$ Map\+Type $>$ \&}]{layor, }
+\item[{Is\+Tile\+Empty}]{Empty\+Check}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_collision_check_helper_a2a6b589d941c538897bef9de9301c0a0}{}\label{struct_collision_check_helper_a2a6b589d941c538897bef9de9301c0a0}
+
+
+あたり判定の実装を提供します。
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & あたり判定を行うオブジェクト。\\
+\hline
+{\em layor} & あたり判定のフィールドとなる \hyperlink{class_i_map_tile_layor}{I\+Map\+Tile\+Layor} オブジェクト。\\
+\hline
+{\em Empty\+Check} & 空のマップタイルかどうか判定するための関数または関数オブジェクト\\
+\hline
+\end{DoxyParams}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_collider_8h}{Collider.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{struct_reflection_1_1_return_value_assured_caller}{}\section{Reflection\+:\+:Return\+Value\+Assured\+Caller$<$ Ret\+Type $>$ 構造体テンプレート}
+\label{struct_reflection_1_1_return_value_assured_caller}\index{Reflection\+::\+Return\+Value\+Assured\+Caller$<$ Ret\+Type $>$@{Reflection\+::\+Return\+Value\+Assured\+Caller$<$ Ret\+Type $>$}}
+
+
+必ず何らかの戻り値を返す関数を提供します。 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class... Args$>$ }\\static Ret\+Type \hyperlink{struct_reflection_1_1_return_value_assured_caller_a1ce408712c3891b311b179326ac59f9a}{Do\+Call} (\hyperlink{classstd_1_1function}{std\+::function}$<$ Ret\+Type(Args...)$>$ \&obj, \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} args\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 指定された関数を呼び出し、その関数の戻り値を返します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Ret\+Type$>$\\*
+struct Reflection\+::\+Return\+Value\+Assured\+Caller$<$ Ret\+Type $>$}
+
+必ず何らかの戻り値を返す関数を提供します。
+
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Return\+Value\+Assured\+Caller@{Reflection\+::\+Return\+Value\+Assured\+Caller}!Do\+Call@{Do\+Call}}
+\index{Do\+Call@{Do\+Call}!Reflection\+::\+Return\+Value\+Assured\+Caller@{Reflection\+::\+Return\+Value\+Assured\+Caller}}
+\subsubsection[{\texorpdfstring{Do\+Call(std\+::function$<$ Ret\+Type(\+Args...)$>$ \&obj, Value\+Object args[])}{DoCall(std::function< RetType(Args...)> &obj, ValueObject args[])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type $>$ template$<$class... Args$>$ static Ret\+Type {\bf Reflection\+::\+Return\+Value\+Assured\+Caller}$<$ Ret\+Type $>$\+::Do\+Call (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::function}$<$ Ret\+Type(Args...)$>$ \&}]{obj, }
+\item[{{\bf Value\+Object}}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_reflection_1_1_return_value_assured_caller_a1ce408712c3891b311b179326ac59f9a}{}\label{struct_reflection_1_1_return_value_assured_caller_a1ce408712c3891b311b179326ac59f9a}
+
+
+指定された関数を呼び出し、その関数の戻り値を返します。
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & 呼び出す関数オブジェクト\\
+\hline
+{\em args} & 関数に引数として渡す \hyperlink{struct_reflection_1_1_value_object}{Value\+Object} の配列\\
+\hline
+\end{DoxyParams}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\end{DoxyCompactItemize}

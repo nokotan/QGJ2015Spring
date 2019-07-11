@@ -1,0 +1,429 @@
+\hypertarget{_net_work_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Net\+Work.h ファイル}
+\label{_net_work_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Net\+Work.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Net\+Work.\+h}}
+\subsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9b}{Connection\+State} \{ \hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9bab8b448128b0384af3c7a5d03b651285d}{C\+S\+\_\+\+Disconnected}, 
+\hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9ba64e9cb7d151841d3115a096a99205cd3}{C\+S\+\_\+\+Connecting}, 
+\hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9ba4b55efee71df3bb0e7914d7d0f19c1c4}{C\+S\+\_\+\+Connected}
+ \}\begin{DoxyCompactList}\small\item\em 接続状態\end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_net_work_8h_ac05effef4f8b5794d2acdd6548a12a7d}{Send\+Data\+Internal} (void $\ast$data, size\+\_\+t datasize)
+\begin{DoxyCompactList}\small\item\em 内部関数\+:使用しないでください。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_ac04035c88714cbcacef197123a903937}{Receive\+Data\+Internal} (void $\ast$data, size\+\_\+t datasize, int timeout=-\/1)
+\begin{DoxyCompactList}\small\item\em 内部関数\+:使用しないでください。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Server\+::\+Start\+Server} ()
+\begin{DoxyCompactList}\small\item\em サーバーを開始し、通信を受け付けられる状態にします。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Server\+::\+Stop\+Server} ()
+\begin{DoxyCompactList}\small\item\em サーバーを停止し、通信を切断します。\end{DoxyCompactList}\item 
+\hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9b}{Connection\+State} {\bfseries Network\+Server\+::\+Get\+Network\+State} ()
+\begin{DoxyCompactList}\small\item\em サーバーの状態を取得します。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Server\+::\+Update} ()
+\begin{DoxyCompactList}\small\item\em サーバーの状態を更新します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_a977c489e721e28476b1970692d06e91c}{Network\+Server\+::\+Send\+Data} (Ty \&data)
+\begin{DoxyCompactList}\small\item\em データを送信します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_ae6365399d46872ebf550e8ac1bc26b31}{Network\+Server\+::\+Receive\+Data} (Ty \&data, int timeout=-\/1)
+\begin{DoxyCompactList}\small\item\em データを受信します。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Client\+::\+Connect} ()
+\begin{DoxyCompactList}\small\item\em サーバーとの通信を確立します。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Client\+::\+Disconnect} ()
+\begin{DoxyCompactList}\small\item\em サーバーとの通信を切断します。\end{DoxyCompactList}\item 
+\hyperlink{_net_work_8h_acdd867d72142510ce53521a63a062f9b}{Connection\+State} {\bfseries Network\+Client\+::\+Get\+Network\+State} ()
+\begin{DoxyCompactList}\small\item\em ネットワークの状態を取得します。\end{DoxyCompactList}\item 
+bool {\bfseries Network\+Client\+::\+Update} ()
+\begin{DoxyCompactList}\small\item\em ネットワークの状態を更新します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_ab9faf452c4004ebf8ce5e50dcb75c6d9}{Network\+Client\+::\+Send\+Data} (Ty \&data)
+\begin{DoxyCompactList}\small\item\em データを送信します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_a2783411690929cdbddd6fbe84d43ec3f}{Network\+Client\+::\+Receive\+Data} (Ty \&data, int timeout=-\/1)
+\begin{DoxyCompactList}\small\item\em データを受信します。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_ad71ce3b5f062350ce20ed8919f9c272a}{Internet\+Client\+::\+Connect} ()
+\begin{DoxyCompactList}\small\item\em サーバーとの通信を確立します。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_ab3474299b7b18a1841c4905e19dd730b}{Internet\+Client\+::\+Disconnect} ()
+\begin{DoxyCompactList}\small\item\em サーバーとの通信を切断します。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_a8ba8db0f11acb16492bc5a81962416df}{Internet\+Client\+::\+Update} ()
+\begin{DoxyCompactList}\small\item\em ネットワークの状態を更新します。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_a3f584a1bf5ad6d497c60a294bf684970}{Internet\+Client\+::\+Send\+Data\+Internal} (void $\ast$data, size\+\_\+t datasize)
+\begin{DoxyCompactList}\small\item\em 内部関数\+:使用しないでください。\end{DoxyCompactList}\item 
+bool \hyperlink{_net_work_8h_ad9318597d8b6a544c62750d142a617a8}{Internet\+Client\+::\+Receive\+Data\+Internal} (void $\ast$data, size\+\_\+t datasize, int timeout=-\/1)
+\begin{DoxyCompactList}\small\item\em 内部関数\+:使用しないでください。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_a41419fd2523a807ad7278c56b71cdc7e}{Internet\+Client\+::\+Send\+Data} (Ty \&data)
+\begin{DoxyCompactList}\small\item\em データを送信します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ty $>$ }\\bool \hyperlink{_net_work_8h_a6d3bcea49c7f2aeb0168bf49e997fc53}{Internet\+Client\+::\+Receive\+Data} (Ty \&data, int timeout=-\/1)
+\begin{DoxyCompactList}\small\item\em データを受信します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_net_work_8h}{Network.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- ネットワーク通信の関数を用意します。
+
+注意 ====================================================== \subsection*{\char`\"{}\+Network.\+cpp\char`\"{} と一緒にプロジェクトに追加してください。 }
+
+最終更新\+: \subsubsection*{2016/08/18 }
+
+\subsection{列挙型詳解}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Connection\+State@{Connection\+State}}
+\index{Connection\+State@{Connection\+State}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Connection\+State}{ConnectionState}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Connection\+State}}\hypertarget{_net_work_8h_acdd867d72142510ce53521a63a062f9b}{}\label{_net_work_8h_acdd867d72142510ce53521a63a062f9b}
+
+
+接続状態
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{C\+S\+\_\+\+Disconnected@{C\+S\+\_\+\+Disconnected}!Net\+Work.\+h@{Net\+Work.\+h}}\index{Net\+Work.\+h@{Net\+Work.\+h}!C\+S\+\_\+\+Disconnected@{C\+S\+\_\+\+Disconnected}}\item[{\em 
+C\+S\+\_\+\+Disconnected\hypertarget{_net_work_8h_acdd867d72142510ce53521a63a062f9bab8b448128b0384af3c7a5d03b651285d}{}\label{_net_work_8h_acdd867d72142510ce53521a63a062f9bab8b448128b0384af3c7a5d03b651285d}
+}]通信は切断されています。\index{C\+S\+\_\+\+Connecting@{C\+S\+\_\+\+Connecting}!Net\+Work.\+h@{Net\+Work.\+h}}\index{Net\+Work.\+h@{Net\+Work.\+h}!C\+S\+\_\+\+Connecting@{C\+S\+\_\+\+Connecting}}\item[{\em 
+C\+S\+\_\+\+Connecting\hypertarget{_net_work_8h_acdd867d72142510ce53521a63a062f9ba64e9cb7d151841d3115a096a99205cd3}{}\label{_net_work_8h_acdd867d72142510ce53521a63a062f9ba64e9cb7d151841d3115a096a99205cd3}
+}]通信を確立している途中です\index{C\+S\+\_\+\+Connected@{C\+S\+\_\+\+Connected}!Net\+Work.\+h@{Net\+Work.\+h}}\index{Net\+Work.\+h@{Net\+Work.\+h}!C\+S\+\_\+\+Connected@{C\+S\+\_\+\+Connected}}\item[{\em 
+C\+S\+\_\+\+Connected\hypertarget{_net_work_8h_acdd867d72142510ce53521a63a062f9ba4b55efee71df3bb0e7914d7d0f19c1c4}{}\label{_net_work_8h_acdd867d72142510ce53521a63a062f9ba4b55efee71df3bb0e7914d7d0f19c1c4}
+}]通信が確立されています。\end{description}
+\end{Desc}
+
+
+\subsection{関数詳解}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Connect@{Connect}}
+\index{Connect@{Connect}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Connect()}{Connect()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Client\+::\+Connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_ab19a272327212d30d91349ddf963c2c7}{}\label{_network_8cpp_file_ab19a272327212d30d91349ddf963c2c7}
+
+
+サーバーとの通信を確立します。
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+
+
+技術者向け\+:使用するポート番号は, Utility.\+cpp内で設定します。 接続先の\+I\+Pアドレスは、\+Connection\+Setting.\+txt を参照してください。 \index{Net\+Work.\+h@{Net\+Work.\+h}!Connect@{Connect}}
+\index{Connect@{Connect}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Connect()}{Connect()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Internet\+Client\+::\+Connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_ad71ce3b5f062350ce20ed8919f9c272a}{}\label{_net_work_8h_file_ad71ce3b5f062350ce20ed8919f9c272a}
+
+
+サーバーとの通信を確立します。
+
+$<$return$>$成功すればfalse, 失敗すればtrue$<$/return$>$
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+
+
+技術者向け\+:使用するポート番号は, Utility.\+cpp内で設定します。 接続先の\+I\+Pアドレスは、\+Connection\+Setting.\+txt を参照してください。 \index{Net\+Work.\+h@{Net\+Work.\+h}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Disconnect()}{Disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Client\+::\+Disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_a26fbbe18d486f2f73a362dfc76b2b075}{}\label{_network_8cpp_file_a26fbbe18d486f2f73a362dfc76b2b075}
+
+
+サーバーとの通信を切断します。
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Disconnect()}{Disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Internet\+Client\+::\+Disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_ab3474299b7b18a1841c4905e19dd730b}{}\label{_net_work_8h_file_ab3474299b7b18a1841c4905e19dd730b}
+
+
+サーバーとの通信を切断します。
+
+$<$return$>$成功すればfalse, 失敗すればtrue$<$/return$>$
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Get\+Network\+State@{Get\+Network\+State}}
+\index{Get\+Network\+State@{Get\+Network\+State}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Network\+State()}{GetNetworkState()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+State} Network\+Client\+::\+Get\+Network\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_ac59bb65591efc332cc157eb8040f6c39}{}\label{_network_8cpp_file_ac59bb65591efc332cc157eb8040f6c39}
+
+
+ネットワークの状態を取得します。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Get\+Network\+State@{Get\+Network\+State}}
+\index{Get\+Network\+State@{Get\+Network\+State}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Network\+State()}{GetNetworkState()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+State} Network\+Server\+::\+Get\+Network\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_aa250129336e7aff0c4a94c633d0659cc}{}\label{_network_8cpp_file_aa250129336e7aff0c4a94c633d0659cc}
+
+
+サーバーの状態を取得します。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Receive\+Data@{Receive\+Data}}
+\index{Receive\+Data@{Receive\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Receive\+Data(\+Ty \&data, int timeout=-\/1)}{ReceiveData(Ty &data, int timeout=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Network\+Server\+::\+Receive\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data, }
+\item[{int}]{timeout = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_ae6365399d46872ebf550e8ac1bc26b31}{}\label{_net_work_8h_file_ae6365399d46872ebf550e8ac1bc26b31}
+
+
+データを受信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 受信するデータ\\
+\hline
+{\em timeout} & 待機する時間(ミリ秒)。この間は受信データ量が足りるようになるまで受信を続けます。 指定しなければ、一度のみ受信を試みます。 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Receive\+Data@{Receive\+Data}}
+\index{Receive\+Data@{Receive\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Receive\+Data(\+Ty \&data, int timeout=-\/1)}{ReceiveData(Ty &data, int timeout=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Network\+Client\+::\+Receive\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data, }
+\item[{int}]{timeout = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a2783411690929cdbddd6fbe84d43ec3f}{}\label{_net_work_8h_file_a2783411690929cdbddd6fbe84d43ec3f}
+
+
+データを受信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 受信するデータ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Receive\+Data@{Receive\+Data}}
+\index{Receive\+Data@{Receive\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Receive\+Data(\+Ty \&data, int timeout=-\/1)}{ReceiveData(Ty &data, int timeout=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Internet\+Client\+::\+Receive\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data, }
+\item[{int}]{timeout = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a6d3bcea49c7f2aeb0168bf49e997fc53}{}\label{_net_work_8h_file_a6d3bcea49c7f2aeb0168bf49e997fc53}
+
+
+データを受信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 受信するデータ\\
+\hline
+\end{DoxyParams}
+$<$return$>$異常がなければfalse, それ以外の場合はtrue$<$/return$>$ \index{Net\+Work.\+h@{Net\+Work.\+h}!Receive\+Data\+Internal@{Receive\+Data\+Internal}}
+\index{Receive\+Data\+Internal@{Receive\+Data\+Internal}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Receive\+Data\+Internal(void $\ast$data, size\+\_\+t datasize, int timeout=-\/1)}{ReceiveDataInternal(void *data, size_t datasize, int timeout=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Receive\+Data\+Internal (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{size\+\_\+t}]{datasize, }
+\item[{int}]{timeout = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_ac04035c88714cbcacef197123a903937}{}\label{_net_work_8h_ac04035c88714cbcacef197123a903937}
+
+
+内部関数\+:使用しないでください。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Receive\+Data\+Internal@{Receive\+Data\+Internal}}
+\index{Receive\+Data\+Internal@{Receive\+Data\+Internal}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Receive\+Data\+Internal(void $\ast$data, size\+\_\+t datasize, int timeout=-\/1)}{ReceiveDataInternal(void *data, size_t datasize, int timeout=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Internet\+Client\+::\+Receive\+Data\+Internal (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{size\+\_\+t}]{datasize, }
+\item[{int}]{timeout = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_ad9318597d8b6a544c62750d142a617a8}{}\label{_net_work_8h_file_ad9318597d8b6a544c62750d142a617a8}
+
+
+内部関数\+:使用しないでください。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Send\+Data@{Send\+Data}}
+\index{Send\+Data@{Send\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Data(\+Ty \&data)}{SendData(Ty &data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Network\+Server\+::\+Send\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a977c489e721e28476b1970692d06e91c}{}\label{_net_work_8h_file_a977c489e721e28476b1970692d06e91c}
+
+
+データを送信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 送信するデータ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Send\+Data@{Send\+Data}}
+\index{Send\+Data@{Send\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Data(\+Ty \&data)}{SendData(Ty &data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Network\+Client\+::\+Send\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_ab9faf452c4004ebf8ce5e50dcb75c6d9}{}\label{_net_work_8h_file_ab9faf452c4004ebf8ce5e50dcb75c6d9}
+
+
+データを送信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 送信するデータ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Send\+Data@{Send\+Data}}
+\index{Send\+Data@{Send\+Data}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Data(\+Ty \&data)}{SendData(Ty &data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ty $>$ bool Internet\+Client\+::\+Send\+Data (
+\begin{DoxyParamCaption}
+\item[{Ty \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a41419fd2523a807ad7278c56b71cdc7e}{}\label{_net_work_8h_file_a41419fd2523a807ad7278c56b71cdc7e}
+
+
+データを送信します。
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 送信するデータ\\
+\hline
+\end{DoxyParams}
+$<$return$>$異常がなければfalse, それ以外の場合はtrue$<$/return$>$ \index{Net\+Work.\+h@{Net\+Work.\+h}!Send\+Data\+Internal@{Send\+Data\+Internal}}
+\index{Send\+Data\+Internal@{Send\+Data\+Internal}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Data\+Internal(void $\ast$data, size\+\_\+t datasize)}{SendDataInternal(void *data, size_t datasize)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Send\+Data\+Internal (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{size\+\_\+t}]{datasize}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_ac05effef4f8b5794d2acdd6548a12a7d}{}\label{_net_work_8h_ac05effef4f8b5794d2acdd6548a12a7d}
+
+
+内部関数\+:使用しないでください。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Send\+Data\+Internal@{Send\+Data\+Internal}}
+\index{Send\+Data\+Internal@{Send\+Data\+Internal}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Send\+Data\+Internal(void $\ast$data, size\+\_\+t datasize)}{SendDataInternal(void *data, size_t datasize)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Internet\+Client\+::\+Send\+Data\+Internal (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{size\+\_\+t}]{datasize}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a3f584a1bf5ad6d497c60a294bf684970}{}\label{_net_work_8h_file_a3f584a1bf5ad6d497c60a294bf684970}
+
+
+内部関数\+:使用しないでください。
+
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Start\+Server@{Start\+Server}}
+\index{Start\+Server@{Start\+Server}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Start\+Server()}{StartServer()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Server\+::\+Start\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_a6f606a9c3ed4f177f79b02a23041541b}{}\label{_network_8cpp_file_a6f606a9c3ed4f177f79b02a23041541b}
+
+
+サーバーを開始し、通信を受け付けられる状態にします。
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+
+
+技術者向け\+:使用するポート番号は, Utility.\+cpp内で設定します。\index{Net\+Work.\+h@{Net\+Work.\+h}!Stop\+Server@{Stop\+Server}}
+\index{Stop\+Server@{Stop\+Server}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Stop\+Server()}{StopServer()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Server\+::\+Stop\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_ad8151b753e3602a50068084e81175f2b}{}\label{_network_8cpp_file_ad8151b753e3602a50068084e81175f2b}
+
+
+サーバーを停止し、通信を切断します。
+
+\begin{DoxyReturn}{戻り値}
+成功すればfalse, 失敗すればtrue
+\end{DoxyReturn}
+\index{Net\+Work.\+h@{Net\+Work.\+h}!Update@{Update}}
+\index{Update@{Update}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Client\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_a55f0589b3619201ee5e8fe905c515390}{}\label{_network_8cpp_file_a55f0589b3619201ee5e8fe905c515390}
+
+
+ネットワークの状態を更新します。
+
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+
+
+通信を確立している間は、1フレームを目安に呼び出してください。\index{Net\+Work.\+h@{Net\+Work.\+h}!Update@{Update}}
+\index{Update@{Update}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Internet\+Client\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_net_work_8h_file_a8ba8db0f11acb16492bc5a81962416df}{}\label{_net_work_8h_file_a8ba8db0f11acb16492bc5a81962416df}
+
+
+ネットワークの状態を更新します。
+
+$<$return$>$異常がなければfalse, それ以外の場合はtrue$<$/return$>$ 
+
+1フレームを目安に呼び出してください。
+
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+
+
+通信を確立している間は、1フレームを目安に呼び出してください。
+
+ネットワークの状態を更新します。
+
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+
+
+サーバーを開始している間は、1フレームを目安に呼び出してください。\index{Net\+Work.\+h@{Net\+Work.\+h}!Update@{Update}}
+\index{Update@{Update}!Net\+Work.\+h@{Net\+Work.\+h}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Server\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_network_8cpp_file_ac6e422e6d85783530ad4fae9fb2d9cb0}{}\label{_network_8cpp_file_ac6e422e6d85783530ad4fae9fb2d9cb0}
+
+
+サーバーの状態を更新します。
+
+ネットワークの状態を更新します。
+
+\begin{DoxyReturn}{戻り値}
+異常がなければfalse, それ以外の場合はtrue
+\end{DoxyReturn}
+
+
+サーバーを開始している間は、1フレームを目安に呼び出してください。

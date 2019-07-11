@@ -1,0 +1,107 @@
+\hypertarget{class_reflection_1_1_member_wrapper}{}\section{Reflection\+:\+:Member\+Wrapper$<$ Owner\+Type, Type $>$ クラステンプレート}
+\label{class_reflection_1_1_member_wrapper}\index{Reflection\+::\+Member\+Wrapper$<$ Owner\+Type, Type $>$@{Reflection\+::\+Member\+Wrapper$<$ Owner\+Type, Type $>$}}
+
+
+メンバ変数を画一的に扱う方法を提供します。 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+
+
+\hyperlink{class_reflection_1_1_member_wrapper_base}{Reflection\+::\+Member\+Wrapper\+Base}を継承しています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_reflection_1_1_member_wrapper_a77482380969cea565f7009333757bf92}{Member\+Wrapper} (My\+Type My\+Value)
+\begin{DoxyCompactList}\small\item\em メンバ変数を保持する \hyperlink{class_reflection_1_1_member_wrapper}{Member\+Wrapper} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_member_wrapper_aba0729eea513a25217d70d4155a650f7}{Get\+Value} (\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&Obj) override
+\begin{DoxyCompactList}\small\item\em メンバ変数の値を読み出します。\end{DoxyCompactList}\item 
+void \hyperlink{class_reflection_1_1_member_wrapper_a3cfbc4a9a4e9b3ffa6052c40e55d2bae}{Set\+Value} (\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&Obj, \hyperlink{class_reflection_1_1_value_object}{Value\+Object} \&value) override
+\begin{DoxyCompactList}\small\item\em メンバ変数の値を書き込みます。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Owner\+Type, class Type$>$\\*
+class Reflection\+::\+Member\+Wrapper$<$ Owner\+Type, Type $>$}
+
+メンバ変数を画一的に扱う方法を提供します。
+
+
+\begin{DoxyParams}{引数}
+{\em Owner\+Type} & メンバ変数を所有する型\\
+\hline
+{\em \hyperlink{class_reflection_1_1_type}{Type}} & メンバ変数の型\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{構築子と解体子}
+\index{Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}!Member\+Wrapper@{Member\+Wrapper}}
+\index{Member\+Wrapper@{Member\+Wrapper}!Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}}
+\subsubsection[{\texorpdfstring{Member\+Wrapper(\+My\+Type My\+Value)}{MemberWrapper(MyType MyValue)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Owner\+Type , class Type $>$ {\bf Reflection\+::\+Member\+Wrapper}$<$ Owner\+Type, {\bf Type} $>$\+::{\bf Member\+Wrapper} (
+\begin{DoxyParamCaption}
+\item[{My\+Type}]{My\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_member_wrapper_a77482380969cea565f7009333757bf92}{}\label{class_reflection_1_1_member_wrapper_a77482380969cea565f7009333757bf92}
+
+
+メンバ変数を保持する \hyperlink{class_reflection_1_1_member_wrapper}{Member\+Wrapper} オブジェクトを初期化します。
+
+
+\begin{DoxyParams}{引数}
+{\em owner} & メンバ変数を所有するオブジェクト\\
+\hline
+{\em My\+Value} & メンバ変数へのポインタ\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}!Get\+Value@{Get\+Value}}
+\index{Get\+Value@{Get\+Value}!Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}}
+\subsubsection[{\texorpdfstring{Get\+Value(\+Value\+Object \&\+Obj) override}{GetValue(ValueObject &Obj) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Owner\+Type , class Type $>$ {\bf Value\+Object} {\bf Reflection\+::\+Member\+Wrapper}$<$ Owner\+Type, {\bf Type} $>$\+::Get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Value\+Object} \&}]{Obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_reflection_1_1_member_wrapper_aba0729eea513a25217d70d4155a650f7}{}\label{class_reflection_1_1_member_wrapper_aba0729eea513a25217d70d4155a650f7}
+
+
+メンバ変数の値を読み出します。
+
+\begin{DoxyReturn}{戻り値}
+メンバ変数の値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト
+\end{DoxyReturn}
+
+
+\hyperlink{class_reflection_1_1_member_wrapper_base_adf41be4011254910a07a23af427e94b0}{Reflection\+::\+Member\+Wrapper\+Base}を実装しています。
+
+\index{Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}!Set\+Value@{Set\+Value}}
+\index{Set\+Value@{Set\+Value}!Reflection\+::\+Member\+Wrapper@{Reflection\+::\+Member\+Wrapper}}
+\subsubsection[{\texorpdfstring{Set\+Value(\+Value\+Object \&\+Obj, Value\+Object \&value) override}{SetValue(ValueObject &Obj, ValueObject &value) override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Owner\+Type , class Type $>$ void {\bf Reflection\+::\+Member\+Wrapper}$<$ Owner\+Type, {\bf Type} $>$\+::Set\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Value\+Object} \&}]{Obj, }
+\item[{{\bf Value\+Object} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_reflection_1_1_member_wrapper_a3cfbc4a9a4e9b3ffa6052c40e55d2bae}{}\label{class_reflection_1_1_member_wrapper_a3cfbc4a9a4e9b3ffa6052c40e55d2bae}
+
+
+メンバ変数の値を書き込みます。
+
+
+\begin{DoxyParams}{引数}
+{\em value} & メンバ変数の新しい値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクト\\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_reflection_1_1_member_wrapper_base_ac85dcf08d50b726f633df60ec42a53bb}{Reflection\+::\+Member\+Wrapper\+Base}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{_reflector_helper_8hpp}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Reflector\+Helper.hpp ファイル}
+\label{_reflector_helper_8hpp}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Reflector\+Helper.\+hpp@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Reflector\+Helper.\+hpp}}
+{\ttfamily \#include $<$typeinfo$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Debug\+Helper.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Value\+Object.\+hpp\char`\"{}}\\*
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_reflection_1_1_value_object}{Reflection\+::\+Value\+Object}
+\begin{DoxyCompactList}\small\item\em 任意型の値を保持することができるクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_function_wrapper}{Reflection\+::\+Function\+Wrapper$<$ Function\+Type $>$}
+\begin{DoxyCompactList}\small\item\em 画一的な関数呼び出しを実現するクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_function_wrapper_base}{Reflection\+::\+Function\+Wrapper\+Base}
+\begin{DoxyCompactList}\small\item\em 画一的な関数呼び出しを実現するクラスの基底クラス\end{DoxyCompactList}\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_args_indexes}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Args\+Indexes$<$ Indexes $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_make_indexes}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Make\+Indexes$<$ Count, Indexes $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_make_indexes_3_010_00_01_indexes_8_8_8_01_4}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Make\+Indexes$<$ 0, Indexes... $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Copy\+Helper$<$ Type $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper_3_01const_01_type_01_6_01_4}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Copy\+Helper$<$ const Type \& $>$}
+\item 
+struct \hyperlink{struct_reflection_1_1_function_wrapper_base_1_1_copy_helper_3_01_type_07_6_08[_size]_4}{Reflection\+::\+Function\+Wrapper\+Base\+::\+Copy\+Helper$<$ Type(\&)\mbox{[}\+Size\mbox{]}$>$}
+\item 
+class \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_5_08_07_args_8_8_8_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type($\ast$)(\+Args...)$>$}
+\begin{DoxyCompactList}\small\item\em 画一的な関数呼び出しを実現するクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_07_args_8_8_8_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)(\+Args...)$>$}
+\begin{DoxyCompactList}\small\item\em 画一的な関数呼び出しを実現するクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_function_wrapper_3_01_ret_type_07_owner_type_1_1_5_08_4}{Reflection\+::\+Function\+Wrapper$<$ Ret\+Type(\+Owner\+Type\+::$\ast$)$>$}
+\begin{DoxyCompactList}\small\item\em 画一的な関数呼び出しを実現するクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_type_base}{Reflection\+::\+Type\+Base}
+\begin{DoxyCompactList}\small\item\em リフレクション用の型情報を保持するクラス\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_type_impl}{Reflection\+::\+Type\+Impl$<$ This\+Type $>$}
+\begin{DoxyCompactList}\small\item\em メンバの追加を簡単にする機能を提供します。\end{DoxyCompactList}\item 
+class \hyperlink{class_reflection_1_1_default_type_traits}{Reflection\+::\+Default\+Type\+Traits$<$ Type $>$}
+\item 
+class \hyperlink{class_reflection_1_1_default_type_traits_3_01_type_01_5_01_4}{Reflection\+::\+Default\+Type\+Traits$<$ Type $\ast$ $>$}
+\item 
+class \hyperlink{class_reflection_1_1_default_type_traits_3_01_type[_size]_4}{Reflection\+::\+Default\+Type\+Traits$<$ Type\mbox{[}\+Size\mbox{]}$>$}
+\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ Value\+Object $>$ \hyperlink{_reflector_helper_8hpp_a83512919cd42ea73553f4d173e7ace4c}{Reflection\+::\+Args\+List}
+\begin{DoxyCompactList}\small\item\em 関数に渡す引数のリスト\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reflection\+::\+Register\+Type} (const std\+::type\+\_\+info \&info, Type\+Base \&obj)\hypertarget{_reflection_helper_8cpp_acbd84ab1c0739cf60a4b614a2680b941}{}\label{_reflection_helper_8cpp_acbd84ab1c0739cf60a4b614a2680b941}
+
+\item 
+Type\+Base \& {\bfseries Reflection\+::\+Get\+Type} (const char name\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 指定された型を表す文字列から、型情報を取得します。\end{DoxyCompactList}\item 
+Type\+Base \& {\bfseries Reflection\+::\+Get\+Type} (const std\+::type\+\_\+info \&typeinfo)
+\begin{DoxyCompactList}\small\item\em 指定された型を表す std\+::typeinfo オブジェクトから、型情報を取得します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\Type\+Base \& \hyperlink{_reflector_helper_8hpp_a5df983eb598676a62df490b0c07177de}{Reflection\+::\+Get\+Type} ()
+\begin{DoxyCompactList}\small\item\em 指定された型から、型情報を取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \subsubsection*{C++ でのリフレクションを試験的に行う部分（開発中） }
+
+\subsection{型定義詳解}
+\index{Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}!Args\+List@{Args\+List}}
+\index{Args\+List@{Args\+List}!Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}}
+\subsubsection[{\texorpdfstring{Args\+List}{ArgsList}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$Value\+Object$>$ {\bf Reflection\+::\+Args\+List}}\hypertarget{_reflector_helper_8hpp_file_a83512919cd42ea73553f4d173e7ace4c}{}\label{_reflector_helper_8hpp_file_a83512919cd42ea73553f4d173e7ace4c}
+
+
+関数に渡す引数のリスト
+
+
+
+\subsection{関数詳解}
+\index{Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}}
+\subsubsection[{\texorpdfstring{Get\+Type(const char name[])}{GetType(const char name[])}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Base \& Reflection\+::\+Get\+Type (
+\begin{DoxyParamCaption}
+\item[{const char}]{name\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_reflection_helper_8cpp_file_a40927da8f6179475afa55a6013b08b1a}{}\label{_reflection_helper_8cpp_file_a40927da8f6179475afa55a6013b08b1a}
+
+
+指定された型を表す文字列から、型情報を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 指定された型を表す文字列\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定された型を表す文字列に関連付けられた型情報
+\end{DoxyReturn}
+\index{Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}}
+\subsubsection[{\texorpdfstring{Get\+Type(const std\+::type\+\_\+info \&typeinfo)}{GetType(const std::type_info &typeinfo)}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Base \& Reflection\+::\+Get\+Type (
+\begin{DoxyParamCaption}
+\item[{const std\+::type\+\_\+info \&}]{typeinfo}
+\end{DoxyParamCaption}
+)}\hypertarget{_reflection_helper_8cpp_file_a264b8bd5a728e31bb8a2708a70dfb293}{}\label{_reflection_helper_8cpp_file_a264b8bd5a728e31bb8a2708a70dfb293}
+
+
+指定された型を表す std\+::typeinfo オブジェクトから、型情報を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em typeinfo} & 指定された型を表す std\+::typeinfo オブジェクト\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定された型を表す std\+::typeinfo オブジェクトに関連付けられた型情報
+\end{DoxyReturn}
+\index{Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Reflector\+Helper.\+hpp@{Reflector\+Helper.\+hpp}}
+\subsubsection[{\texorpdfstring{Get\+Type()}{GetType()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Type\+Base\& Reflection\+::\+Get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_reflector_helper_8hpp_file_a5df983eb598676a62df490b0c07177de}{}\label{_reflector_helper_8hpp_file_a5df983eb598676a62df490b0c07177de}
+
+
+指定された型から、型情報を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em \hyperlink{class_reflection_1_1_type}{Type}} & 型情報を取得する型\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定された型に関連付けられた型情報
+\end{DoxyReturn}

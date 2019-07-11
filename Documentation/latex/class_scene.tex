@@ -1,0 +1,161 @@
+\hypertarget{class_scene}{}\section{Scene クラス}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+画面（シーン）の基底クラス 
+
+
+
+
+{\ttfamily \#include $<$Scene\+Base.\+h$>$}
+
+
+
+\hyperlink{class_effect_test_scene}{Effect\+Test\+Scene}, \hyperlink{class_ending_scene}{Ending\+Scene}, \hyperlink{class_game_over_scene}{Game\+Over\+Scene}, \hyperlink{class_level_scene}{Level\+Scene}, \hyperlink{class_opening_scene}{Opening\+Scene}, \hyperlink{class_reflection_scene}{Reflection\+Scene}, \hyperlink{class_shutter_scene}{Shutter\+Scene}, \hyperlink{class_wave_test_scene}{Wave\+Test\+Scene}に継承されています。
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene} ()
+\begin{DoxyCompactList}\small\item\em 新しい \hyperlink{class_scene}{Scene} オブジェクトを作成します。\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_scene_a7fce113f1a210a5b1998c2976171be40}{Initialize} ()
+\begin{DoxyCompactList}\small\item\em 初期化します。\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_ab99ec7aff3ed995985ddb764ffb78f8e}{Update} ()=0
+\begin{DoxyCompactList}\small\item\em 更新します。\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_a8680672fd30bb4b345e6fab918e31ecd}{Draw} ()=0
+\begin{DoxyCompactList}\small\item\em 描画します。\end{DoxyCompactList}\item 
+void \hyperlink{class_scene_af81e321ee8f0659fcbeed78eaf5488f4}{Add\+Handler} (\hyperlink{classstd_1_1function}{std\+::function}$<$ void(\hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{Scene\+Type})$>$)
+\begin{DoxyCompactList}\small\item\em 画面遷移時に呼び出す関数を登録します。\end{DoxyCompactList}\item 
+void \hyperlink{class_scene_ab827f04d0f304f68d3b12c4a475d86c5}{Remove\+Handler} ()
+\begin{DoxyCompactList}\small\item\em 画面遷移時に呼び出す関数を削除します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\\hyperlink{class_scene}{Scene} $\ast$ {\bfseries Create\+Instance} (int x, int y)\hypertarget{class_scene_aecc957f3e96fdc9f0fdf2f644c12f42a}{}\label{class_scene_aecc957f3e96fdc9f0fdf2f644c12f42a}
+
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Scene\+Class , class... Args$>$ }\\static \hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_scene_a5bde8f90a78405f7a4d1648200afcef1}{Create\+Instance} (Args...)
+\begin{DoxyCompactList}\small\item\em シーンのインスタンス作成\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scene_a425abcf008b32202319d672792f39259}{On\+Scene\+Change} (\hyperlink{_scene_base_8h_a006282dc9ad93696316e776700c3c948}{Scene\+Type})
+\begin{DoxyCompactList}\small\item\em 画面遷移時に呼び出す関数を呼び出します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+画面（シーン）の基底クラス
+
+
+
+\subsection{構築子と解体子}
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Scene()}{Scene()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}{}\label{class_scene_ad10176d75a9cc0da56626f682d083507}
+
+
+新しい \hyperlink{class_scene}{Scene} オブジェクトを作成します。
+
+
+
+\subsection{関数詳解}
+\index{Scene@{Scene}!Add\+Handler@{Add\+Handler}}
+\index{Add\+Handler@{Add\+Handler}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Add\+Handler(std\+::function$<$ void(\+Scene\+Type)$>$)}{AddHandler(std::function< void(SceneType)>)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::\+Add\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::function}$<$ void({\bf Scene\+Type})$>$}]{funcptr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_af81e321ee8f0659fcbeed78eaf5488f4}{}\label{class_scene_af81e321ee8f0659fcbeed78eaf5488f4}
+
+
+画面遷移時に呼び出す関数を登録します。
+
+\index{Scene@{Scene}!Create\+Instance@{Create\+Instance}}
+\index{Create\+Instance@{Create\+Instance}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Create\+Instance(\+Args...)}{CreateInstance(Args...)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Scene\+Class , class... Args$>$ static {\bf Scene}$\ast$ Scene\+::\+Create\+Instance (
+\begin{DoxyParamCaption}
+\item[{Args...}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_scene_a5bde8f90a78405f7a4d1648200afcef1}{}\label{class_scene_a5bde8f90a78405f7a4d1648200afcef1}
+
+
+シーンのインスタンス作成
+
+\index{Scene@{Scene}!Draw@{Draw}}
+\index{Draw@{Draw}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Draw()=0}{Draw()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Scene\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_scene_a8680672fd30bb4b345e6fab918e31ecd}{}\label{class_scene_a8680672fd30bb4b345e6fab918e31ecd}
+
+
+描画します。
+
+
+
+\hyperlink{class_reflection_scene_ae749304efc77f6004e23a25f33816e95}{Reflection\+Scene}, \hyperlink{class_effect_test_scene_a81096e439c30e6115c450825a6c2bfa7}{Effect\+Test\+Scene}, \hyperlink{class_shutter_scene_aad7427b7ea82db86bb878942f19e7630}{Shutter\+Scene}, \hyperlink{class_wave_test_scene_a085ec3827015ec2562e3944007cb52f3}{Wave\+Test\+Scene}, \hyperlink{class_opening_scene_ac62917cd564af0a8fce71d0a4a330668}{Opening\+Scene}, \hyperlink{class_level_scene_af3a04bb555b578692a3e67a62ad6f4ba}{Level\+Scene}, \hyperlink{class_ending_scene_a85febce07b305b20d5ecae28cc2bc7eb}{Ending\+Scene}, \hyperlink{class_game_over_scene_a0ca4f157ce8f5f8e2ccbef58ce93aa46}{Game\+Over\+Scene}で実装されています。
+
+\index{Scene@{Scene}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Initialize()}{Initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Scene\+::\+Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a7fce113f1a210a5b1998c2976171be40}{}\label{class_scene_a7fce113f1a210a5b1998c2976171be40}
+
+
+初期化します。
+
+
+
+\hyperlink{class_reflection_scene_a4e6f3640b5dac3088d7f4772ebd46b87}{Reflection\+Scene}, \hyperlink{class_effect_test_scene_a8fe0f9e29fef194529f76d483a5ca3cb}{Effect\+Test\+Scene}, \hyperlink{class_shutter_scene_a5b674772da9bdae37a00f17bb5119d04}{Shutter\+Scene}, \hyperlink{class_wave_test_scene_a9b1665eaf9e26fe79106ad8a55bbd4d7}{Wave\+Test\+Scene}, \hyperlink{class_opening_scene_ac3580cad4dc6d1dc46b53b9b0cc17e8c}{Opening\+Scene}, \hyperlink{class_level_scene_a0bef8af917b6dc4e3c1f055b71586843}{Level\+Scene}, \hyperlink{class_ending_scene_af992008682dd87d32919f43fc0f14077}{Ending\+Scene}, \hyperlink{class_game_over_scene_a4a342b6facad569ddaa74d7457b6aecf}{Game\+Over\+Scene}で再実装されています。
+
+\index{Scene@{Scene}!On\+Scene\+Change@{On\+Scene\+Change}}
+\index{On\+Scene\+Change@{On\+Scene\+Change}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{On\+Scene\+Change(\+Scene\+Type)}{OnSceneChange(SceneType)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::\+On\+Scene\+Change (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Type}}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_scene_a425abcf008b32202319d672792f39259}{}\label{class_scene_a425abcf008b32202319d672792f39259}
+
+
+画面遷移時に呼び出す関数を呼び出します。
+
+\index{Scene@{Scene}!Remove\+Handler@{Remove\+Handler}}
+\index{Remove\+Handler@{Remove\+Handler}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Remove\+Handler()}{RemoveHandler()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::\+Remove\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_ab827f04d0f304f68d3b12c4a475d86c5}{}\label{class_scene_ab827f04d0f304f68d3b12c4a475d86c5}
+
+
+画面遷移時に呼び出す関数を削除します。
+
+\index{Scene@{Scene}!Update@{Update}}
+\index{Update@{Update}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Update()=0}{Update()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Scene\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_scene_ab99ec7aff3ed995985ddb764ffb78f8e}{}\label{class_scene_ab99ec7aff3ed995985ddb764ffb78f8e}
+
+
+更新します。
+
+
+
+\hyperlink{class_reflection_scene_a3ff59b41aab3ad8a483fc516f59a4de5}{Reflection\+Scene}, \hyperlink{class_effect_test_scene_a8bf8b7d42afeaae65d0eb2300432bb02}{Effect\+Test\+Scene}, \hyperlink{class_shutter_scene_a23929df4a04632c6743e11b1bcbce1bd}{Shutter\+Scene}, \hyperlink{class_wave_test_scene_a3557c09777ebf2898e717a3bfaa87755}{Wave\+Test\+Scene}, \hyperlink{class_opening_scene_ad0dfb428f9ff9ba158c5fc3d76ab35b1}{Opening\+Scene}, \hyperlink{class_level_scene_a36679230652237fb3fcca0e9992f9cdb}{Level\+Scene}, \hyperlink{class_ending_scene_aefc237718b553dacba7d943b39353e63}{Ending\+Scene}, \hyperlink{class_game_over_scene_a662c002f6938500c1ce04ba8760191bc}{Game\+Over\+Scene}で実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_scene_base_8h}{Scene\+Base.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Opening\+Scene.\+cpp\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Scene\+Base.\+cpp\end{DoxyCompactItemize}

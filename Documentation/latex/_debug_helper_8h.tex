@@ -1,0 +1,109 @@
+\hypertarget{_debug_helper_8h}{}\section{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Debug\+Helper.h ファイル}
+\label{_debug_helper_8h}\index{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Debug\+Helper.\+h@{C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\+Debug\+Helper.\+h}}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_debug_helper_8h_ae7744534864019344a547bb50d753982}{Debug\+Trace}(format, ...)
+\begin{DoxyCompactList}\small\item\em ファイルと行番号を追加して標準出力に文字列を出力します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_debug_helper_8h_a65b9bc9e4459ee02f44f4917c805e856}{Assert\+Trace}(condition,  format, ...)
+\begin{DoxyCompactList}\small\item\em 条件式が真のとき、ファイルと行番号を追加して標準出力に文字列を出力します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_debug_helper_8h_affb81717953a68a565706edd36f55096}{Get\+Variable\+Name}(x)~\#x
+\begin{DoxyCompactList}\small\item\em 変数の名前を取得します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_debug_helper_8h_a90936d23704e2295ddd03c76b58fe2fb}{Get\+Macro\+Value}(x)~\hyperlink{_debug_helper_8h_affb81717953a68a565706edd36f55096}{Get\+Variable\+Name}(x)
+\begin{DoxyCompactList}\small\item\em マクロ変数の値を表す文字列を取得します。\end{DoxyCompactList}\item 
+\#define \hyperlink{_debug_helper_8h_aa7587591c34530f4100acc4213cda25e}{enumdef}(name, ...)
+\begin{DoxyCompactList}\small\item\em 列挙体 name を作成し、その要素数を格納する name\+\_\+\+Count も定義します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t size$>$ }\\int \hyperlink{_debug_helper_8h_a9d54ae95b24f1fcf3fc35b9a86dc8a0a}{Count\+Comma} (const char(\&str)\mbox{[}size\mbox{]})
+\begin{DoxyCompactList}\small\item\em 列挙体を宣言する文字列の要素数を取得します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{_debug_helper_8h}{Debug\+Helper.\+h} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \subsubsection*{デバッグ補助関数と列挙体宣言マクロ }
+
+\subsection{マクロ定義詳解}
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!Assert\+Trace@{Assert\+Trace}}
+\index{Assert\+Trace@{Assert\+Trace}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{Assert\+Trace}{AssertTrace}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Assert\+Trace(
+\begin{DoxyParamCaption}
+\item[{}]{condition, }
+\item[{}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_debug_helper_8h_a65b9bc9e4459ee02f44f4917c805e856}{}\label{_debug_helper_8h_a65b9bc9e4459ee02f44f4917c805e856}
+
+
+条件式が真のとき、ファイルと行番号を追加して標準出力に文字列を出力します。
+
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!Debug\+Trace@{Debug\+Trace}}
+\index{Debug\+Trace@{Debug\+Trace}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{Debug\+Trace}{DebugTrace}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Debug\+Trace(
+\begin{DoxyParamCaption}
+\item[{}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_debug_helper_8h_ae7744534864019344a547bb50d753982}{}\label{_debug_helper_8h_ae7744534864019344a547bb50d753982}
+
+
+ファイルと行番号を追加して標準出力に文字列を出力します。
+
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!enumdef@{enumdef}}
+\index{enumdef@{enumdef}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{enumdef}{enumdef}}]{\setlength{\rightskip}{0pt plus 5cm}\#define enumdef(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_debug_helper_8h_aa7587591c34530f4100acc4213cda25e}{}\label{_debug_helper_8h_aa7587591c34530f4100acc4213cda25e}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{enum} name \{ \_\_VA\_ARGS\_\_ \};  \(\backslash\)
+    const \textcolor{keywordtype}{int} name##\_Count = \hyperlink{_debug_helper_8h_a9d54ae95b24f1fcf3fc35b9a86dc8a0a}{CountComma}(#\_\_VA\_ARGS\_\_);
+\end{DoxyCode}
+
+
+列挙体 name を作成し、その要素数を格納する name\+\_\+\+Count も定義します。
+
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!Get\+Macro\+Value@{Get\+Macro\+Value}}
+\index{Get\+Macro\+Value@{Get\+Macro\+Value}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Macro\+Value}{GetMacroValue}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Get\+Macro\+Value(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf Get\+Variable\+Name}(x)}\hypertarget{_debug_helper_8h_a90936d23704e2295ddd03c76b58fe2fb}{}\label{_debug_helper_8h_a90936d23704e2295ddd03c76b58fe2fb}
+
+
+マクロ変数の値を表す文字列を取得します。
+
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!Get\+Variable\+Name@{Get\+Variable\+Name}}
+\index{Get\+Variable\+Name@{Get\+Variable\+Name}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{Get\+Variable\+Name}{GetVariableName}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Get\+Variable\+Name(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\#x}\hypertarget{_debug_helper_8h_affb81717953a68a565706edd36f55096}{}\label{_debug_helper_8h_affb81717953a68a565706edd36f55096}
+
+
+変数の名前を取得します。
+
+
+
+\subsection{関数詳解}
+\index{Debug\+Helper.\+h@{Debug\+Helper.\+h}!Count\+Comma@{Count\+Comma}}
+\index{Count\+Comma@{Count\+Comma}!Debug\+Helper.\+h@{Debug\+Helper.\+h}}
+\subsubsection[{\texorpdfstring{Count\+Comma(const char(\&str)[size])}{CountComma(const char(&str)[size])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\+\_\+t size$>$ int Count\+Comma (
+\begin{DoxyParamCaption}
+\item[{const char(\&)}]{str\mbox{[}size\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_debug_helper_8h_a9d54ae95b24f1fcf3fc35b9a86dc8a0a}{}\label{_debug_helper_8h_a9d54ae95b24f1fcf3fc35b9a86dc8a0a}
+
+
+列挙体を宣言する文字列の要素数を取得します。
+
+
+\begin{DoxyParams}{引数}
+{\em str} & 列挙体を定義する文字列\\
+\hline
+\end{DoxyParams}

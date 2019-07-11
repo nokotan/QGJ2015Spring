@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>QGJ2015Spring: InputManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="亀甲.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">QGJ2015Spring
+   &#160;<span id="projectnumber">ver 0.1.1</span>
+   </div>
+   <div id="projectbrief">Library for DX Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>総合概要</span></a></li>
+      <li><a href="pages.html"><span>諸情報</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>クラス一覧</span></a></li>
+      <li><a href="classes.html"><span>クラス索引</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>クラスメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_input_manager.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_input_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">InputManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>エミュレート機能を備えた、ジョイパッド入力対応の入力管理クラス。 
+ <a href="class_input_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_input_manager_8h_source.html">InputManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9d59fc26c033096c70554b725a5b34fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a9d59fc26c033096c70554b725a5b34fa">InitializeData</a> ()</td></tr>
+<tr class="memdesc:a9d59fc26c033096c70554b725a5b34fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部データを初期化します。アプリケーション開始時は自動的に一度呼ばれるので、アプリケーション開始時に呼び出す必要はありません。 <a href="#a9d59fc26c033096c70554b725a5b34fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a9d59fc26c033096c70554b725a5b34fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5480931dba2720e7d80dd00a53adae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#aa5480931dba2720e7d80dd00a53adae0">Update</a> ()</td></tr>
+<tr class="memdesc:aa5480931dba2720e7d80dd00a53adae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力状態を更新します。１フレームを目安に呼び出してください。 <a href="#aa5480931dba2720e7d80dd00a53adae0">[詳解]</a><br /></td></tr>
+<tr class="separator:aa5480931dba2720e7d80dd00a53adae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2c0f85c865760531bc373d71180630"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a4e2c0f85c865760531bc373d71180630">LoadEmulateFile</a> (const char filename[])</td></tr>
+<tr class="memdesc:a4e2c0f85c865760531bc373d71180630"><td class="mdescLeft">&#160;</td><td class="mdescRight">エミュレートファイルを読み込みます。 <a href="#a4e2c0f85c865760531bc373d71180630">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e2c0f85c865760531bc373d71180630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed453ee1a1b372ff7ae1c9204272f8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#aed453ee1a1b372ff7ae1c9204272f8a3">StartEmulate</a> ()</td></tr>
+<tr class="memdesc:aed453ee1a1b372ff7ae1c9204272f8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のエミュレートを開始します。 KeyPressed, KeyPressedOnce, KeyPressedFlame 関数に影響します。  <a href="#aed453ee1a1b372ff7ae1c9204272f8a3">[詳解]</a><br /></td></tr>
+<tr class="separator:aed453ee1a1b372ff7ae1c9204272f8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6658574be74485579cbd99e56b6abcec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a6658574be74485579cbd99e56b6abcec">EndEmulate</a> ()</td></tr>
+<tr class="memdesc:a6658574be74485579cbd99e56b6abcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のエミュレートを終了します。 <a href="#a6658574be74485579cbd99e56b6abcec">[詳解]</a><br /></td></tr>
+<tr class="separator:a6658574be74485579cbd99e56b6abcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f15928d9522586da1b47a2c9a65e453"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a3f15928d9522586da1b47a2c9a65e453">KeyPressed</a> (int keycode) const </td></tr>
+<tr class="memdesc:a3f15928d9522586da1b47a2c9a65e453"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定のキー入力状態を取得します。 <a href="#a3f15928d9522586da1b47a2c9a65e453">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f15928d9522586da1b47a2c9a65e453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd73b9fee163ea92ca73c01b149cb18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#abcd73b9fee163ea92ca73c01b149cb18">KeyTyped</a> (int keycode) const </td></tr>
+<tr class="memdesc:abcd73b9fee163ea92ca73c01b149cb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定のキー入力状態を取得します。タイピング向けです。 <a href="#abcd73b9fee163ea92ca73c01b149cb18">[詳解]</a><br /></td></tr>
+<tr class="separator:abcd73b9fee163ea92ca73c01b149cb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9b6280d613b3441fa4a8bac1cef502"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a3b9b6280d613b3441fa4a8bac1cef502">JoyPadPressed</a> (int keycode)</td></tr>
+<tr class="memdesc:a3b9b6280d613b3441fa4a8bac1cef502"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定のジョイパッド入力状態を取得します。 <a href="#a3b9b6280d613b3441fa4a8bac1cef502">[詳解]</a><br /></td></tr>
+<tr class="separator:a3b9b6280d613b3441fa4a8bac1cef502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13380875904b6ad54e37f2c727dbe08a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a13380875904b6ad54e37f2c727dbe08a">KeyPressedOnce</a> (int keycode) const </td></tr>
+<tr class="memdesc:a13380875904b6ad54e37f2c727dbe08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定のキーが押された瞬間かどうかを取得します。 <a href="#a13380875904b6ad54e37f2c727dbe08a">[詳解]</a><br /></td></tr>
+<tr class="separator:a13380875904b6ad54e37f2c727dbe08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38147ee44dd913964543d91ac41556c6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a38147ee44dd913964543d91ac41556c6">KeyPressedFlame</a> (int keycode) const </td></tr>
+<tr class="memdesc:a38147ee44dd913964543d91ac41556c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">特定のキーが押されているフレーム数を取得します。 <a href="#a38147ee44dd913964543d91ac41556c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a38147ee44dd913964543d91ac41556c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa52e91c7a5816ab8680d5620210e66a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#aaa52e91c7a5816ab8680d5620210e66a">KeyPressed_Actual</a> (int keycode) const </td></tr>
+<tr class="memdesc:aaa52e91c7a5816ab8680d5620210e66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">実際のキー入力状態を取得します。 <a href="#aaa52e91c7a5816ab8680d5620210e66a">[詳解]</a><br /></td></tr>
+<tr class="separator:aaa52e91c7a5816ab8680d5620210e66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633f4192164eb3ca9e48d9d922df5b6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a633f4192164eb3ca9e48d9d922df5b6a">KeyPressedOnce_Actual</a> (int keycode) const </td></tr>
+<tr class="memdesc:a633f4192164eb3ca9e48d9d922df5b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">実際のキーが押された瞬間かどうかを取得します。 <a href="#a633f4192164eb3ca9e48d9d922df5b6a">[詳解]</a><br /></td></tr>
+<tr class="separator:a633f4192164eb3ca9e48d9d922df5b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119cd284128ec64ed6cad6479fe246d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a119cd284128ec64ed6cad6479fe246d3">KeyPressedFlame_Actual</a> (int keycode) const </td></tr>
+<tr class="memdesc:a119cd284128ec64ed6cad6479fe246d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">実際のキーが押されているフレーム数を取得します。 <a href="#a119cd284128ec64ed6cad6479fe246d3">[詳解]</a><br /></td></tr>
+<tr class="separator:a119cd284128ec64ed6cad6479fe246d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4286b0b732204cc2e7f287fe10c683e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#ae4286b0b732204cc2e7f287fe10c683e">GetResetRequestStatus</a> () const </td></tr>
+<tr class="memdesc:ae4286b0b732204cc2e7f287fe10c683e"><td class="mdescLeft">&#160;</td><td class="mdescRight">[2015年合宿仕様準拠] リセットキーコマンド（[E][S][C] Or [↓][3][5][6][7][8]）の状態を取得します。  <a href="#ae4286b0b732204cc2e7f287fe10c683e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4286b0b732204cc2e7f287fe10c683e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4b36379b1381374a534e42c3c3effbe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b36379b1381374a534e42c3c3effbe0"></a>
+static <a class="el" href="class_input_manager.html">InputManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="separator:a4b36379b1381374a534e42c3c3effbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>エミュレート機能を備えた、ジョイパッド入力対応の入力管理クラス。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a class="anchor" id="a6658574be74485579cbd99e56b6abcec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::EndEmulate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力のエミュレートを終了します。</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4286b0b732204cc2e7f287fe10c683e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::GetResetRequestStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[2015年合宿仕様準拠] リセットキーコマンド（[E][S][C] Or [↓][3][5][6][7][8]）の状態を取得します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d59fc26c033096c70554b725a5b34fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::InitializeData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内部データを初期化します。アプリケーション開始時は自動的に一度呼ばれるので、アプリケーション開始時に呼び出す必要はありません。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b9b6280d613b3441fa4a8bac1cef502"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::JoyPadPressed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特定のジョイパッド入力状態を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f15928d9522586da1b47a2c9a65e453"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyPressed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特定のキー入力状態を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa52e91c7a5816ab8680d5620210e66a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyPressed_Actual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実際のキー入力状態を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a38147ee44dd913964543d91ac41556c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::KeyPressedFlame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特定のキーが押されているフレーム数を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a119cd284128ec64ed6cad6479fe246d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputManager::KeyPressedFlame_Actual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実際のキーが押されているフレーム数を取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a13380875904b6ad54e37f2c727dbe08a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyPressedOnce </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特定のキーが押された瞬間かどうかを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="a633f4192164eb3ca9e48d9d922df5b6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyPressedOnce_Actual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実際のキーが押された瞬間かどうかを取得します。</p>
+
+</div>
+</div>
+<a class="anchor" id="abcd73b9fee163ea92ca73c01b149cb18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::KeyTyped </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特定のキー入力状態を取得します。タイピング向けです。</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e2c0f85c865760531bc373d71180630"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputManager::LoadEmulateFile </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>filename</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エミュレートファイルを読み込みます。</p>
+
+</div>
+</div>
+<a class="anchor" id="aed453ee1a1b372ff7ae1c9204272f8a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::StartEmulate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力のエミュレートを開始します。 KeyPressed, KeyPressedOnce, KeyPressedFlame 関数に影響します。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa5480931dba2720e7d80dd00a53adae0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力状態を更新します。１フレームを目安に呼び出してください。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/Owner/Documents/Visual Studio 2013/Projects/QGJ2015Spring/<a class="el" href="_input_manager_8h_source.html">InputManager.h</a></li>
+<li>C:/Users/Owner/Documents/Visual Studio 2013/Projects/QGJ2015Spring/InputManager.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_input_manager.html">InputManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

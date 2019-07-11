@@ -1,0 +1,150 @@
+\hypertarget{class_utility_1_1_work_queue_base}{}\section{Utility\+:\+:Work\+Queue\+Base$<$ Ret\+Type, Arg\+Types $>$ クラステンプレート}
+\label{class_utility_1_1_work_queue_base}\index{Utility\+::\+Work\+Queue\+Base$<$ Ret\+Type, Arg\+Types $>$@{Utility\+::\+Work\+Queue\+Base$<$ Ret\+Type, Arg\+Types $>$}}
+
+
+関数をリスト管理し、実行できるようにします。 
+
+
+
+
+{\ttfamily \#include $<$Work\+Queue\+Class.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classstd_1_1function}{std\+::function}$<$ Ret\+Type(Arg\+Types...)$>$ {\bfseries My\+Function}\hypertarget{class_utility_1_1_work_queue_base_a659c6fc2f8ec7468026d4d6f853a16fa}{}\label{class_utility_1_1_work_queue_base_a659c6fc2f8ec7468026d4d6f853a16fa}
+
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_utility_1_1_work_queue_base_ab881136d649a36e6f04cdc1f67beae08}{Work\+Queue\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em 新しい \hyperlink{class_utility_1_1_work_queue_base}{Work\+Queue\+Base} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_utility_1_1_work_queue_base_a682eab32915823ad6782116dd173b7bc}{Have\+More\+Work} () const 
+\begin{DoxyCompactList}\small\item\em 実行すべき関数がまだ残っているかどうか。\end{DoxyCompactList}\item 
+void \hyperlink{class_utility_1_1_work_queue_base_a4ecb958dcd62ae825d554989ae42de41}{Enqueue} (\hyperlink{classstd_1_1function}{My\+Function} \&work)
+\begin{DoxyCompactList}\small\item\em 実行すべき関数を追加します。\end{DoxyCompactList}\item 
+void \hyperlink{class_utility_1_1_work_queue_base_a70fd2fe67a06ec46f9719554bbb2efbd}{Enqueue} (\hyperlink{classstd_1_1function}{My\+Function} \&\&work)
+\begin{DoxyCompactList}\small\item\em 実行すべき関数を追加します。\end{DoxyCompactList}\item 
+Ret\+Type \hyperlink{class_utility_1_1_work_queue_base_a5c129e5b8605d28bed51f33767cd8af6}{Dequeue} (Arg\+Types...\+args)
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数を実行し、キューから削除します。\end{DoxyCompactList}\item 
+Ret\+Type \hyperlink{class_utility_1_1_work_queue_base_ab8384746b144ee2225ded569371a2437}{Run\+Work} (Arg\+Types...\+args)
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数を実行します。\end{DoxyCompactList}\item 
+void \hyperlink{class_utility_1_1_work_queue_base_a9be74bbf9df0c7bd46de3810567d7b8e}{Pop} ()
+\begin{DoxyCompactList}\small\item\em 一番先頭にある関数をキューから削除します。\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Ret\+Type, class... Arg\+Types$>$\\*
+class Utility\+::\+Work\+Queue\+Base$<$ Ret\+Type, Arg\+Types $>$}
+
+関数をリスト管理し、実行できるようにします。
+
+
+\begin{DoxyParams}{引数}
+{\em Ret\+Type} & 関数の戻り値の型\\
+\hline
+{\em Arg\+Types} & 関数の引数の型。複数指定ができます。\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{構築子と解体子}
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Work\+Queue\+Base@{Work\+Queue\+Base}}
+\index{Work\+Queue\+Base@{Work\+Queue\+Base}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Work\+Queue\+Base()=default}{WorkQueueBase()=default}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::{\bf Work\+Queue\+Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{class_utility_1_1_work_queue_base_ab881136d649a36e6f04cdc1f67beae08}{}\label{class_utility_1_1_work_queue_base_ab881136d649a36e6f04cdc1f67beae08}
+
+
+新しい \hyperlink{class_utility_1_1_work_queue_base}{Work\+Queue\+Base} オブジェクトを初期化します。
+
+
+
+\subsection{関数詳解}
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Dequeue@{Dequeue}}
+\index{Dequeue@{Dequeue}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Dequeue(\+Arg\+Types...\+args)}{Dequeue(ArgTypes...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ Ret\+Type {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Dequeue (
+\begin{DoxyParamCaption}
+\item[{Arg\+Types...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_a5c129e5b8605d28bed51f33767cd8af6}{}\label{class_utility_1_1_work_queue_base_a5c129e5b8605d28bed51f33767cd8af6}
+
+
+一番先頭にある関数を実行し、キューから削除します。
+
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Enqueue(\+My\+Function \&work)}{Enqueue(MyFunction &work)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ void {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+Function} \&}]{work}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_a4ecb958dcd62ae825d554989ae42de41}{}\label{class_utility_1_1_work_queue_base_a4ecb958dcd62ae825d554989ae42de41}
+
+
+実行すべき関数を追加します。
+
+
+\begin{DoxyParams}{引数}
+{\em work} & 追加する関数への参照\\
+\hline
+\end{DoxyParams}
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Enqueue(\+My\+Function \&\&work)}{Enqueue(MyFunction &&work)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ void {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+Function} \&\&}]{work}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_a70fd2fe67a06ec46f9719554bbb2efbd}{}\label{class_utility_1_1_work_queue_base_a70fd2fe67a06ec46f9719554bbb2efbd}
+
+
+実行すべき関数を追加します。
+
+
+\begin{DoxyParams}{引数}
+{\em work} & 追加する関数への参照\\
+\hline
+\end{DoxyParams}
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Have\+More\+Work@{Have\+More\+Work}}
+\index{Have\+More\+Work@{Have\+More\+Work}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Have\+More\+Work() const }{HaveMoreWork() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ bool {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Have\+More\+Work (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_a682eab32915823ad6782116dd173b7bc}{}\label{class_utility_1_1_work_queue_base_a682eab32915823ad6782116dd173b7bc}
+
+
+実行すべき関数がまだ残っているかどうか。
+
+\begin{DoxyReturn}{戻り値}
+関数が残っていれば true, そうでなければ false
+\end{DoxyReturn}
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Pop@{Pop}}
+\index{Pop@{Pop}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Pop()}{Pop()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ void {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_a9be74bbf9df0c7bd46de3810567d7b8e}{}\label{class_utility_1_1_work_queue_base_a9be74bbf9df0c7bd46de3810567d7b8e}
+
+
+一番先頭にある関数をキューから削除します。
+
+\index{Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}!Run\+Work@{Run\+Work}}
+\index{Run\+Work@{Run\+Work}!Utility\+::\+Work\+Queue\+Base@{Utility\+::\+Work\+Queue\+Base}}
+\subsubsection[{\texorpdfstring{Run\+Work(\+Arg\+Types...\+args)}{RunWork(ArgTypes...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Ret\+Type, class... Arg\+Types$>$ Ret\+Type {\bf Utility\+::\+Work\+Queue\+Base}$<$ Ret\+Type, Arg\+Types $>$\+::Run\+Work (
+\begin{DoxyParamCaption}
+\item[{Arg\+Types...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_utility_1_1_work_queue_base_ab8384746b144ee2225ded569371a2437}{}\label{class_utility_1_1_work_queue_base_ab8384746b144ee2225ded569371a2437}
+
+
+一番先頭にある関数を実行します。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_work_queue_class_8h}{Work\+Queue\+Class.\+h}\end{DoxyCompactItemize}

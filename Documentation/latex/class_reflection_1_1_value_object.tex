@@ -1,0 +1,141 @@
+\hypertarget{class_reflection_1_1_value_object}{}\section{Reflection\+:\+:Value\+Object クラス}
+\label{class_reflection_1_1_value_object}\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+
+
+任意型の値を保持することができるクラス 
+
+
+
+
+{\ttfamily \#include $<$Reflector\+Helper.\+hpp$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}{Value\+Object} ()
+\begin{DoxyCompactList}\small\item\em 空の値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{class_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}{Value\+Object} (\hyperlink{class_reflection_1_1_type}{Type} val)
+\begin{DoxyCompactList}\small\item\em 指定された値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{class_reflection_1_1_value_object_ae7eb6f4d1fee6368b140472adf2586a1}{Value\+Object} (std\+::reference\+\_\+wrapper$<$ \hyperlink{class_reflection_1_1_type}{Type} $>$ val)
+\begin{DoxyCompactList}\small\item\em 指定された値への参照を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type , size\+\_\+t Size$>$ }\\\hyperlink{class_reflection_1_1_value_object_a75dc850c81551b2f96d72ea9ee536f9d}{Value\+Object} (\hyperlink{class_reflection_1_1_type}{Type}(\&val)\mbox{[}Size\mbox{]})
+\begin{DoxyCompactList}\small\item\em 指定された配列を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{class_reflection_1_1_type}{Type} \hyperlink{class_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}{Get} ()
+\begin{DoxyCompactList}\small\item\em このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。\end{DoxyCompactList}\item 
+{\footnotesize template$<$class Type $>$ }\\\hyperlink{class_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}{operator Type} ()
+\begin{DoxyCompactList}\small\item\em このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。\end{DoxyCompactList}\item 
+\hyperlink{class_reflection_1_1_value_object}{Value\+Object} \hyperlink{class_reflection_1_1_value_object_a21dac9a24e4cd98de42e552a0a65d18c}{Internal\+Cast} (const type\+\_\+info \&info)
+\begin{DoxyCompactList}\small\item\em 内部の値を指定した型に変換します。\end{DoxyCompactList}\item 
+bool \hyperlink{class_reflection_1_1_value_object_aff9e816bb79890d63f24beb311da7b2c}{Is\+Empty} () const 
+\begin{DoxyCompactList}\small\item\em このオブジェクトが保持している値が空かどうか確認します。\end{DoxyCompactList}\item 
+bool {\bfseries Check\+Type} (const type\+\_\+info \&info)\hypertarget{class_reflection_1_1_value_object_acf1d193f3708e1e7269fb9d0bd02138a}{}\label{class_reflection_1_1_value_object_acf1d193f3708e1e7269fb9d0bd02138a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+任意型の値を保持することができるクラス
+
+
+
+\subsection{構築子と解体子}
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object()}{ValueObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}{}\label{class_reflection_1_1_value_object_a1cdbf247fc231bcc6eafe2f3cd60fc04}
+
+
+空の値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object(\+Type val)}{ValueObject(Type val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}{}\label{class_reflection_1_1_value_object_aa50228eb33aa5a5b5c0c220414d6ea40}
+
+
+指定された値を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object(std\+::reference\+\_\+wrapper$<$ Type $>$ val)}{ValueObject(std::reference_wrapper< Type > val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::reference\+\_\+wrapper$<$ {\bf Type} $>$}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_value_object_ae7eb6f4d1fee6368b140472adf2586a1}{}\label{class_reflection_1_1_value_object_ae7eb6f4d1fee6368b140472adf2586a1}
+
+
+指定された値への参照を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Value\+Object@{Value\+Object}}
+\index{Value\+Object@{Value\+Object}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Value\+Object(\+Type(\&val)[Size])}{ValueObject(Type(&val)[Size])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type , size\+\_\+t Size$>$ Reflection\+::\+Value\+Object\+::\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}(\&)}]{val\mbox{[}\+Size\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_reflection_1_1_value_object_a75dc850c81551b2f96d72ea9ee536f9d}{}\label{class_reflection_1_1_value_object_a75dc850c81551b2f96d72ea9ee536f9d}
+
+
+指定された配列を保持する \hyperlink{class_reflection_1_1_value_object}{Value\+Object} オブジェクトを初期化します。
+
+
+
+\subsection{関数詳解}
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Get@{Get}}
+\index{Get@{Get}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Get()}{Get()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ {\bf Type} Reflection\+::\+Value\+Object\+::\+Get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}{}\label{class_reflection_1_1_value_object_a01ab084d58c123074ebbc155e901a23b}
+
+
+このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Internal\+Cast@{Internal\+Cast}}
+\index{Internal\+Cast@{Internal\+Cast}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Internal\+Cast(const type\+\_\+info \&info)}{InternalCast(const type_info &info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Object} Reflection\+::\+Value\+Object\+::\+Internal\+Cast (
+\begin{DoxyParamCaption}
+\item[{const type\+\_\+info \&}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{class_reflection_1_1_value_object_a21dac9a24e4cd98de42e552a0a65d18c}{}\label{class_reflection_1_1_value_object_a21dac9a24e4cd98de42e552a0a65d18c}
+
+
+内部の値を指定した型に変換します。
+
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{Is\+Empty() const }{IsEmpty() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Reflection\+::\+Value\+Object\+::\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_reflection_1_1_value_object_aff9e816bb79890d63f24beb311da7b2c}{}\label{class_reflection_1_1_value_object_aff9e816bb79890d63f24beb311da7b2c}
+
+
+このオブジェクトが保持している値が空かどうか確認します。
+
+\begin{DoxyReturn}{戻り値}
+このオブジェクトが保持している値が空ならば true, そうでなければ false
+\end{DoxyReturn}
+\index{Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}!operator Type@{operator Type}}
+\index{operator Type@{operator Type}!Reflection\+::\+Value\+Object@{Reflection\+::\+Value\+Object}}
+\subsubsection[{\texorpdfstring{operator Type()}{operator Type()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ Reflection\+::\+Value\+Object\+::operator {\bf Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{class_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}{}\label{class_reflection_1_1_value_object_a65ae4ed69a132b5f156cc83a11129bd6}
+
+
+このオブジェクトが保持している値を取得します。型変換に失敗した場合、例外を送出します。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_reflector_helper_8hpp}{Reflector\+Helper.\+hpp}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Value\+Object.\+cpp\end{DoxyCompactItemize}

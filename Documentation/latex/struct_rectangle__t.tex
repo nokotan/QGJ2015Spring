@@ -1,0 +1,309 @@
+\hypertarget{struct_rectangle__t}{}\section{Rectangle\+\_\+t 構造体}
+\label{struct_rectangle__t}\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+
+
+辺が x, y 軸に平行な長方形を定義します。 
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_rectangle__t_a419db2da2078fe5a55b06992cb90f392}{Rectangle\+\_\+t} ()
+\begin{DoxyCompactList}\small\item\em 空の長方形を作成します。\end{DoxyCompactList}\item 
+\hyperlink{struct_rectangle__t_a7dc00af20c4d713796472bcf428ee6e3}{Rectangle\+\_\+t} (\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} x, \hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} y, \hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} width, \hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} height)
+\begin{DoxyCompactList}\small\item\em 指定した x, y座標, 幅, 高さから長方形を作成します。\end{DoxyCompactList}\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} \hyperlink{struct_rectangle__t_ab46f8bc8fec97b0cb5fc09c8a5c7f75b}{Right} () const 
+\begin{DoxyCompactList}\small\item\em 右端の座標を取得します。\end{DoxyCompactList}\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} \hyperlink{struct_rectangle__t_a7da08baa214830a212f92793ccca3d9b}{Bottom} () const 
+\begin{DoxyCompactList}\small\item\em 下端の座標を取得します。\end{DoxyCompactList}\item 
+bool \hyperlink{struct_rectangle__t_a54f6d0cb15367365eb987d672dc1c949}{Contains} (int x, int y) const 
+\begin{DoxyCompactList}\small\item\em 指定した座標が含まれているかどうか\end{DoxyCompactList}\item 
+bool \hyperlink{struct_rectangle__t_a86cc029602e881c2b69fb5189acf6304}{Intersect\+With} (\hyperlink{struct_rectangle__t}{Rectangle\+\_\+t} \&rect) const 
+\begin{DoxyCompactList}\small\item\em 指定した長方形と重なっているかどうか \end{DoxyCompactList}\item 
+bool \hyperlink{struct_rectangle__t_ab85dd06db91a326dd840e25aca8f7544}{Intersect\+With} (\hyperlink{struct_rectangle__t}{Rectangle\+\_\+t} \&\&rect) const 
+\begin{DoxyCompactList}\small\item\em 指定した長方形と重なっているかどうか\end{DoxyCompactList}\item 
+void \hyperlink{struct_rectangle__t_a042347cae1e12ad6e2a1d75a492c8ff0}{Intersects} (\hyperlink{struct_rectangle__t}{Rectangle\+\_\+t} \&rect)
+\begin{DoxyCompactList}\small\item\em この長方形を指定した長方形との交差部分に変換します\end{DoxyCompactList}\item 
+void \hyperlink{struct_rectangle__t_aacc81f628ec164e5508444d9635d1ff7}{Intersects} (\hyperlink{struct_rectangle__t}{Rectangle\+\_\+t} \&\&rect)
+\begin{DoxyCompactList}\small\item\em この長方形を指定した長方形との交差部分に変換します\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} {\bfseries X}\hypertarget{struct_rectangle__t_aab23c1364e4974661b6d78d57da78266}{}\label{struct_rectangle__t_aab23c1364e4974661b6d78d57da78266}
+
+\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} {\bfseries Y}\hypertarget{struct_rectangle__t_aa94994505e12cd1eabfa336dc0938eca}{}\label{struct_rectangle__t_aa94994505e12cd1eabfa336dc0938eca}
+
+\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} {\bfseries Width}\hypertarget{struct_rectangle__t_aaae374fa2e10957a46c4bc9af49baebc}{}\label{struct_rectangle__t_aaae374fa2e10957a46c4bc9af49baebc}
+
+\item 
+\hyperlink{_shape_8h_a1532964af24b39019c627e9bcdc22d14}{Pixel} {\bfseries Height}\hypertarget{struct_rectangle__t_ac68c8dcd125ae98bb6deae44c4712a82}{}\label{struct_rectangle__t_ac68c8dcd125ae98bb6deae44c4712a82}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+辺が x, y 軸に平行な長方形を定義します。
+
+
+
+\subsection{構築子と解体子}
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Rectangle\+\_\+t()}{Rectangle_t()}}]{\setlength{\rightskip}{0pt plus 5cm}Rectangle\+\_\+t\+::\+Rectangle\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_rectangle__t_a419db2da2078fe5a55b06992cb90f392}{}\label{struct_rectangle__t_a419db2da2078fe5a55b06992cb90f392}
+
+
+空の長方形を作成します。
+
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Rectangle\+\_\+t(\+Pixel x, Pixel y, Pixel width, Pixel height)}{Rectangle_t(Pixel x, Pixel y, Pixel width, Pixel height)}}]{\setlength{\rightskip}{0pt plus 5cm}Rectangle\+\_\+t\+::\+Rectangle\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{{\bf Pixel}}]{x, }
+\item[{{\bf Pixel}}]{y, }
+\item[{{\bf Pixel}}]{width, }
+\item[{{\bf Pixel}}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_rectangle__t_a7dc00af20c4d713796472bcf428ee6e3}{}\label{struct_rectangle__t_a7dc00af20c4d713796472bcf428ee6e3}
+
+
+指定した x, y座標, 幅, 高さから長方形を作成します。
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 新しく作成する長方形の x 座標\\
+\hline
+{\em y} & 新しく作成する長方形の y 座標\\
+\hline
+{\em width} & 新しく作成する長方形の幅\\
+\hline
+{\em height} & 新しく作成する長方形の高さ\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Bottom@{Bottom}}
+\index{Bottom@{Bottom}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Bottom() const }{Bottom() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel} Rectangle\+\_\+t\+::\+Bottom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_rectangle__t_a7da08baa214830a212f92793ccca3d9b}{}\label{struct_rectangle__t_a7da08baa214830a212f92793ccca3d9b}
+
+
+下端の座標を取得します。
+
+\begin{DoxyReturn}{戻り値}
+下端の座標
+\end{DoxyReturn}
+\index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Contains@{Contains}}
+\index{Contains@{Contains}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Contains(int x, int y) const }{Contains(int x, int y) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Rectangle\+\_\+t\+::\+Contains (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_rectangle__t_a54f6d0cb15367365eb987d672dc1c949}{}\label{struct_rectangle__t_a54f6d0cb15367365eb987d672dc1c949}
+
+
+指定した座標が含まれているかどうか
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 含まれているかどうか確かめる点の x 座標の値\\
+\hline
+{\em y} & 含まれているかどうか確かめる点の y 座標の値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+含まれていれば true, そうでなければ false
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+\textcolor{keywordtype}{int} MouseX, MouseY;
+GetMousePoint(&MouseX, &MouseY);
+
+\textcolor{keywordflow}{if} (Rect1.\hyperlink{struct_rectangle__t_a54f6d0cb15367365eb987d672dc1c949}{Contains}(MouseX, MouseY)) \{
+    \textcolor{comment}{// マウスカーソルが長方形上にあればこっち}
+\} \textcolor{keywordflow}{else} \{
+    \textcolor{comment}{// マウスカーソルが長方形上になければこっち}
+\}
+\end{DoxyCode}
+ \index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Intersects(\+Rectangle\+\_\+t \&rect)}{Intersects(Rectangle_t &rect)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rectangle\+\_\+t\+::\+Intersects (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle\+\_\+t} \&}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_rectangle__t_a042347cae1e12ad6e2a1d75a492c8ff0}{}\label{struct_rectangle__t_a042347cae1e12ad6e2a1d75a492c8ff0}
+
+
+この長方形を指定した長方形との交差部分に変換します
+
+
+\begin{DoxyParams}{引数}
+{\em rect} & 交差部分を取る長方形への参照\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect2;
+Rect2.X = 150; Rect2.Y = 150;
+Rect2.Width = 100; Rect2.Height = 100;
+
+Rect1.\hyperlink{struct_rectangle__t_a042347cae1e12ad6e2a1d75a492c8ff0}{Intersects}(Rect2));
+printf(\textcolor{stringliteral}{"Rect1: x = %.0f, y = %.0f, width = %.0f, height = %.0f\(\backslash\)n"}, Rect1.X, Rect1.Y, Rect1.Width, Rect1.
+      Height);
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1: x = 150, y = 150, width = 50, height = 50}
+\end{DoxyCode}
+ \index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Intersects(\+Rectangle\+\_\+t \&\&rect)}{Intersects(Rectangle_t &&rect)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rectangle\+\_\+t\+::\+Intersects (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle\+\_\+t} \&\&}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_rectangle__t_aacc81f628ec164e5508444d9635d1ff7}{}\label{struct_rectangle__t_aacc81f628ec164e5508444d9635d1ff7}
+
+
+この長方形を指定した長方形との交差部分に変換します
+
+
+\begin{DoxyParams}{引数}
+{\em rect} & 交差部分を取る長方形への参照\\
+\hline
+\end{DoxyParams}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+Rect1.\hyperlink{struct_rectangle__t_a042347cae1e12ad6e2a1d75a492c8ff0}{Intersects}( \{ 150, 150, 100, 100 \} ));
+printf(\textcolor{stringliteral}{"Rect1: x = %.0f, y = %.0f, width = %.0f, height = %.0f\(\backslash\)n"}, Rect1.X, Rect1.Y, Rect1.Width, Rect1.
+      Height);
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1: x = 150, y = 150, width = 50, height = 50}
+\end{DoxyCode}
+ \index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Intersect\+With@{Intersect\+With}}
+\index{Intersect\+With@{Intersect\+With}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Intersect\+With(\+Rectangle\+\_\+t \&rect) const }{IntersectWith(Rectangle_t &rect) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Rectangle\+\_\+t\+::\+Intersect\+With (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle\+\_\+t} \&}]{rect}
+\end{DoxyParamCaption}
+) const}\hypertarget{struct_rectangle__t_a86cc029602e881c2b69fb5189acf6304}{}\label{struct_rectangle__t_a86cc029602e881c2b69fb5189acf6304}
+
+
+指定した長方形と重なっているかどうか 
+
+
+\begin{DoxyParams}{引数}
+{\em rect} & 重なっているかどうか確かめる長方形への参照\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+重なっていれば true, そうでなければ false
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect2;
+Rect2.X = 150; Rect2.Y = 200;
+Rect2.Width = 100; Rect2.Height = 100;
+
+\textcolor{keywordflow}{if} (Rect1.\hyperlink{struct_rectangle__t_a86cc029602e881c2b69fb5189acf6304}{IntersectWith}(Rect2)) \{
+    printf(\textcolor{stringliteral}{"Rect1 intersects Rect2!\(\backslash\)n"});
+\} \textcolor{keywordflow}{else} \{
+    printf(\textcolor{stringliteral}{"Rect1 does not intersect Rect2.\(\backslash\)n"});
+\}
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1 intersects Rect2!}
+\end{DoxyCode}
+ \index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Intersect\+With@{Intersect\+With}}
+\index{Intersect\+With@{Intersect\+With}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Intersect\+With(\+Rectangle\+\_\+t \&\&rect) const }{IntersectWith(Rectangle_t &&rect) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Rectangle\+\_\+t\+::\+Intersect\+With (
+\begin{DoxyParamCaption}
+\item[{{\bf Rectangle\+\_\+t} \&\&}]{rect}
+\end{DoxyParamCaption}
+) const}\hypertarget{struct_rectangle__t_ab85dd06db91a326dd840e25aca8f7544}{}\label{struct_rectangle__t_ab85dd06db91a326dd840e25aca8f7544}
+
+
+指定した長方形と重なっているかどうか
+
+
+\begin{DoxyParams}{引数}
+{\em rect} & 重なっているかどうか確かめる長方形への参照\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+重なっていれば true, そうでなければ false
+\end{DoxyReturn}
+
+
+使用例\+: 
+\begin{DoxyCode}
+\hyperlink{struct_rectangle__t}{Rectangle\_t} Rect1;
+Rect1.X = 100; Rect1.Y = 100;
+Rect1.Width = 100; Rect1.Height = 100;
+
+\textcolor{keywordflow}{if} (Rect1.\hyperlink{struct_rectangle__t_a86cc029602e881c2b69fb5189acf6304}{IntersectWith}( \{ 150, 200, 100, 100 \} )) \{
+    printf(\textcolor{stringliteral}{"Rect1 intersects!\(\backslash\)n"});
+\} \textcolor{keywordflow}{else} \{
+    printf(\textcolor{stringliteral}{"Rect1 does not intersect.\(\backslash\)n"});
+\}
+
+\textcolor{comment}{// 出力}
+\textcolor{comment}{// Rect1 intersects!}
+\end{DoxyCode}
+ \index{Rectangle\+\_\+t@{Rectangle\+\_\+t}!Right@{Right}}
+\index{Right@{Right}!Rectangle\+\_\+t@{Rectangle\+\_\+t}}
+\subsubsection[{\texorpdfstring{Right() const }{Right() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel} Rectangle\+\_\+t\+::\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_rectangle__t_ab46f8bc8fec97b0cb5fc09c8a5c7f75b}{}\label{struct_rectangle__t_ab46f8bc8fec97b0cb5fc09c8a5c7f75b}
+
+
+右端の座標を取得します。
+
+\begin{DoxyReturn}{戻り値}
+右端の座標
+\end{DoxyReturn}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/\hyperlink{_shape_8h}{Shape.\+h}\item 
+C\+:/\+Users/\+Owner/\+Documents/\+Visual Studio 2013/\+Projects/\+Q\+G\+J2015\+Spring/Shape.\+cpp\end{DoxyCompactItemize}
